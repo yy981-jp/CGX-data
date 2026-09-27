@@ -1,0 +1,17 @@
+{
+	"2-wide": {
+		"x86-64": "slm",
+		"aarch64": "thunderxt88",
+		"riscv64": "syntacore-scr7"
+	},
+	"4-wide": {
+		"x86-64": "haswell",
+		"aarch64": "ampere1",
+		"riscv64": "sifive-p600-series"
+	},
+	"6-wide": {
+		"x86-64": "skylake",
+		"aarch64": "neoverse-v2",
+		"riscv64": "sifive-p870-d"
+	}
+}
