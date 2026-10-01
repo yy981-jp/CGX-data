@@ -1,8 +1,13 @@
+#include "../def.h"
+
+
 float dot_product(const float *a, const float *b, int n) {
 	float sum = 0.0f;
 
+	CGX_MCA_BEGIN
 	for(int i = 0; i < n; ++i)
 		sum += a[i] * b[i];
+	CGX_MCA_END
 
 	return sum;
 }
