@@ -19,11 +19,11 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	sd	a0, 24(sp)
 	sd	a1, 16(sp)
 	sw	a2, 12(sp)
-	li	a0, 0
-	sw	a0, 8(sp)
 	#APP
 	# LLVM-MCA-BEGIN CGX-MCA-target
 	#NO_APP
+	li	a0, 0
+	sw	a0, 8(sp)
 	sw	a0, 4(sp)
 	j	.LBB0_1
 .LBB0_1:                                # =>This Inner Loop Header: Depth=1
@@ -50,9 +50,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	sw	a0, 4(sp)
 	j	.LBB0_1
 .LBB0_4:
-	#APP
-	# LLVM-MCA-END
-	#NO_APP
 	flw	fa0, 8(sp)
 	.cfi_def_cfa sp, 48
 	ld	ra, 40(sp)                      # 8-byte Folded Reload

@@ -24,9 +24,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	addi	a0, a0, 4
 	bne	a1, a2, .LBB0_2
 .LBB0_3:
-	#APP
-	# LLVM-MCA-END
-	#NO_APP
 	ret
 .Lfunc_end0:
 	.size	_Z11dot_productPKfS0_i, .Lfunc_end0-_Z11dot_productPKfS0_i
@@ -41,9 +38,6 @@ main:                                   # @main
 	li	a0, 0
 	#APP
 	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
-	#APP
-	# LLVM-MCA-END
 	#NO_APP
 	ret
 .Lfunc_end1:

@@ -9,7 +9,7 @@ _Z11dot_productPKfS0_i:
 	endbr64
 	movq	%rdi, %rcx
 #APP
-# 7 "source.cpp" 1
+# 5 "source.cpp" 1
 	# LLVM-MCA-BEGIN CGX-MCA-target
 # 0 "" 2
 #NO_APP
@@ -44,7 +44,7 @@ _Z11dot_productPKfS0_i:
 	movl	%edx, %eax
 	andl	$-4, %eax
 	testb	$3, %dl
-	je	.L2
+	je	.L11
 .L3:
 	movslq	%eax, %r8
 	movss	(%rcx,%r8,4), %xmm1
@@ -53,28 +53,27 @@ _Z11dot_productPKfS0_i:
 	leal	1(%rax), %r8d
 	addss	%xmm1, %xmm0
 	cmpl	%r8d, %edx
-	jle	.L2
+	jle	.L1
 	movss	4(%rcx,%rdi), %xmm1
 	mulss	4(%rsi,%rdi), %xmm1
 	addl	$2, %eax
 	addss	%xmm1, %xmm0
 	cmpl	%eax, %edx
-	jle	.L2
+	jle	.L1
 	movss	8(%rsi,%rdi), %xmm1
 	mulss	8(%rcx,%rdi), %xmm1
 	addss	%xmm1, %xmm0
-.L2:
-#APP
-# 10 "source.cpp" 1
-	# LLVM-MCA-END
-# 0 "" 2
-#NO_APP
 	ret
 	.p2align 4,,10
 	.p2align 3
 .L7:
 	pxor	%xmm0, %xmm0
-	jmp	.L2
+.L1:
+	ret
+	.p2align 4,,10
+	.p2align 3
+.L11:
+	ret
 .L8:
 	xorl	%eax, %eax
 	pxor	%xmm0, %xmm0
@@ -91,11 +90,8 @@ main:
 	.cfi_startproc
 	endbr64
 #APP
-# 7 "source.cpp" 1
+# 5 "source.cpp" 1
 	# LLVM-MCA-BEGIN CGX-MCA-target
-# 0 "" 2
-# 10 "source.cpp" 1
-	# LLVM-MCA-END
 # 0 "" 2
 #NO_APP
 	xorl	%eax, %eax

@@ -8,7 +8,7 @@ _Z11dot_productPKfS0_i:
 	.cfi_startproc
 	endbr64
 #APP
-# 7 "source.cpp" 1
+# 5 "source.cpp" 1
 	# LLVM-MCA-BEGIN CGX-MCA-target
 # 0 "" 2
 #NO_APP
@@ -27,19 +27,14 @@ _Z11dot_productPKfS0_i:
 	addss	%xmm0, %xmm1
 	cmpq	%rax, %rdx
 	jne	.L3
-.L2:
-#APP
-# 10 "source.cpp" 1
-	# LLVM-MCA-END
-# 0 "" 2
-#NO_APP
 	movaps	%xmm1, %xmm0
 	ret
 	.p2align 4,,10
 	.p2align 3
 .L4:
 	pxor	%xmm1, %xmm1
-	jmp	.L2
+	movaps	%xmm1, %xmm0
+	ret
 	.cfi_endproc
 .LFE0:
 	.size	_Z11dot_productPKfS0_i, .-_Z11dot_productPKfS0_i

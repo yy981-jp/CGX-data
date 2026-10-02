@@ -9,13 +9,13 @@ _Z11dot_productPKfS0_i:
 .LFB0:
 	.cfi_startproc
 #APP
-// 7 "source.cpp" 1
+// 5 "source.cpp" 1
 	# LLVM-MCA-BEGIN CGX-MCA-target
 // 0 "" 2
 #NO_APP
 	movi	v0.2s, #0
 	cmp	w2, 0
-	ble	.L2
+	ble	.L1
 	sbfiz	x3, x2, 2, 32
 	mov	x2, 0
 	.p2align 3,,7
@@ -26,12 +26,7 @@ _Z11dot_productPKfS0_i:
 	fmadd	s0, s2, s1, s0
 	cmp	x3, x2
 	bne	.L3
-.L2:
-#APP
-// 10 "source.cpp" 1
-	# LLVM-MCA-END
-// 0 "" 2
-#NO_APP
+.L1:
 	ret
 	.cfi_endproc
 .LFE0:
