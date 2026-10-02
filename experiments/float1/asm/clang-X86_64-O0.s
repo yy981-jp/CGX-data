@@ -17,6 +17,9 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	movl	%edx, -20(%rbp)
 	xorps	%xmm0, %xmm0
 	movss	%xmm0, -24(%rbp)
+	#APP
+	# LLVM-MCA-BEGIN CGX-MCA-target
+	#NO_APP
 	movl	$0, -28(%rbp)
 .LBB0_1:                                # =>This Inner Loop Header: Depth=1
 	movl	-28(%rbp), %eax
@@ -39,6 +42,9 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	movl	%eax, -28(%rbp)
 	jmp	.LBB0_1
 .LBB0_4:
+	#APP
+	# LLVM-MCA-END
+	#NO_APP
 	movss	-24(%rbp), %xmm0                # xmm0 = mem[0],zero,zero,zero
 	popq	%rbp
 	.cfi_def_cfa %rsp, 8
