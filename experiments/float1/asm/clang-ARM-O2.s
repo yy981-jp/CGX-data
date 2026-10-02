@@ -7,6 +7,9 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	.cfi_startproc
 // %bb.0:
 	cmp	w2, #1
+	//APP
+	// LLVM-MCA-BEGIN CGX-MCA-target
+	//NO_APP
 	b.lt	.LBB0_3
 // %bb.1:
 	movi	d0, #0000000000000000
@@ -18,6 +21,9 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	b	.LBB0_7
 .LBB0_3:
 	movi	d0, #0000000000000000
+	//APP
+	// LLVM-MCA-END
+	//NO_APP
 	ret
 .LBB0_4:
 	and	x9, x8, #0x7ffffff8
@@ -62,6 +68,9 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	fmadd	s0, s1, s2, s0
 	b.ne	.LBB0_8
 .LBB0_9:
+	//APP
+	// LLVM-MCA-END
+	//NO_APP
 	ret
 .Lfunc_end0:
 	.size	_Z11dot_productPKfS0_i, .Lfunc_end0-_Z11dot_productPKfS0_i
@@ -74,6 +83,12 @@ main:                                   // @main
 	.cfi_startproc
 // %bb.0:
 	mov	w0, wzr
+	//APP
+	// LLVM-MCA-BEGIN CGX-MCA-target
+	//NO_APP
+	//APP
+	// LLVM-MCA-END
+	//NO_APP
 	ret
 .Lfunc_end1:
 	.size	main, .Lfunc_end1-main

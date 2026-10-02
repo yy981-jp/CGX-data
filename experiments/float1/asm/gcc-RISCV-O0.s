@@ -22,6 +22,11 @@ _Z11dot_productPKfS0_i:
 	sw	a5,-52(s0)
 	fmv.s.x	fa5,zero
 	fsw	fa5,-24(s0)
+#APP
+# 7 "source.cpp" 1
+	# LLVM-MCA-BEGIN CGX-MCA-target
+# 0 "" 2
+#NO_APP
 	sw	zero,-20(s0)
 	j	.L2
 .L3:
@@ -49,6 +54,11 @@ _Z11dot_productPKfS0_i:
 	sext.w	a4,a4
 	sext.w	a5,a5
 	blt	a4,a5,.L3
+#APP
+# 10 "source.cpp" 1
+	# LLVM-MCA-END
+# 0 "" 2
+#NO_APP
 	flw	fa5,-24(s0)
 	fmv.s	fa0,fa5
 	ld	s0,56(sp)

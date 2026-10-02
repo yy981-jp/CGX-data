@@ -13,6 +13,11 @@ _Z11dot_productPKfS0_i:
 	str	x1, [sp, 16]
 	str	w2, [sp, 12]
 	str	wzr, [sp, 40]
+#APP
+// 7 "source.cpp" 1
+	# LLVM-MCA-BEGIN CGX-MCA-target
+// 0 "" 2
+#NO_APP
 	str	wzr, [sp, 44]
 	b	.L2
 .L3:
@@ -38,6 +43,11 @@ _Z11dot_productPKfS0_i:
 	ldr	w0, [sp, 12]
 	cmp	w1, w0
 	blt	.L3
+#APP
+// 10 "source.cpp" 1
+	# LLVM-MCA-END
+// 0 "" 2
+#NO_APP
 	ldr	s0, [sp, 40]
 	add	sp, sp, 48
 	.cfi_def_cfa_offset 0

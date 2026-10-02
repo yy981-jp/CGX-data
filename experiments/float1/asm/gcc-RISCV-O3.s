@@ -10,8 +10,13 @@
 _Z11dot_productPKfS0_i:
 .LFB0:
 	.cfi_startproc
+#APP
+# 7 "source.cpp" 1
+	# LLVM-MCA-BEGIN CGX-MCA-target
+# 0 "" 2
+#NO_APP
 	fmv.s.x	fa0,zero
-	ble	a2,zero,.L4
+	ble	a2,zero,.L2
 	slli	a2,a2,2
 	add	a5,a0,a2
 .L3:
@@ -21,8 +26,12 @@ _Z11dot_productPKfS0_i:
 	addi	a1,a1,4
 	fmadd.s	fa0,fa4,fa5,fa0
 	bne	a5,a0,.L3
-	ret
-.L4:
+.L2:
+#APP
+# 10 "source.cpp" 1
+	# LLVM-MCA-END
+# 0 "" 2
+#NO_APP
 	ret
 	.cfi_endproc
 .LFE0:
@@ -34,6 +43,14 @@ _Z11dot_productPKfS0_i:
 main:
 .LFB1:
 	.cfi_startproc
+#APP
+# 7 "source.cpp" 1
+	# LLVM-MCA-BEGIN CGX-MCA-target
+# 0 "" 2
+# 10 "source.cpp" 1
+	# LLVM-MCA-END
+# 0 "" 2
+#NO_APP
 	li	a0,0
 	ret
 	.cfi_endproc

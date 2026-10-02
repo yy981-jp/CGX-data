@@ -12,6 +12,9 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	str	x1, [sp, #16]
 	str	w2, [sp, #12]
 	str	wzr, [sp, #8]
+	//APP
+	// LLVM-MCA-BEGIN CGX-MCA-target
+	//NO_APP
 	str	wzr, [sp, #4]
 	b	.LBB0_1
 .LBB0_1:                                // =>This Inner Loop Header: Depth=1
@@ -37,6 +40,9 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	str	w8, [sp, #4]
 	b	.LBB0_1
 .LBB0_4:
+	//APP
+	// LLVM-MCA-END
+	//NO_APP
 	ldr	s0, [sp, #8]
 	add	sp, sp, #32
 	.cfi_def_cfa_offset 0
