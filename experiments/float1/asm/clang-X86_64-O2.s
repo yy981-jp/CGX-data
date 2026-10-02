@@ -24,9 +24,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	jmp	.LBB0_5
 .LBB0_1:
 	xorps	%xmm0, %xmm0
-	#APP
-	# LLVM-MCA-END
-	#NO_APP
 	retq
 .LBB0_8:
 	andl	$2147483644, %r8d               # imm = 0x7FFFFFFC
@@ -65,9 +62,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	cmpq	%rsi, %rax
 	jne	.LBB0_6
 .LBB0_7:
-	#APP
-	# LLVM-MCA-END
-	#NO_APP
 	retq
 .Lfunc_end0:
 	.size	_Z11dot_productPKfS0_i, .Lfunc_end0-_Z11dot_productPKfS0_i
@@ -81,9 +75,6 @@ main:                                   # @main
 # %bb.0:
 	#APP
 	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
-	#APP
-	# LLVM-MCA-END
 	#NO_APP
 	xorl	%eax, %eax
 	retq

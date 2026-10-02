@@ -14,13 +14,13 @@ _Z11dot_productPKfS0_i:
 	movq	%rdi, -24(%rbp)
 	movq	%rsi, -32(%rbp)
 	movl	%edx, -36(%rbp)
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -8(%rbp)
 #APP
-# 7 "source.cpp" 1
+# 5 "source.cpp" 1
 	# LLVM-MCA-BEGIN CGX-MCA-target
 # 0 "" 2
 #NO_APP
+	pxor	%xmm0, %xmm0
+	movss	%xmm0, -8(%rbp)
 	movl	$0, -4(%rbp)
 	jmp	.L2
 .L3:
@@ -45,11 +45,6 @@ _Z11dot_productPKfS0_i:
 	movl	-4(%rbp), %eax
 	cmpl	-36(%rbp), %eax
 	jl	.L3
-#APP
-# 10 "source.cpp" 1
-	# LLVM-MCA-END
-# 0 "" 2
-#NO_APP
 	movss	-8(%rbp), %xmm0
 	popq	%rbp
 	.cfi_def_cfa 7, 8
