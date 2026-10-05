@@ -19,9 +19,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	sd	a0, 24(sp)
 	sd	a1, 16(sp)
 	sw	a2, 12(sp)
-	#APP
-	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
 	li	a0, 0
 	sw	a0, 8(sp)
 	sw	a0, 4(sp)

@@ -7,9 +7,6 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	.cfi_startproc
 // %bb.0:
 	cmp	w2, #1
-	//APP
-	// LLVM-MCA-BEGIN CGX-MCA-target
-	//NO_APP
 	b.lt	.LBB0_3
 // %bb.1:
 	movi	d0, #0000000000000000
@@ -77,9 +74,6 @@ main:                                   // @main
 	.cfi_startproc
 // %bb.0:
 	mov	w0, wzr
-	//APP
-	// LLVM-MCA-BEGIN CGX-MCA-target
-	//NO_APP
 	ret
 .Lfunc_end1:
 	.size	main, .Lfunc_end1-main

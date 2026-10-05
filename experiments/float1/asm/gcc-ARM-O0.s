@@ -12,11 +12,6 @@ _Z11dot_productPKfS0_i:
 	str	x0, [sp, 24]
 	str	x1, [sp, 16]
 	str	w2, [sp, 12]
-#APP
-// 5 "source.cpp" 1
-	# LLVM-MCA-BEGIN CGX-MCA-target
-// 0 "" 2
-#NO_APP
 	str	wzr, [sp, 40]
 	str	wzr, [sp, 44]
 	b	.L2
