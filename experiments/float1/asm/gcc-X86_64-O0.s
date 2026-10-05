@@ -2,75 +2,12 @@
 	.text
 .Ltext0:
 	.file 0 "/home/yy981/cpp/CGX-data/experiments/float1" "source.cpp"
-	.globl	_Z11dot_productPKfS0_i
-	.type	_Z11dot_productPKfS0_i, @function
-_Z11dot_productPKfS0_i:
-.LFB0:
-	.file 1 "source.cpp"
-	.loc 1 1 58
-	.cfi_startproc
-	endbr64
-	pushq	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp
-	.cfi_def_cfa_register 6
-	movq	%rdi, -24(%rbp)
-	movq	%rsi, -32(%rbp)
-	movl	%edx, -36(%rbp)
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -8(%rbp)
-.LBB2:
-	.file 2 "CGX-MCA-BEGIN"
-	.loc 2 2 10
-	movl	$0, -4(%rbp)
-	.loc 2 2 2
-	jmp	.L2
-.L3:
-	.loc 2 3 12
-	movl	-4(%rbp), %eax
-	cltq
-	.loc 2 3 13
-	leaq	0(,%rax,4), %rdx
-	movq	-24(%rbp), %rax
-	addq	%rdx, %rax
-	movss	(%rax), %xmm1
-	.loc 2 3 19
-	movl	-4(%rbp), %eax
-	cltq
-	.loc 2 3 20
-	leaq	0(,%rax,4), %rdx
-	movq	-32(%rbp), %rax
-	addq	%rdx, %rax
-	movss	(%rax), %xmm0
-	.loc 2 3 15
-	mulss	%xmm1, %xmm0
-	.loc 2 3 7
-	movss	-8(%rbp), %xmm1
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -8(%rbp)
-	.loc 2 2 2 discriminator 3
-	addl	$1, -4(%rbp)
-.L2:
-	.loc 2 2 19 discriminator 1
-	movl	-4(%rbp), %eax
-	cmpl	-36(%rbp), %eax
-	jl	.L3
-.LBE2:
-	.loc 2 5 9
-	movss	-8(%rbp), %xmm0
-	popq	%rbp
-	.cfi_def_cfa 7, 8
-	ret
-	.cfi_endproc
-.LFE0:
-	.size	_Z11dot_productPKfS0_i, .-_Z11dot_productPKfS0_i
 	.globl	main
 	.type	main, @function
 main:
-.LFB1:
-	.file 3 "CGX-MCA-END"
-	.loc 3 3 12
+.LFB0:
+	.file 1 "source.cpp"
+	.loc 1 1 12
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -78,12 +15,12 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$64, %rsp
-	.loc 3 3 12
+	subq	$80, %rsp
+	.loc 1 1 12
 	movq	%fs:40, %rax
 	movq	%rax, -8(%rbp)
 	xorl	%eax, %eax
-	.loc 3 4 8
+	.loc 1 2 8
 	pxor	%xmm0, %xmm0
 	movss	%xmm0, -64(%rbp)
 	movss	.LC1(%rip), %xmm0
@@ -94,7 +31,7 @@ main:
 	movss	%xmm0, -52(%rbp)
 	movss	.LC4(%rip), %xmm0
 	movss	%xmm0, -48(%rbp)
-	.loc 3 5 8
+	.loc 1 3 8
 	movss	.LC5(%rip), %xmm0
 	movss	%xmm0, -32(%rbp)
 	movss	.LC6(%rip), %xmm0
@@ -105,25 +42,54 @@ main:
 	movss	%xmm0, -20(%rbp)
 	movss	.LC9(%rip), %xmm0
 	movss	%xmm0, -16(%rbp)
-	.loc 3 7 13
-	leaq	-32(%rbp), %rcx
-	leaq	-64(%rbp), %rax
-	movl	$5, %edx
-	movq	%rcx, %rsi
-	movq	%rax, %rdi
-	call	_Z11dot_productPKfS0_i
-	.loc 3 8 1
-	movl	$0, %eax
+	.loc 1 4 6
+	movl	$5, -68(%rbp)
+	.loc 1 6 8
+	pxor	%xmm0, %xmm0
+	movss	%xmm0, -76(%rbp)
+.LBB2:
+	.file 2 "CGX-MCA-BEGIN"
+	.loc 2 1 10
+	movl	$0, -72(%rbp)
+	.loc 2 1 2
+	jmp	.L2
+.L3:
+	.loc 2 2 13
+	movl	-72(%rbp), %eax
+	cltq
+	movss	-64(%rbp,%rax,4), %xmm1
+	.loc 2 2 20
+	movl	-72(%rbp), %eax
+	cltq
+	movss	-32(%rbp,%rax,4), %xmm0
+	.loc 2 2 15
+	mulss	%xmm1, %xmm0
+	.loc 2 2 7
+	movss	-76(%rbp), %xmm1
+	addss	%xmm1, %xmm0
+	movss	%xmm0, -76(%rbp)
+	.loc 2 1 2 discriminator 3
+	addl	$1, -72(%rbp)
+.L2:
+	.loc 2 1 19 discriminator 1
+	movl	-72(%rbp), %eax
+	cmpl	-68(%rbp), %eax
+	jl	.L3
+.LBE2:
+	movss	-76(%rbp), %xmm0
+	cvttss2sil	%xmm0, %eax
+	.file 3 "CGX-MCA-END"
+	.loc 3 1 1
 	movq	-8(%rbp), %rdx
 	subq	%fs:40, %rdx
-	je	.L7
+	je	.L5
 	call	__stack_chk_fail@PLT
-.L7:
+.L5:
 	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE1:
+.LFE0:
 	.size	main, .-main
 	.section	.rodata
 	.align 4
@@ -157,7 +123,7 @@ main:
 .Letext0:
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x63
+	.long	0x45
 	.value	0x5
 	.byte	0x1
 	.byte	0x8
@@ -172,19 +138,9 @@ main:
 	.long	.Ldebug_line0
 	.uleb128 0x2
 	.long	.LASF3
-	.byte	0x3
-	.byte	0x3
+	.byte	0x1
+	.byte	0x1
 	.byte	0x5
-	.quad	.LFB1
-	.quad	.LFE1-.LFB1
-	.uleb128 0x1
-	.byte	0x9c
-	.uleb128 0x3
-	.long	.LASF4
-	.byte	0x1
-	.byte	0x1
-	.byte	0x7
-	.long	.LASF5
 	.quad	.LFB0
 	.quad	.LFE0-.LFB0
 	.uleb128 0x1
@@ -234,31 +190,6 @@ main:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x3
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0xe
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x7a
-	.uleb128 0x19
-	.byte	0
-	.byte	0
 	.byte	0
 	.section	.debug_aranges,"",@progbits
 	.long	0x2c
@@ -275,10 +206,6 @@ main:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF5:
-	.string	"_Z11dot_productPKfS0_i"
-.LASF4:
-	.string	"dot_product"
 .LASF2:
 	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:

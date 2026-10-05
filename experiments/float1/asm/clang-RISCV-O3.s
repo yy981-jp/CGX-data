@@ -2,57 +2,22 @@
 	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0_zcd1p0"
 	.file	"source.cpp"
 	.text
-	.globl	_Z11dot_productPKfS0_i          # -- Begin function _Z11dot_productPKfS0_i
-	.p2align	1
-	.type	_Z11dot_productPKfS0_i,@function
-_Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
-.Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float1" "source.cpp" md5 0x7ee2336757f594880f9d0f9478831218
-	.loc	0 1 0                           # source.cpp:1:0
-	.cfi_startproc
-# %bb.0:
-	fmv.w.x	fa0, zero
-.Ltmp0:
-	.file	1 "CGX-MCA-BEGIN"
-	.loc	1 2 2 prologue_end              # CGX-MCA-BEGIN:2:2
-	blez	a2, .LBB0_3
-# %bb.1:
-	slli	a2, a2, 2
-	add	a2, a2, a1
-.LBB0_2:                                # =>This Inner Loop Header: Depth=1
-	.loc	1 3 10                          # CGX-MCA-BEGIN:3:10
-	flw	fa5, 0(a0)
-	.loc	1 3 17 is_stmt 0                # CGX-MCA-BEGIN:3:17
-	flw	fa4, 0(a1)
-	.loc	1 3 7                           # CGX-MCA-BEGIN:3:7
-	fmadd.s	fa0, fa5, fa4, fa0
-	.loc	1 2 19 is_stmt 1                # CGX-MCA-BEGIN:2:19
-	addi	a1, a1, 4
-	addi	a0, a0, 4
-	.loc	1 2 2                           # CGX-MCA-BEGIN:2:2
-	bne	a1, a2, .LBB0_2
-.LBB0_3:
-	.loc	1 5 2                           # CGX-MCA-BEGIN:5:2
-	ret
-.Ltmp1:
-.Lfunc_end0:
-	.size	_Z11dot_productPKfS0_i, .Lfunc_end0-_Z11dot_productPKfS0_i
-	.cfi_endproc
-                                        # -- End function
 	.globl	main                            # -- Begin function main
 	.p2align	1
 	.type	main,@function
 main:                                   # @main
-.Lfunc_begin1:
+.Lfunc_begin0:
+	.file	0 "/home/yy981/cpp/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
+	.loc	0 1 0                           # source.cpp:1:0
 	.cfi_startproc
 # %bb.0:
-	.file	2 "CGX-MCA-END"
-	.loc	2 8 1 prologue_end              # CGX-MCA-END:8:1
-	li	a0, 0
+	.file	1 "CGX-MCA-END"
+	.loc	1 0 2 is_stmt 0                 # CGX-MCA-END:0:2
+	li	a0, 1
 	ret
-.Ltmp2:
-.Lfunc_end1:
-	.size	main, .Lfunc_end1-main
+.Ltmp0:
+.Lfunc_end0:
+	.size	main, .Lfunc_end0-main
 	.cfi_endproc
                                         # -- End function
 	.section	.debug_abbrev,"",@progbits
@@ -96,7 +61,7 @@ main:                                   # @main
 	.word	.Lline_table_start0             # DW_AT_stmt_list
 	.byte	2                               # DW_AT_comp_dir
 	.byte	0                               # DW_AT_low_pc
-	.word	.Lfunc_end1-.Lfunc_begin0       # DW_AT_high_pc
+	.word	.Lfunc_end0-.Lfunc_begin0       # DW_AT_high_pc
 	.word	.Laddr_table_base0              # DW_AT_addr_base
 .Ldebug_info_end0:
 	.section	.debug_str_offsets,"",@progbits
