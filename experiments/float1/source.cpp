@@ -1,15 +1,12 @@
-#include "../def.h"
-
-
 float dot_product(const float *a, const float *b, int n) {
-	CGX_MCA_BEGIN
+	#line 0 "CGX-MCA-BEGIN"
 	float sum = 0.0f;
 
 	for(int i = 0; i < n; ++i)
 		sum += a[i] * b[i];
 
 	return sum;
-CGX_MCA_END
+	#line 0 "CGX-MCA-END"
 }
 
 
