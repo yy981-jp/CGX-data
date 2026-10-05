@@ -8,11 +8,6 @@ _Z11dot_productPKfS0_i:
 	.cfi_startproc
 	endbr64
 	movq	%rdi, %rcx
-#APP
-# 5 "source.cpp" 1
-	# LLVM-MCA-BEGIN CGX-MCA-target
-# 0 "" 2
-#NO_APP
 	testl	%edx, %edx
 	jle	.L7
 	leal	-1(%rdx), %eax
@@ -89,11 +84,6 @@ main:
 .LFB1:
 	.cfi_startproc
 	endbr64
-#APP
-# 5 "source.cpp" 1
-	# LLVM-MCA-BEGIN CGX-MCA-target
-# 0 "" 2
-#NO_APP
 	xorl	%eax, %eax
 	ret
 	.cfi_endproc

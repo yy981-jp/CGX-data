@@ -10,11 +10,6 @@
 _Z11dot_productPKfS0_i:
 .LFB0:
 	.cfi_startproc
-#APP
-# 5 "source.cpp" 1
-	# LLVM-MCA-BEGIN CGX-MCA-target
-# 0 "" 2
-#NO_APP
 	fmv.s.x	fa0,zero
 	ble	a2,zero,.L4
 	slli	a2,a2,2
@@ -39,11 +34,6 @@ _Z11dot_productPKfS0_i:
 main:
 .LFB1:
 	.cfi_startproc
-#APP
-# 5 "source.cpp" 1
-	# LLVM-MCA-BEGIN CGX-MCA-target
-# 0 "" 2
-#NO_APP
 	li	a0,0
 	ret
 	.cfi_endproc

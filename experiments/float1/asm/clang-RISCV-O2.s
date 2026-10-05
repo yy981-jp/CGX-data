@@ -8,9 +8,6 @@
 _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	.cfi_startproc
 # %bb.0:
-	#APP
-	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
 	fmv.w.x	fa0, zero
 	blez	a2, .LBB0_3
 # %bb.1:
@@ -36,9 +33,6 @@ main:                                   # @main
 	.cfi_startproc
 # %bb.0:
 	li	a0, 0
-	#APP
-	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
 	ret
 .Lfunc_end1:
 	.size	main, .Lfunc_end1-main

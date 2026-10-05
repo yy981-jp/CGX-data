@@ -20,11 +20,6 @@ _Z11dot_productPKfS0_i:
 	sd	a1,-48(s0)
 	mv	a5,a2
 	sw	a5,-52(s0)
-#APP
-# 5 "source.cpp" 1
-	# LLVM-MCA-BEGIN CGX-MCA-target
-# 0 "" 2
-#NO_APP
 	fmv.s.x	fa5,zero
 	fsw	fa5,-24(s0)
 	sw	zero,-20(s0)

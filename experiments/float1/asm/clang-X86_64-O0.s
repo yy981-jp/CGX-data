@@ -15,9 +15,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	movq	%rdi, -8(%rbp)
 	movq	%rsi, -16(%rbp)
 	movl	%edx, -20(%rbp)
-	#APP
-	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
 	xorps	%xmm0, %xmm0
 	movss	%xmm0, -24(%rbp)
 	movl	$0, -28(%rbp)

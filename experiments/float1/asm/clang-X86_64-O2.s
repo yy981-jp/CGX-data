@@ -7,9 +7,6 @@
 _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 	.cfi_startproc
 # %bb.0:
-	#APP
-	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
 	testl	%edx, %edx
 	jle	.LBB0_1
 # %bb.2:
@@ -73,9 +70,6 @@ _Z11dot_productPKfS0_i:                 # @_Z11dot_productPKfS0_i
 main:                                   # @main
 	.cfi_startproc
 # %bb.0:
-	#APP
-	# LLVM-MCA-BEGIN CGX-MCA-target
-	#NO_APP
 	xorl	%eax, %eax
 	retq
 .Lfunc_end1:

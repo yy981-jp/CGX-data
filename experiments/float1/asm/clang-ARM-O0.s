@@ -11,9 +11,6 @@ _Z11dot_productPKfS0_i:                 // @_Z11dot_productPKfS0_i
 	str	x0, [sp, #24]
 	str	x1, [sp, #16]
 	str	w2, [sp, #12]
-	//APP
-	// LLVM-MCA-BEGIN CGX-MCA-target
-	//NO_APP
 	str	wzr, [sp, #8]
 	str	wzr, [sp, #4]
 	b	.LBB0_1
