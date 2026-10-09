@@ -5,69 +5,6 @@
         "InstructionList": [
           {
             "Instruction": 0,
-            "Latency": 100,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.25,
-            "hasUnmodeledSideEffects": true,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 1,
-            "Latency": 1,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.25,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 2,
-            "Latency": 1,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.5,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 3,
-            "Latency": 1,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.25,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 4,
-            "Latency": 0,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.16666666666666666,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 5,
-            "Latency": 0,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.16666666666666666,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 6,
-            "Latency": 1,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.5,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 7,
             "Latency": 5,
             "NumMicroOpcodes": 1,
             "RThroughput": 0.5,
@@ -76,7 +13,7 @@
             "mayStore": false
           },
           {
-            "Instruction": 8,
+            "Instruction": 1,
             "Latency": 9,
             "NumMicroOpcodes": 2,
             "RThroughput": 0.5,
@@ -85,7 +22,7 @@
             "mayStore": false
           },
           {
-            "Instruction": 9,
+            "Instruction": 2,
             "Latency": 1,
             "NumMicroOpcodes": 1,
             "RThroughput": 0.25,
@@ -94,7 +31,7 @@
             "mayStore": false
           },
           {
-            "Instruction": 10,
+            "Instruction": 3,
             "Latency": 4,
             "NumMicroOpcodes": 1,
             "RThroughput": 0.5,
@@ -103,7 +40,7 @@
             "mayStore": false
           },
           {
-            "Instruction": 11,
+            "Instruction": 4,
             "Latency": 1,
             "NumMicroOpcodes": 1,
             "RThroughput": 0.25,
@@ -112,7 +49,7 @@
             "mayStore": false
           },
           {
-            "Instruction": 12,
+            "Instruction": 5,
             "Latency": 1,
             "NumMicroOpcodes": 1,
             "RThroughput": 0.5,
@@ -121,446 +58,134 @@
             "mayStore": false
           },
           {
-            "Instruction": 13,
-            "Latency": 1,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.33333333333333331,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 14,
-            "Latency": 7,
-            "NumMicroOpcodes": 3,
+            "Instruction": 6,
+            "Latency": 6,
+            "NumMicroOpcodes": 2,
             "RThroughput": 1,
-            "hasUnmodeledSideEffects": true,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 15,
-            "Latency": 0,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.16666666666666666,
             "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 16,
-            "Latency": 1,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.33333333333333331,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 17,
-            "Latency": 7,
-            "NumMicroOpcodes": 3,
-            "RThroughput": 1,
-            "hasUnmodeledSideEffects": true,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 18,
-            "Latency": 100,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.25,
-            "hasUnmodeledSideEffects": true,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 19,
-            "Latency": 0,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.16666666666666666,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
-            "mayStore": false
-          },
-          {
-            "Instruction": 20,
-            "Latency": 7,
-            "NumMicroOpcodes": 3,
-            "RThroughput": 1,
-            "hasUnmodeledSideEffects": true,
             "mayLoad": false,
             "mayStore": false
           }
         ]
       },
       "Instructions": [
-        "endbr64",
-        "testl\t%edx, %edx",
-        "jle\t.L4",
-        "movslq\t%edx, %rdx",
-        "xorl\t%eax, %eax",
-        "pxor\t%xmm1, %xmm1",
-        "shlq\t$2, %rdx",
-        "movss\t(%rdi,%rax), %xmm0",
-        "mulss\t(%rsi,%rax), %xmm0",
+        "movss\t(%rcx,%rax), %xmm0",
+        "mulss\t(%rdx,%rax), %xmm0",
         "addq\t$4, %rax",
         "addss\t%xmm0, %xmm1",
-        "cmpq\t%rax, %rdx",
-        "jne\t.L3",
-        "movaps\t%xmm1, %xmm0",
-        "retq",
-        "pxor\t%xmm1, %xmm1",
-        "movaps\t%xmm1, %xmm0",
-        "retq",
-        "endbr64",
-        "xorl\t%eax, %eax",
-        "retq"
+        "cmpq\t$20, %rax",
+        "jne\t.L2",
+        "cvttss2si\t%xmm1, %eax"
       ],
       "Name": "",
       "ResourcePressureView": {
         "ResourcePressureInfo": [
           {
             "InstructionIndex": 0,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.46000000000000002
-          },
-          {
-            "InstructionIndex": 0,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.20000000000000001
-          },
-          {
-            "InstructionIndex": 0,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.19
-          },
-          {
-            "InstructionIndex": 0,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.14999999999999999
-          },
-          {
-            "InstructionIndex": 1,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.34999999999999998
-          },
-          {
-            "InstructionIndex": 1,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.25
-          },
-          {
-            "InstructionIndex": 1,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.28999999999999998
-          },
-          {
-            "InstructionIndex": 1,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.11
-          },
-          {
-            "InstructionIndex": 2,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.71999999999999997
-          },
-          {
-            "InstructionIndex": 2,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.28000000000000003
-          },
-          {
-            "InstructionIndex": 3,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.28000000000000003
-          },
-          {
-            "InstructionIndex": 3,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.42999999999999999
-          },
-          {
-            "InstructionIndex": 3,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.26000000000000001
-          },
-          {
-            "InstructionIndex": 3,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.029999999999999999
-          },
-          {
-            "InstructionIndex": 6,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.59999999999999998
-          },
-          {
-            "InstructionIndex": 6,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.40000000000000002
-          },
-          {
-            "InstructionIndex": 7,
-            "ResourceIndex": 4,
-            "ResourceUsage": 0.57999999999999996
-          },
-          {
-            "InstructionIndex": 7,
             "ResourceIndex": 5,
-            "ResourceUsage": 0.41999999999999998
-          },
-          {
-            "InstructionIndex": 8,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.20000000000000001
-          },
-          {
-            "InstructionIndex": 8,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.80000000000000004
-          },
-          {
-            "InstructionIndex": 8,
-            "ResourceIndex": 4,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 8,
-            "ResourceIndex": 5,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 9,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.10000000000000001
-          },
-          {
-            "InstructionIndex": 9,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.64000000000000001
-          },
-          {
-            "InstructionIndex": 9,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.26000000000000001
-          },
-          {
-            "InstructionIndex": 10,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.029999999999999999
-          },
-          {
-            "InstructionIndex": 10,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.96999999999999997
-          },
-          {
-            "InstructionIndex": 11,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.13
-          },
-          {
-            "InstructionIndex": 11,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.14000000000000001
-          },
-          {
-            "InstructionIndex": 11,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.46999999999999997
-          },
-          {
-            "InstructionIndex": 11,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.26000000000000001
-          },
-          {
-            "InstructionIndex": 12,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.63
-          },
-          {
-            "InstructionIndex": 12,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.37
-          },
-          {
-            "InstructionIndex": 13,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.29999999999999999
-          },
-          {
-            "InstructionIndex": 13,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.17000000000000001
-          },
-          {
-            "InstructionIndex": 13,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.53000000000000003
-          },
-          {
-            "InstructionIndex": 14,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.029999999999999999
-          },
-          {
-            "InstructionIndex": 14,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.46999999999999997
-          },
-          {
-            "InstructionIndex": 14,
-            "ResourceIndex": 4,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 14,
-            "ResourceIndex": 5,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 14,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 14,
-            "ResourceIndex": 8,
             "ResourceUsage": 1
           },
           {
-            "InstructionIndex": 16,
+            "InstructionIndex": 1,
             "ResourceIndex": 2,
+            "ResourceUsage": 0.98999999999999999
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 3,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 4,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.97999999999999998
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.02
+          },
+          {
+            "InstructionIndex": 3,
+            "ResourceIndex": 3,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 4,
+            "ResourceIndex": 7,
             "ResourceUsage": 0.51000000000000001
           },
           {
-            "InstructionIndex": 16,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.28999999999999998
-          },
-          {
-            "InstructionIndex": 16,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.20000000000000001
-          },
-          {
-            "InstructionIndex": 17,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.16
-          },
-          {
-            "InstructionIndex": 17,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.28000000000000003
-          },
-          {
-            "InstructionIndex": 17,
-            "ResourceIndex": 4,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 17,
-            "ResourceIndex": 5,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 17,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.56000000000000005
-          },
-          {
-            "InstructionIndex": 17,
+            "InstructionIndex": 4,
             "ResourceIndex": 8,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 2,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.98999999999999999
+          },
+          {
+            "InstructionIndex": 6,
+            "ResourceIndex": 2,
             "ResourceUsage": 1
           },
           {
-            "InstructionIndex": 18,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.050000000000000003
-          },
-          {
-            "InstructionIndex": 18,
+            "InstructionIndex": 6,
             "ResourceIndex": 3,
-            "ResourceUsage": 0.5
-          },
-          {
-            "InstructionIndex": 18,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.45000000000000001
-          },
-          {
-            "InstructionIndex": 20,
-            "ResourceIndex": 2,
-            "ResourceUsage": 0.29999999999999999
-          },
-          {
-            "InstructionIndex": 20,
-            "ResourceIndex": 3,
-            "ResourceUsage": 0.050000000000000003
-          },
-          {
-            "InstructionIndex": 20,
-            "ResourceIndex": 4,
-            "ResourceUsage": 0.41999999999999998
-          },
-          {
-            "InstructionIndex": 20,
-            "ResourceIndex": 5,
-            "ResourceUsage": 0.57999999999999996
-          },
-          {
-            "InstructionIndex": 20,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.65000000000000002
-          },
-          {
-            "InstructionIndex": 20,
-            "ResourceIndex": 8,
             "ResourceUsage": 1
           },
           {
-            "InstructionIndex": 21,
+            "InstructionIndex": 7,
             "ResourceIndex": 2,
-            "ResourceUsage": 4.8499999999999996
+            "ResourceUsage": 2
           },
           {
-            "InstructionIndex": 21,
+            "InstructionIndex": 7,
             "ResourceIndex": 3,
-            "ResourceUsage": 4.5499999999999998
+            "ResourceUsage": 2.0099999999999998
           },
           {
-            "InstructionIndex": 21,
+            "InstructionIndex": 7,
             "ResourceIndex": 4,
-            "ResourceUsage": 2.5
+            "ResourceUsage": 1
           },
           {
-            "InstructionIndex": 21,
+            "InstructionIndex": 7,
             "ResourceIndex": 5,
-            "ResourceUsage": 2.5
+            "ResourceUsage": 1
           },
           {
-            "InstructionIndex": 21,
+            "InstructionIndex": 7,
             "ResourceIndex": 7,
-            "ResourceUsage": 4.7400000000000002
+            "ResourceUsage": 1.49
           },
           {
-            "InstructionIndex": 21,
+            "InstructionIndex": 7,
             "ResourceIndex": 8,
-            "ResourceUsage": 4.8600000000000003
+            "ResourceUsage": 1.5
           }
         ]
       },
       "SummaryView": {
-        "BlockRThroughput": 4.666666666666667,
+        "BlockRThroughput": 1.5,
         "DispatchWidth": 6,
-        "IPC": 1.5601783060921248,
-        "Instructions": 2100,
+        "IPC": 0.36784025223331579,
+        "Instructions": 700,
         "Iterations": 100,
-        "TotalCycles": 1346,
-        "TotaluOps": 2800,
-        "uOpsPerCycle": 2.0802377414561666
+        "TotalCycles": 1903,
+        "TotaluOps": 900,
+        "uOpsPerCycle": 0.47293746715712032
       }
     }
   ],
