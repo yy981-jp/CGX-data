@@ -1,0 +1,97 @@
+{
+  "CodeRegions": [
+    {
+      "InstructionInfoView": {
+        "InstructionList": [
+          {
+            "Instruction": 0,
+            "Latency": 100,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.25,
+            "hasUnmodeledSideEffects": true,
+            "mayLoad": false,
+            "mayStore": false
+          }
+        ]
+      },
+      "Instructions": [
+        "endbr64"
+      ],
+      "Name": "",
+      "ResourcePressureView": {
+        "ResourcePressureInfo": [
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 2,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 3,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 2,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 3,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.25
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.25
+          }
+        ]
+      },
+      "SummaryView": {
+        "BlockRThroughput": 0.25,
+        "DispatchWidth": 6,
+        "IPC": 0.78740157480314965,
+        "Instructions": 100,
+        "Iterations": 100,
+        "TotalCycles": 127,
+        "TotaluOps": 100,
+        "uOpsPerCycle": 0.78740157480314965
+      }
+    }
+  ],
+  "SimulationParameters": {
+    "-march": "x86_64",
+    "-mcpu": "skylake",
+    "-mtriple": "x86_64-w64-windows-gnu"
+  },
+  "TargetInfo": {
+    "CPUName": "skylake",
+    "Resources": [
+      "SKLDivider",
+      "SKLFPDivider",
+      "SKLPort0",
+      "SKLPort1",
+      "SKLPort2",
+      "SKLPort3",
+      "SKLPort4",
+      "SKLPort5",
+      "SKLPort6",
+      "SKLPort7"
+    ]
+  }
+}
