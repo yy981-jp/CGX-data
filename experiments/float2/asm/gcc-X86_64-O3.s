@@ -2,10 +2,13 @@
 	.text
 .Ltext0:
 	.file 0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp"
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"dummy.txt"
 	.section	.text.unlikely,"ax",@progbits
-.LCOLDB1:
+.LCOLDB2:
 	.section	.text.startup,"ax",@progbits
-.LHOTB1:
+.LHOTB2:
 	.p2align 4
 	.section	.text.unlikely
 .Ltext_cold0:
@@ -23,6 +26,10 @@ main:
 	pushq	%r12
 	.cfi_def_cfa_offset 16
 	.cfi_offset 12, -16
+	.loc 1 9 31
+	movl	$8, %edx
+	leaq	.LC0(%rip), %rsi
+	.loc 1 5 12
 	pushq	%rbp
 	.cfi_def_cfa_offset 24
 	.cfi_offset 6, -24
@@ -35,28 +42,28 @@ main:
 	movq	%fs:40, %rax
 	movq	%rax, 632(%rsp)
 	xorl	%eax, %eax
-	.loc 1 9 16
+	.loc 1 9 31
 	leaq	112(%rsp), %rbp
 	leaq	16(%rsp), %rbx
 	movq	%rbp, %rdi
 	leaq	56(%rsp), %r12
 .LEHB0:
-	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev@PLT
+	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode@PLT
 .LEHE0:
 	.p2align 4,,10
 	.p2align 3
 .L2:
-.LBB53:
-.LBB54:
-.LBB55:
+.LBB73:
+.LBB74:
+.LBB75:
 	.file 2 "/usr/include/c++/13/istream"
 	.loc 2 217 26
 	movq	%rbx, %rsi
 	movq	%rbp, %rdi
 .LEHB1:
 	call	_ZNSi10_M_extractIfEERSiRT_@PLT
-.LBE55:
-.LBE54:
+.LBE75:
+.LBE74:
 	.loc 1 10 16 discriminator 3
 	addq	$4, %rbx
 	cmpq	%rbx, %r12
@@ -66,33 +73,33 @@ main:
 	.p2align 4,,10
 	.p2align 3
 .L3:
-.LBE53:
-.LBB56:
-.LBB57:
-.LBB58:
+.LBE73:
+.LBB76:
+.LBB77:
+.LBB78:
 	.loc 2 217 26
 	movq	%rbx, %rsi
 	movq	%rbp, %rdi
 	call	_ZNSi10_M_extractIfEERSiRT_@PLT
 .LEHE1:
-.LBE58:
-.LBE57:
+.LBE78:
+.LBE77:
 	.loc 1 11 16 discriminator 3
 	addq	$4, %rbx
 	cmpq	%rbx, %r12
 	jne	.L3
-.LBE56:
-.LBB59:
+.LBE76:
+.LBB79:
 	.file 3 "CGX-MCA-BEGIN"
 	.loc 3 2 15 discriminator 2
 	movaps	16(%rsp), %xmm1
 	mulps	64(%rsp), %xmm1
 	pxor	%xmm0, %xmm0
-.LBE59:
+.LBE79:
 	.file 4 "CGX-MCA-END"
 	.loc 4 1 1
 	movq	%rbp, %rdi
-.LBB60:
+.LBB80:
 	.loc 3 2 15 discriminator 2
 	movq	96(%rsp), %xmm4
 	movaps	%xmm1, %xmm2
@@ -126,15 +133,15 @@ main:
 	movlps	%xmm2, 8(%rsp)
 	addss	%xmm2, %xmm0
 	movss	%xmm0, 4(%rsp)
-.LBE60:
+.LBE80:
 	.loc 4 1 1
 	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@PLT
-.LBB61:
+.LBB81:
 	.loc 3 2 7 discriminator 2
 	movq	8(%rsp), %xmm2
 	shufps	$0xe5, %xmm2, %xmm2
 	addss	4(%rsp), %xmm2
-.LBE61:
+.LBE81:
 	cvttss2sil	%xmm2, %eax
 	.loc 4 1 1
 	movq	632(%rsp), %rdx
@@ -208,7 +215,7 @@ main.cold:
 	.byte	0x1
 	.uleb128 .LLSDACSEC2745-.LLSDACSBC2745
 .LLSDACSBC2745:
-	.uleb128 .LEHB2-.LCOLDB1
+	.uleb128 .LEHB2-.LCOLDB2
 	.uleb128 .LEHE2-.LEHB2
 	.uleb128 0
 	.uleb128 0
@@ -218,9 +225,9 @@ main.cold:
 	.size	main, .-main
 	.section	.text.unlikely
 	.size	main.cold, .-main.cold
-.LCOLDE1:
+.LCOLDE2:
 	.section	.text.startup
-.LHOTE1:
+.LHOTE2:
 	.text
 .Letext0:
 	.section	.text.unlikely
@@ -231,39 +238,39 @@ main.cold:
 	.file 8 "/usr/include/c++/13/bits/locale_classes.h"
 	.file 9 "/usr/include/c++/13/bits/fstream.tcc"
 	.file 10 "/usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h"
-	.file 11 "/usr/include/c++/13/bits/ios_base.h"
-	.file 12 "/usr/include/c++/13/new"
-	.file 13 "/usr/include/c++/13/bits/basic_ios.tcc"
-	.file 14 "/usr/include/c++/13/array"
-	.file 15 "/usr/include/c++/13/fstream"
-	.file 16 "/usr/include/c++/13/bits/basic_ios.h"
+	.file 11 "/usr/include/c++/13/bits/basic_ios.tcc"
+	.file 12 "/usr/include/c++/13/bits/ios_base.h"
+	.file 13 "/usr/include/c++/13/new"
+	.file 14 "/usr/include/c++/13/bits/basic_ios.h"
+	.file 15 "/usr/include/c++/13/array"
+	.file 16 "/usr/include/c++/13/fstream"
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x384
+	.long	0x3e0
 	.value	0x5
 	.byte	0x1
 	.byte	0x8
 	.long	.Ldebug_abbrev0
 	.uleb128 0xe
-	.long	.LASF100
+	.long	.LASF112
 	.byte	0x21
 	.long	.LASF0
 	.long	.LASF1
 	.long	.LLRL1
 	.quad	0
 	.long	.Ldebug_line0
-	.uleb128 0x7
+	.uleb128 0x9
 	.long	.LASF24
 	.byte	0x7
 	.byte	0x60
 	.byte	0x7
 	.long	.LASF26
 	.uleb128 0xf
-	.long	.LASF48
-	.byte	0xb
+	.long	.LASF54
+	.byte	0xc
 	.value	0x379
 	.byte	0xd
-	.long	.LASF50
+	.long	.LASF56
 	.byte	0x1
 	.byte	0
 	.uleb128 0x2
@@ -278,7 +285,7 @@ main.cold:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0xd
-	.uleb128 0x8
+	.uleb128 0xa
 	.long	.LASF3
 	.byte	0x4f
 	.long	.LASF10
@@ -303,7 +310,7 @@ main.cold:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x9
-	.uleb128 0x8
+	.uleb128 0xa
 	.long	.LASF9
 	.byte	0x2d
 	.long	.LASF11
@@ -364,7 +371,7 @@ main.cold:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.uleb128 0x4
+	.uleb128 0x6
 	.long	.LASF25
 	.byte	0x8
 	.byte	0xd5
@@ -481,11 +488,11 @@ main.cold:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.uleb128 0x3
-	.long	.LASF43
-	.uleb128 0x3
-	.long	.LASF44
 	.uleb128 0x4
+	.long	.LASF43
+	.uleb128 0x4
+	.long	.LASF44
+	.uleb128 0x6
 	.long	.LASF45
 	.byte	0xa
 	.byte	0x6e
@@ -494,172 +501,218 @@ main.cold:
 	.uleb128 0x2
 	.long	0x1d7
 	.long	.LASF47
-	.uleb128 0x9
-	.long	.LASF53
+	.uleb128 0x5
+	.long	.LASF48
 	.byte	0x9
 	.byte	0xf8
 	.byte	0x5
-	.long	.LASF55
-	.uleb128 0x10
+	.long	.LASF50
+	.uleb128 0x5
 	.long	.LASF49
 	.byte	0xb
-	.value	0x37c
+	.byte	0x29
 	.byte	0x5
 	.long	.LASF51
+	.uleb128 0x5
+	.long	.LASF52
+	.byte	0x9
+	.byte	0xb2
+	.byte	0x5
+	.long	.LASF53
+	.uleb128 0x10
+	.long	.LASF55
+	.byte	0xc
+	.value	0x37c
+	.byte	0x5
+	.long	.LASF57
 	.byte	0x2
 	.byte	0
 	.uleb128 0x2
-	.long	0x1f8
-	.long	.LASF52
-	.uleb128 0x9
-	.long	.LASF54
-	.byte	0xc
-	.byte	0x87
-	.byte	0x6
-	.long	.LASF56
-	.uleb128 0x3
-	.long	.LASF57
-	.uleb128 0x3
+	.long	0x210
 	.long	.LASF58
-	.uleb128 0x7
+	.uleb128 0x5
 	.long	.LASF59
 	.byte	0xd
-	.byte	0x7e
-	.byte	0x5
+	.byte	0x87
+	.byte	0x6
 	.long	.LASF60
 	.uleb128 0x4
 	.long	.LASF61
+	.uleb128 0x4
+	.long	.LASF62
+	.uleb128 0x9
+	.long	.LASF63
+	.byte	0xb
+	.byte	0x7e
+	.byte	0x5
+	.long	.LASF64
+	.uleb128 0x6
+	.long	.LASF65
 	.byte	0x9
 	.byte	0x50
 	.byte	0x5
-	.long	.LASF62
-	.uleb128 0x2
-	.long	0x232
-	.long	.LASF63
-	.uleb128 0x5
-	.long	.LASF64
-	.byte	0x5
-	.byte	0xcc
-	.long	.LASF65
-	.uleb128 0x2
-	.long	0x247
 	.long	.LASF66
 	.uleb128 0x2
-	.long	0x247
+	.long	0x24a
 	.long	.LASF67
-	.uleb128 0xa
+	.uleb128 0x3
 	.long	.LASF68
 	.byte	0xe
-	.value	0x114
-	.long	.LASF97
-	.byte	0x3
-	.uleb128 0x5
+	.byte	0x89
+	.byte	0x7
 	.long	.LASF69
-	.byte	0xf
-	.byte	0xfd
+	.uleb128 0x3
 	.long	.LASF70
-	.uleb128 0x2
-	.long	0x271
+	.byte	0xe
+	.byte	0x9d
+	.byte	0x7
 	.long	.LASF71
-	.uleb128 0x2
-	.long	0x271
+	.uleb128 0x7
 	.long	.LASF72
-	.uleb128 0x5
+	.byte	0x5
+	.byte	0xcc
 	.long	.LASF73
-	.byte	0x2
-	.byte	0x69
+	.uleb128 0x2
+	.long	0x277
 	.long	.LASF74
 	.uleb128 0x2
-	.long	0x28e
+	.long	0x277
 	.long	.LASF75
-	.uleb128 0xb
+	.uleb128 0x8
 	.long	.LASF76
-	.byte	0x2
-	.value	0x2b8
-	.long	.LASF79
-	.uleb128 0x2
-	.long	0x2a2
+	.byte	0xf
+	.value	0x114
 	.long	.LASF77
-	.uleb128 0xc
-	.long	.LASF78
+	.byte	0x3
+	.uleb128 0x8
+	.long	.LASF52
 	.byte	0x10
-	.value	0x11a
+	.value	0x299
+	.long	.LASF78
+	.byte	0x3
+	.uleb128 0x7
+	.long	.LASF79
+	.byte	0x10
+	.byte	0xfd
 	.long	.LASF80
 	.uleb128 0x2
-	.long	0x2b7
+	.long	0x2ae
 	.long	.LASF81
 	.uleb128 0x2
-	.long	0x2b7
+	.long	0x2ae
 	.long	.LASF82
-	.uleb128 0xb
+	.uleb128 0x7
 	.long	.LASF83
-	.byte	0x10
-	.value	0x1cc
+	.byte	0x2
+	.byte	0x69
 	.long	.LASF84
 	.uleb128 0x2
-	.long	0x2d5
+	.long	0x2cb
 	.long	.LASF85
-	.uleb128 0x6
+	.uleb128 0xb
 	.long	.LASF86
-	.byte	0xe
-	.byte	0xc8
-	.long	.LASF87
-	.uleb128 0x6
-	.long	.LASF88
 	.byte	0x2
-	.byte	0xd8
+	.value	0x2b8
 	.long	.LASF89
-	.uleb128 0x11
-	.string	"end"
-	.byte	0xe
-	.byte	0x88
-	.byte	0x7
-	.long	.LASF101
-	.byte	0x3
-	.uleb128 0x6
-	.long	.LASF90
-	.byte	0xe
-	.byte	0x7e
-	.long	.LASF91
-	.uleb128 0xc
-	.long	.LASF92
-	.byte	0xf
-	.value	0x25e
-	.long	.LASF93
 	.uleb128 0x2
-	.long	0x318
+	.long	0x2df
+	.long	.LASF87
+	.uleb128 0xc
+	.long	.LASF88
+	.byte	0xe
+	.value	0x11a
+	.long	.LASF90
+	.uleb128 0x2
+	.long	0x2f4
+	.long	.LASF91
+	.uleb128 0x2
+	.long	0x2f4
+	.long	.LASF92
+	.uleb128 0xb
+	.long	.LASF93
+	.byte	0xe
+	.value	0x1cc
 	.long	.LASF94
 	.uleb128 0x2
-	.long	0x318
+	.long	0x312
 	.long	.LASF95
-	.uleb128 0xa
+	.uleb128 0x3
 	.long	.LASF96
 	.byte	0xf
-	.value	0x20d
+	.byte	0xc8
+	.byte	0x7
+	.long	.LASF97
+	.uleb128 0x3
 	.long	.LASF98
 	.byte	0x2
-	.uleb128 0x2
-	.long	0x336
+	.byte	0xd8
+	.byte	0x7
 	.long	.LASF99
-	.uleb128 0x12
+	.uleb128 0x11
+	.string	"end"
+	.byte	0xf
+	.byte	0x88
+	.byte	0x7
+	.long	.LASF113
+	.byte	0x3
+	.uleb128 0x3
+	.long	.LASF100
+	.byte	0xf
+	.byte	0x7e
+	.byte	0x7
+	.long	.LASF101
+	.uleb128 0xc
 	.long	.LASF102
+	.byte	0x10
+	.value	0x25e
+	.long	.LASF103
+	.uleb128 0x2
+	.long	0x358
+	.long	.LASF104
+	.uleb128 0x2
+	.long	0x358
+	.long	.LASF105
+	.uleb128 0x8
+	.long	.LASF106
+	.byte	0x10
+	.value	0x218
+	.long	.LASF107
+	.byte	0x2
+	.uleb128 0x2
+	.long	0x376
+	.long	.LASF108
+	.uleb128 0x12
+	.long	.LASF114
 	.byte	0x1
 	.byte	0x5
 	.byte	0x5
 	.long	.LLRL0
 	.uleb128 0x1
 	.byte	0x9c
+	.long	0x3cb
 	.uleb128 0xd
-	.long	0x2f5
-	.quad	.LBB54
-	.quad	.LBE54-.LBB54
+	.long	0x333
+	.quad	.LBB74
+	.quad	.LBE74-.LBB74
 	.byte	0xa
 	.uleb128 0xd
-	.long	0x2f5
-	.quad	.LBB57
-	.quad	.LBE57-.LBB57
+	.long	0x333
+	.quad	.LBB77
+	.quad	.LBE77-.LBB77
 	.byte	0xb
 	.byte	0
+	.uleb128 0x3
+	.long	.LASF109
+	.byte	0xc
+	.byte	0xaa
+	.byte	0x3
+	.long	.LASF110
+	.uleb128 0x3
+	.long	.LASF109
+	.byte	0xc
+	.byte	0x82
+	.byte	0x3
+	.long	.LASF111
 	.byte	0
 	.section	.debug_abbrev,"",@progbits
 .Ldebug_abbrev0:
@@ -706,13 +759,52 @@ main.cold:
 	.uleb128 0x19
 	.uleb128 0x3
 	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0xe
+	.uleb128 0x20
+	.uleb128 0x21
+	.sleb128 3
+	.byte	0
+	.byte	0
+	.uleb128 0x4
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
 	.uleb128 0x34
 	.uleb128 0x19
 	.uleb128 0x3c
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x4
+	.uleb128 0x5
+	.uleb128 0x2e
+	.byte	0
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0xe
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x6
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -734,7 +826,7 @@ main.cold:
 	.sleb128 0
 	.byte	0
 	.byte	0
-	.uleb128 0x5
+	.uleb128 0x7
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -758,7 +850,7 @@ main.cold:
 	.sleb128 2
 	.byte	0
 	.byte	0
-	.uleb128 0x6
+	.uleb128 0x8
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -768,18 +860,17 @@ main.cold:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x39
 	.uleb128 0x21
 	.sleb128 7
 	.uleb128 0x6e
 	.uleb128 0xe
 	.uleb128 0x20
-	.uleb128 0x21
-	.sleb128 3
+	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x9
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -801,7 +892,7 @@ main.cold:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0xa
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -828,45 +919,6 @@ main.cold:
 	.sleb128 2
 	.uleb128 0x3c
 	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x9
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0xe
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0xa
-	.uleb128 0x2e
-	.byte	0
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0x21
-	.sleb128 7
-	.uleb128 0x6e
-	.uleb128 0xe
-	.uleb128 0x20
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0xb
@@ -1039,6 +1091,8 @@ main.cold:
 	.uleb128 0x18
 	.uleb128 0x7c
 	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.byte	0
@@ -1053,7 +1107,7 @@ main.cold:
 	.quad	.Ltext_cold0
 	.quad	.Letext_cold0-.Ltext_cold0
 	.quad	.LFB2745
-	.quad	.LHOTE1-.LFB2745
+	.quad	.LHOTE2-.LFB2745
 	.quad	0
 	.quad	0
 	.section	.debug_rnglists,"",@progbits
@@ -1067,10 +1121,10 @@ main.cold:
 .LLRL0:
 	.byte	0x7
 	.quad	.LFB2745
-	.uleb128 .LHOTE1-.LFB2745
+	.uleb128 .LHOTE2-.LFB2745
 	.byte	0x7
 	.quad	.LFSB2745
-	.uleb128 .LCOLDE1-.LFSB2745
+	.uleb128 .LCOLDE2-.LFSB2745
 	.byte	0
 .LLRL1:
 	.byte	0x7
@@ -1078,45 +1132,47 @@ main.cold:
 	.uleb128 .Letext_cold0-.Ltext_cold0
 	.byte	0x7
 	.quad	.LFB2745
-	.uleb128 .LHOTE1-.LFB2745
+	.uleb128 .LHOTE2-.LFB2745
 	.byte	0
 .Ldebug_ranges3:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
+.LASF69:
+	.string	"_ZNKSt9basic_iosIcSt11char_traitsIcEE7rdstateEv"
 .LASF17:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode"
 .LASF5:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE8overflowEi"
-.LASF87:
+.LASF97:
 	.string	"_ZNSt5arrayIfLm10EEixEm"
 .LASF8:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9underflowEv"
-.LASF72:
+.LASF82:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEED2Ev"
-.LASF101:
+.LASF113:
 	.string	"_ZNSt5arrayIfLm10EE3endEv"
 .LASF32:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9pbackfailEi"
 .LASF24:
 	.string	"_M_extract<float>"
-.LASF90:
+.LASF100:
 	.string	"begin"
-.LASF84:
+.LASF94:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEEC4Ev"
-.LASF78:
+.LASF88:
 	.string	"~basic_ios"
-.LASF95:
+.LASF105:
 	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev"
-.LASF91:
+.LASF101:
 	.string	"_ZNSt5arrayIfLm10EE5beginEv"
-.LASF68:
+.LASF76:
 	.string	"data"
-.LASF96:
+.LASF106:
 	.string	"basic_ifstream"
 .LASF29:
 	.string	"_ZNSt6localeD1Ev"
-.LASF82:
+.LASF92:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEED2Ev"
 .LASF7:
 	.string	"underflow"
@@ -1124,19 +1180,21 @@ main.cold:
 	.string	"xsputn"
 .LASF25:
 	.string	"~locale"
-.LASF100:
+.LASF112:
 	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
-.LASF48:
+.LASF54:
 	.string	"~ios_base"
-.LASF75:
+.LASF85:
 	.string	"_ZNSiD2Ev"
-.LASF94:
+.LASF104:
 	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED0Ev"
 .LASF4:
 	.string	"pbackfail"
 .LASF15:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE4syncEv"
 .LASF71:
+	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateESt12_Ios_Iostate"
+.LASF81:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEED0Ev"
 .LASF20:
 	.string	"setbuf"
@@ -1144,51 +1202,59 @@ main.cold:
 	.string	"~__basic_file"
 .LASF46:
 	.string	"_ZNSt12__basic_fileIcED4Ev"
-.LASF85:
+.LASF53:
+	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode"
+.LASF95:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEEC2Ev"
 .LASF39:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekposESt4fposI11__mbstate_tESt13_Ios_Openmode"
-.LASF51:
+.LASF57:
 	.string	"_ZNSt8ios_baseC4Ev"
 .LASF37:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9showmanycEv"
-.LASF80:
+.LASF90:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEED4Ev"
 .LASF40:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode"
-.LASF50:
+.LASF49:
+	.string	"clear"
+.LASF56:
 	.string	"_ZNSt8ios_baseD4Ev"
-.LASF83:
+.LASF93:
 	.string	"basic_ios"
-.LASF97:
+.LASF77:
 	.string	"_ZNSt5arrayIfLm10EE4dataEv"
 .LASF36:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsgetnEPcl"
+.LASF109:
+	.string	"operator|"
 .LASF10:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsputnEPKcl"
-.LASF65:
+.LASF73:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEED4Ev"
-.LASF92:
+.LASF102:
 	.string	"~basic_ifstream"
 .LASF13:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9showmanycEv"
-.LASF73:
+.LASF108:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode"
+.LASF78:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEE4openEPKcSt13_Ios_Openmode"
+.LASF83:
 	.string	"~basic_istream"
-.LASF98:
-	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC4Ev"
 .LASF22:
 	.string	"imbue"
 .LASF38:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE4syncEv"
-.LASF69:
+.LASF79:
 	.string	"~basic_filebuf"
-.LASF62:
+.LASF66:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEEC4Ev"
 .LASF6:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE9pbackfailEi"
-.LASF55:
+.LASF50:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE5closeEv"
-.LASF52:
+.LASF58:
 	.string	"_ZNSt8ios_baseC2Ev"
 .LASF33:
 	.string	"uflow"
@@ -1196,11 +1262,13 @@ main.cold:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6xsputnEPKcl"
 .LASF21:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6setbufEPcl"
-.LASF59:
+.LASF111:
+	.string	"_ZStorSt13_Ios_OpenmodeS_"
+.LASF63:
 	.string	"init"
-.LASF86:
+.LASF96:
 	.string	"operator[]"
-.LASF102:
+.LASF114:
 	.string	"main"
 .LASF18:
 	.string	"seekoff"
@@ -1214,69 +1282,79 @@ main.cold:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5uflowEv"
 .LASF35:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE9underflowEv"
-.LASF60:
+.LASF68:
+	.string	"rdstate"
+.LASF64:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E"
-.LASF67:
+.LASF75:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEED2Ev"
 .LASF12:
 	.string	"showmanyc"
+.LASF107:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC4EPKcSt13_Ios_Openmode"
+.LASF70:
+	.string	"setstate"
 .LASF14:
 	.string	"sync"
-.LASF70:
+.LASF80:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEED4Ev"
 .LASF26:
 	.string	"_ZNSi10_M_extractIfEERSiRT_"
-.LASF79:
+.LASF89:
 	.string	"_ZNSiC4Ev"
-.LASF54:
+.LASF110:
+	.string	"_ZStorSt12_Ios_IostateS_"
+.LASF59:
 	.string	"operator delete"
 .LASF41:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE6setbufEPcl"
-.LASF49:
+.LASF55:
 	.string	"ios_base"
 .LASF9:
 	.string	"xsgetn"
-.LASF93:
+.LASF103:
 	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED4Ev"
 .LASF42:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEE5imbueERKSt6locale"
+.LASF51:
+	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate"
 .LASF27:
 	.string	"_ZNSt6localeD4Ev"
-.LASF89:
+.LASF99:
 	.string	"_ZNSirsERf"
 .LASF23:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE5imbueERKSt6locale"
-.LASF61:
+.LASF65:
 	.string	"basic_filebuf"
-.LASF58:
+.LASF62:
 	.string	"_ZTv0_n24_NSt14basic_ifstreamIcSt11char_traitsIcEED1Ev"
-.LASF81:
+.LASF91:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEED0Ev"
+.LASF52:
+	.string	"open"
 .LASF28:
 	.string	"_ZNSt8ios_baseD2Ev"
-.LASF74:
+.LASF84:
 	.string	"_ZNSiD4Ev"
-.LASF99:
-	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev"
-.LASF64:
+.LASF72:
 	.string	"~basic_streambuf"
-.LASF53:
+.LASF48:
 	.string	"close"
-.LASF88:
+.LASF98:
 	.string	"operator>>"
 .LASF43:
 	.string	"__cxa_end_catch"
-.LASF76:
+.LASF86:
 	.string	"basic_istream"
-.LASF63:
+.LASF67:
 	.string	"_ZNSt13basic_filebufIcSt11char_traitsIcEEC1Ev"
-.LASF66:
+.LASF74:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEED0Ev"
 .LASF44:
 	.string	"__cxa_begin_catch"
-.LASF57:
+.LASF61:
 	.string	"_ZTv0_n24_NSt14basic_ifstreamIcSt11char_traitsIcEED0Ev"
-.LASF56:
+.LASF60:
 	.string	"_ZdlPvm"
 .LASF11:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE6xsgetnEPcl"
@@ -1284,7 +1362,7 @@ main.cold:
 	.string	"_ZNSt15basic_streambufIcSt11char_traitsIcEE7seekoffElSt12_Ios_SeekdirSt13_Ios_Openmode"
 .LASF16:
 	.string	"seekpos"
-.LASF77:
+.LASF87:
 	.string	"_ZNSiC2Ev"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:

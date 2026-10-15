@@ -3,6 +3,11 @@
 	.text
 .Ltext0:
 	.file 0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp"
+	.section	.rodata
+	.align	3
+.LC0:
+	.string	"dummy.txt"
+	.text
 	.align	2
 	.global	main
 	.type	main, %function
@@ -33,10 +38,14 @@ main:
 	.loc 1 6 16
 	mov	w0, 10
 	str	w0, [sp, 20]
-	.loc 1 9 16
-	add	x0, sp, 168
+	.loc 1 9 31
+	add	x3, sp, 168
+	mov	w2, 8
+	adrp	x0, .LC0
+	add	x1, x0, :lo12:.LC0
+	mov	x0, x3
 .LEHB0:
-	bl	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev
+	bl	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
 .LEHE0:
 .LBB6:
 	.loc 1 10 16
@@ -394,7 +403,7 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.uleb128 0x1
 	.4byte	.LASF4
 	.byte	0x5
-	.2byte	0x20d
+	.2byte	0x218
 	.4byte	.LASF6
 	.byte	0x2
 	.uleb128 0x3
@@ -668,8 +677,6 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.string	"begin"
 .LASF16:
 	.string	"~basic_ifstream"
-.LASF8:
-	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev"
 .LASF18:
 	.string	"main"
 .LASF11:
@@ -692,12 +699,14 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.string	"operator[]"
 .LASF7:
 	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev"
-.LASF6:
-	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC4EiPPKv"
 .LASF14:
 	.string	"_ZNSt5arrayIfLm10EE3endEv"
+.LASF6:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC4EiPPKvPKcSt13_Ios_Openmode"
 .LASF4:
 	.string	"basic_ifstream"
+.LASF8:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/yy981/cpp/CGX-data/experiments/float2"
