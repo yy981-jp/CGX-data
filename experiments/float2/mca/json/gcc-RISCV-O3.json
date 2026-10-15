@@ -101,6 +101,290 @@
         "TotalCycles": 107,
         "TotaluOps": 400,
         "uOpsPerCycle": 3.7383177570093458
+      },
+      "TimelineView": {
+        "TimelineInfo": [
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 6,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 6,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 3,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 6,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 7,
+            "CycleIssued": 2,
+            "CycleReady": 0,
+            "CycleRetired": 8
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 7,
+            "CycleIssued": 2,
+            "CycleReady": 0,
+            "CycleRetired": 8
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 4,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 8
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 7,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 8
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 8,
+            "CycleIssued": 3,
+            "CycleReady": 1,
+            "CycleRetired": 9
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 8,
+            "CycleIssued": 3,
+            "CycleReady": 1,
+            "CycleRetired": 9
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 5,
+            "CycleIssued": 3,
+            "CycleReady": 1,
+            "CycleRetired": 9
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 8,
+            "CycleIssued": 3,
+            "CycleReady": 1,
+            "CycleRetired": 9
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 9,
+            "CycleIssued": 4,
+            "CycleReady": 2,
+            "CycleRetired": 10
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 9,
+            "CycleIssued": 4,
+            "CycleReady": 2,
+            "CycleRetired": 10
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 6,
+            "CycleIssued": 4,
+            "CycleReady": 2,
+            "CycleRetired": 10
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 9,
+            "CycleIssued": 4,
+            "CycleReady": 2,
+            "CycleRetired": 10
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 10,
+            "CycleIssued": 5,
+            "CycleReady": 2,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 10,
+            "CycleIssued": 5,
+            "CycleReady": 2,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 7,
+            "CycleIssued": 5,
+            "CycleReady": 3,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 10,
+            "CycleIssued": 5,
+            "CycleReady": 3,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 11,
+            "CycleIssued": 6,
+            "CycleReady": 3,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 11,
+            "CycleIssued": 6,
+            "CycleReady": 3,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 8,
+            "CycleIssued": 6,
+            "CycleReady": 3,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 11,
+            "CycleIssued": 6,
+            "CycleReady": 3,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 12,
+            "CycleIssued": 7,
+            "CycleReady": 4,
+            "CycleRetired": 13
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 12,
+            "CycleIssued": 7,
+            "CycleReady": 4,
+            "CycleRetired": 13
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 9,
+            "CycleIssued": 7,
+            "CycleReady": 4,
+            "CycleRetired": 13
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 12,
+            "CycleIssued": 7,
+            "CycleReady": 4,
+            "CycleRetired": 13
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 13,
+            "CycleIssued": 8,
+            "CycleReady": 4,
+            "CycleRetired": 14
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 13,
+            "CycleIssued": 8,
+            "CycleReady": 4,
+            "CycleRetired": 14
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 10,
+            "CycleIssued": 8,
+            "CycleReady": 5,
+            "CycleRetired": 14
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 13,
+            "CycleIssued": 8,
+            "CycleReady": 5,
+            "CycleRetired": 14
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 14,
+            "CycleIssued": 9,
+            "CycleReady": 5,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 14,
+            "CycleIssued": 9,
+            "CycleReady": 5,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 11,
+            "CycleIssued": 9,
+            "CycleReady": 5,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 14,
+            "CycleIssued": 9,
+            "CycleReady": 5,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 15,
+            "CycleIssued": 10,
+            "CycleReady": 6,
+            "CycleRetired": 16
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 15,
+            "CycleIssued": 10,
+            "CycleReady": 6,
+            "CycleRetired": 16
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 12,
+            "CycleIssued": 10,
+            "CycleReady": 6,
+            "CycleRetired": 16
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 15,
+            "CycleIssued": 10,
+            "CycleReady": 6,
+            "CycleRetired": 16
+          }
+        ]
       }
     }
   ],

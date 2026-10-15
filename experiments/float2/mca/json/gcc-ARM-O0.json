@@ -631,6 +631,38 @@
         "TotalCycles": 960,
         "TotaluOps": 2800,
         "uOpsPerCycle": 2.9166666666666665
+      },
+      "TimelineView": {
+        "TimelineInfo": [
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 3
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 3
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 5,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 6
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 6
+          }
+        ]
       }
     }
   ],

@@ -786,6 +786,59 @@
         "TotalCycles": 1801,
         "TotaluOps": 3900,
         "uOpsPerCycle": 2.1654636313159354
+      },
+      "TimelineView": {
+        "TimelineInfo": [
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 3
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 3
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 6,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 7,
+            "CycleIssued": 6,
+            "CycleReady": 6,
+            "CycleRetired": 8
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 8
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 8,
+            "CycleIssued": 7,
+            "CycleReady": 7,
+            "CycleRetired": 9
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 3,
+            "CycleIssued": 2,
+            "CycleReady": 2,
+            "CycleRetired": 9
+          }
+        ]
       }
     }
   ],
