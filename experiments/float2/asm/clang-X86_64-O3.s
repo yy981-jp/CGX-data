@@ -6,7 +6,7 @@
 	.type	main,@function
 main:                                   # @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0x51068c791a48a4b6d5cdcef952623779
+	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
 	.loc	0 5 0                           # source.cpp:5:0
 	.cfi_startproc
 	.cfi_personality 155, DW.ref.__gxx_personality_v0
@@ -17,211 +17,212 @@ main:                                   # @main
 	subq	$608, %rsp                      # imm = 0x260
 	.cfi_def_cfa_offset 624
 	.cfi_offset %rbx, -16
-	leaq	88(%rsp), %rbx
-.Ltmp42:
 	.loc	0 9 16 prologue_end             # source.cpp:9:16
+	leaq	.L.str(%rip), %rsi
+	leaq	88(%rsp), %rbx
 	movq	%rbx, %rdi
-	callq	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev@PLT
-.Ltmp43:
+	movl	$8, %edx
+	callq	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode@PLT
+.Ltmp42:
 .Ltmp0:                                 # EH_LABEL
 	.loc	0 0 16 is_stmt 0                # source.cpp:0:16
 	leaq	48(%rsp), %rsi
-.Ltmp44:
+.Ltmp43:
 	.file	1 "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13" "istream"
 	.loc	1 217 16 is_stmt 1              # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	movq	%rbx, %rdi
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp45:
+.Ltmp44:
 .Ltmp1:                                 # EH_LABEL
 # %bb.1:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	52(%rsp), %rsi
 .Ltmp2:                                 # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp46:
+.Ltmp45:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp47:
+.Ltmp46:
 .Ltmp3:                                 # EH_LABEL
 # %bb.2:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	56(%rsp), %rsi
 .Ltmp4:                                 # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp48:
+.Ltmp47:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp49:
+.Ltmp48:
 .Ltmp5:                                 # EH_LABEL
 # %bb.3:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	60(%rsp), %rsi
 .Ltmp6:                                 # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp50:
+.Ltmp49:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp51:
+.Ltmp50:
 .Ltmp7:                                 # EH_LABEL
 # %bb.4:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	64(%rsp), %rsi
 .Ltmp8:                                 # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp52:
+.Ltmp51:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp53:
+.Ltmp52:
 .Ltmp9:                                 # EH_LABEL
 # %bb.5:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	68(%rsp), %rsi
 .Ltmp10:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp54:
+.Ltmp53:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp55:
+.Ltmp54:
 .Ltmp11:                                # EH_LABEL
 # %bb.6:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	72(%rsp), %rsi
 .Ltmp12:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp56:
+.Ltmp55:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp57:
+.Ltmp56:
 .Ltmp13:                                # EH_LABEL
 # %bb.7:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	76(%rsp), %rsi
 .Ltmp14:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp58:
+.Ltmp57:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp59:
+.Ltmp58:
 .Ltmp15:                                # EH_LABEL
 # %bb.8:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	80(%rsp), %rsi
 .Ltmp16:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp60:
+.Ltmp59:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp61:
+.Ltmp60:
 .Ltmp17:                                # EH_LABEL
 # %bb.9:
 	.loc	0 10 14                         # source.cpp:10:14
 	leaq	84(%rsp), %rsi
 .Ltmp18:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp62:
+.Ltmp61:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp63:
+.Ltmp62:
 .Ltmp19:                                # EH_LABEL
 # %bb.10:
 .Ltmp21:                                # EH_LABEL
 	.loc	1 0 16 is_stmt 0                # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:0:16
 	leaq	88(%rsp), %rdi
 	leaq	8(%rsp), %rsi
-.Ltmp64:
+.Ltmp63:
 	.loc	1 217 16 is_stmt 1              # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp65:
+.Ltmp64:
 .Ltmp22:                                # EH_LABEL
 # %bb.11:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	12(%rsp), %rsi
 .Ltmp23:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp66:
+.Ltmp65:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp67:
+.Ltmp66:
 .Ltmp24:                                # EH_LABEL
 # %bb.12:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	16(%rsp), %rsi
 .Ltmp25:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp68:
+.Ltmp67:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp69:
+.Ltmp68:
 .Ltmp26:                                # EH_LABEL
 # %bb.13:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	20(%rsp), %rsi
 .Ltmp27:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp70:
+.Ltmp69:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp71:
+.Ltmp70:
 .Ltmp28:                                # EH_LABEL
 # %bb.14:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	24(%rsp), %rsi
 .Ltmp29:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp72:
+.Ltmp71:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp73:
+.Ltmp72:
 .Ltmp30:                                # EH_LABEL
 # %bb.15:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	28(%rsp), %rsi
 .Ltmp31:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp74:
+.Ltmp73:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp75:
+.Ltmp74:
 .Ltmp32:                                # EH_LABEL
 # %bb.16:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	32(%rsp), %rsi
 .Ltmp33:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp76:
+.Ltmp75:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp77:
+.Ltmp76:
 .Ltmp34:                                # EH_LABEL
 # %bb.17:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	36(%rsp), %rsi
 .Ltmp35:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp78:
+.Ltmp77:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp79:
+.Ltmp78:
 .Ltmp36:                                # EH_LABEL
 # %bb.18:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	40(%rsp), %rsi
 .Ltmp37:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp80:
+.Ltmp79:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp81:
+.Ltmp80:
 .Ltmp38:                                # EH_LABEL
 # %bb.19:
 	.loc	0 11 14                         # source.cpp:11:14
 	leaq	44(%rsp), %rsi
 .Ltmp39:                                # EH_LABEL
 	leaq	88(%rsp), %rdi
-.Ltmp82:
+.Ltmp81:
 	.loc	1 217 16                        # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
 	callq	_ZNSi10_M_extractIfEERSiRT_@PLT
-.Ltmp83:
+.Ltmp82:
 .Ltmp40:                                # EH_LABEL
 # %bb.20:
 	.file	2 "CGX-MCA-BEGIN"
@@ -292,7 +293,7 @@ main:                                   # @main
 	leaq	88(%rsp), %rdi
 	.loc	3 1 1 is_stmt 1                 # CGX-MCA-END:1:1
 	callq	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@PLT
-.Ltmp84:
+.Ltmp83:
 	.loc	3 1 1                           # CGX-MCA-END:1:1
 	movl	%ebx, %eax
 	.loc	3 1 1 epilogue_begin is_stmt 0  # CGX-MCA-END:1:1
@@ -313,11 +314,11 @@ main:                                   # @main
 	leaq	88(%rsp), %rdi
 	.loc	3 1 1 is_stmt 1                 # CGX-MCA-END:1:1
 	callq	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev@PLT
-.Ltmp85:
+.Ltmp84:
 	.loc	3 0 1 is_stmt 0                 # CGX-MCA-END:0:1
 	movq	%rbx, %rdi
 	callq	_Unwind_Resume@PLT
-.Ltmp86:
+.Ltmp85:
 .Lfunc_end0:
 	.size	main, .Lfunc_end0-main
 	.cfi_endproc
@@ -349,6 +350,12 @@ GCC_except_table0:
 .Lcst_end0:
 	.p2align	2, 0x0
                                         # -- End function
+	.type	.L.str,@object                  # @.str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.L.str:
+	.asciz	"dummy.txt"
+	.size	.L.str, 10
+
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               # Abbreviation Code
 	.byte	17                              # DW_TAG_compile_unit
@@ -558,67 +565,67 @@ GCC_except_table0:
 	.long	.Ldebug_ranges1-.Lrnglists_table_base0
 .Ldebug_ranges0:
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp44-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp45-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp43-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp44-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp46-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp47-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp45-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp46-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp48-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp49-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp47-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp48-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp50-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp51-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp49-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp50-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp52-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp53-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp51-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp52-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp54-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp55-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp53-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp54-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp56-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp57-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp55-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp56-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp58-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp59-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp57-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp58-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp60-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp61-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp59-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp60-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp62-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp63-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp61-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp62-.Lfunc_begin0          #   ending offset
 	.byte	0                               # DW_RLE_end_of_list
 .Ldebug_ranges1:
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp64-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp65-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp63-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp64-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp66-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp67-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp65-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp66-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp68-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp69-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp67-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp68-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp70-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp71-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp69-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp70-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp72-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp73-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp71-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp72-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp74-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp75-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp73-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp74-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp76-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp77-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp75-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp76-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp78-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp79-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp77-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp78-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp80-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp81-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp79-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp80-.Lfunc_begin0          #   ending offset
 	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp82-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp83-.Lfunc_begin0          #   ending offset
+	.uleb128 .Ltmp81-.Lfunc_begin0          #   starting offset
+	.uleb128 .Ltmp82-.Lfunc_begin0          #   ending offset
 	.byte	0                               # DW_RLE_end_of_list
 .Ldebug_list_header_end0:
 	.section	.debug_str_offsets,"",@progbits
@@ -654,26 +661,26 @@ GCC_except_table0:
 	.byte	0                               # Segment selector size
 .Laddr_table_base0:
 	.quad	.Lfunc_begin0
-	.quad	.Ltmp45
-	.quad	.Ltmp47
-	.quad	.Ltmp49
-	.quad	.Ltmp51
-	.quad	.Ltmp53
-	.quad	.Ltmp55
-	.quad	.Ltmp57
-	.quad	.Ltmp59
-	.quad	.Ltmp61
-	.quad	.Ltmp63
-	.quad	.Ltmp65
-	.quad	.Ltmp67
-	.quad	.Ltmp69
-	.quad	.Ltmp71
-	.quad	.Ltmp73
-	.quad	.Ltmp75
-	.quad	.Ltmp77
-	.quad	.Ltmp79
-	.quad	.Ltmp81
-	.quad	.Ltmp83
+	.quad	.Ltmp44
+	.quad	.Ltmp46
+	.quad	.Ltmp48
+	.quad	.Ltmp50
+	.quad	.Ltmp52
+	.quad	.Ltmp54
+	.quad	.Ltmp56
+	.quad	.Ltmp58
+	.quad	.Ltmp60
+	.quad	.Ltmp62
+	.quad	.Ltmp64
+	.quad	.Ltmp66
+	.quad	.Ltmp68
+	.quad	.Ltmp70
+	.quad	.Ltmp72
+	.quad	.Ltmp74
+	.quad	.Ltmp76
+	.quad	.Ltmp78
+	.quad	.Ltmp80
+	.quad	.Ltmp82
 .Ldebug_addr_end0:
 	.hidden	DW.ref.__gxx_personality_v0
 	.weak	DW.ref.__gxx_personality_v0

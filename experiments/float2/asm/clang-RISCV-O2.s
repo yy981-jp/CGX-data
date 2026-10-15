@@ -7,7 +7,7 @@
 	.type	main,@function
 main:                                   # @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0x51068c791a48a4b6d5cdcef952623779
+	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
 	.loc	0 5 0                           # source.cpp:5:0
 	.cfi_startproc
 	.cfi_personality 155, DW.ref.__gxx_personality_v0
@@ -20,10 +20,14 @@ main:                                   # @main
 	.cfi_offset ra, -8
 	.cfi_offset s0, -16
 	.cfi_remember_state
+.Lpcrel_hi0:
 .Ltmp42:
 	.loc	0 9 16 prologue_end             # source.cpp:9:16
+	auipc	a1, %pcrel_hi(.L.str)
+	addi	a1, a1, %pcrel_lo(.Lpcrel_hi0)
 	addi	a0, sp, 8
-	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev
+	li	a2, 8
+	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
 .Ltmp43:
 .Ltmp0:                                 # EH_LABEL
 	.file	1 "/usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13" "istream"
@@ -276,12 +280,12 @@ main:                                   # @main
 	.file	3 "CGX-MCA-END"
 	.loc	3 0 9 is_stmt 0                 # CGX-MCA-END:0:9
 	fcvt.w.s	s0, fa5, rtz
-.Lpcrel_hi0:
+.Lpcrel_hi1:
 .Ltmp82:
 	.file	4 "/usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13" "fstream"
 	.loc	4 607 7 is_stmt 1               # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
 	auipc	a0, %got_pcrel_hi(_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE)
-	ld	a1, %pcrel_lo(.Lpcrel_hi0)(a0)
+	ld	a1, %pcrel_lo(.Lpcrel_hi1)(a0)
 	addi	a0, sp, 8
 	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED2Ev
 .Ltmp83:
@@ -308,11 +312,11 @@ main:                                   # @main
 .Ltmp20:                                # EH_LABEL
 .LBB0_23:
 	mv	s0, a0
-.Lpcrel_hi1:
+.Lpcrel_hi2:
 .Ltmp85:
 	.loc	4 607 7 is_stmt 1               # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
 	auipc	a0, %got_pcrel_hi(_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE)
-	ld	a1, %pcrel_lo(.Lpcrel_hi1)(a0)
+	ld	a1, %pcrel_lo(.Lpcrel_hi2)(a0)
 	addi	a0, sp, 8
 	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED2Ev
 .Ltmp86:
@@ -355,6 +359,12 @@ GCC_except_table0:
 .Lcst_end0:
 	.p2align	2, 0x0
                                         # -- End function
+	.type	.L.str,@object                  # @.str
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.L.str:
+	.asciz	"dummy.txt"
+	.size	.L.str, 10
+
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               # Abbreviation Code
 	.byte	17                              # DW_TAG_compile_unit

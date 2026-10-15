@@ -6,6 +6,11 @@
 	.text
 .Ltext0:
 	.file 0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp"
+	.section	.rodata
+	.align	3
+.LC0:
+	.string	"dummy.txt"
+	.text
 	.align	1
 	.globl	main
 	.type	main, @function
@@ -36,11 +41,13 @@ main:
 	.loc 1 6 16
 	li	a5,10
 	sw	a5,-724(s0)
-	.loc 1 9 16
+	.loc 1 9 31
 	addi	a5,s0,-576
+	li	a2,8
+	lla	a1,.LC0
 	mv	a0,a5
 .LEHB0:
-	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev@plt
+	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode@plt
 .LEHE0:
 .LBB6:
 	.loc 1 10 16
@@ -432,7 +439,7 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.uleb128 0x1
 	.4byte	.LASF4
 	.byte	0x5
-	.2byte	0x20d
+	.2byte	0x218
 	.4byte	.LASF6
 	.byte	0x2
 	.uleb128 0x3
@@ -706,8 +713,6 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.string	"begin"
 .LASF16:
 	.string	"~basic_ifstream"
-.LASF8:
-	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1Ev"
 .LASF18:
 	.string	"main"
 .LASF11:
@@ -730,12 +735,14 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.string	"operator[]"
 .LASF7:
 	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEED1Ev"
-.LASF6:
-	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC4EiPPKv"
 .LASF14:
 	.string	"_ZNSt5arrayIfLm10EE3endEv"
+.LASF6:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC4EiPPKvPKcSt13_Ios_Openmode"
 .LASF9:
 	.string	"GNU C++23 13.3.0 -mabi=lp64d -misa-spec=20191213 -march=rv64imafdc_zicsr_zifencei -g1 -O0 -std=c++23 -fstack-protector-strong"
+.LASF8:
+	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/yy981/cpp/CGX-data/experiments/float2"
