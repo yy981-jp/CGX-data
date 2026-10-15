@@ -1,0 +1,412 @@
+{
+  "CodeRegions": [
+    {
+      "InstructionInfoView": {
+        "InstructionList": [
+          {
+            "Instruction": 0,
+            "Latency": 5,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": true,
+            "mayStore": false
+          },
+          {
+            "Instruction": 1,
+            "Latency": 9,
+            "NumMicroOpcodes": 2,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": true,
+            "mayStore": false
+          },
+          {
+            "Instruction": 2,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.25,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 3,
+            "Latency": 4,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 4,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.25,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 5,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 6,
+            "Latency": 6,
+            "NumMicroOpcodes": 2,
+            "RThroughput": 1,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          }
+        ]
+      },
+      "Instructions": [
+        "movss\t(%rcx,%rax), %xmm0",
+        "mulss\t(%rdx,%rax), %xmm0",
+        "addq\t$4, %rax",
+        "addss\t%xmm0, %xmm1",
+        "cmpq\t$20, %rax",
+        "jne\t.L2",
+        "cvttss2si\t%xmm1, %eax"
+      ],
+      "Name": "",
+      "ResourcePressureView": {
+        "ResourcePressureInfo": [
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 5,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 2,
+            "ResourceUsage": 0.98999999999999999
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 3,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 4,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.97999999999999998
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.02
+          },
+          {
+            "InstructionIndex": 3,
+            "ResourceIndex": 3,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 4,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.51000000000000001
+          },
+          {
+            "InstructionIndex": 4,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 2,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.98999999999999999
+          },
+          {
+            "InstructionIndex": 6,
+            "ResourceIndex": 2,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 6,
+            "ResourceIndex": 3,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 2,
+            "ResourceUsage": 2
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 3,
+            "ResourceUsage": 2.0099999999999998
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 4,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 5,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 7,
+            "ResourceUsage": 1.49
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 8,
+            "ResourceUsage": 1.5
+          }
+        ]
+      },
+      "SummaryView": {
+        "BlockRThroughput": 1.5,
+        "DispatchWidth": 6,
+        "IPC": 0.36784025223331579,
+        "Instructions": 700,
+        "Iterations": 100,
+        "TotalCycles": 1903,
+        "TotaluOps": 900,
+        "uOpsPerCycle": 0.47293746715712032
+      },
+      "TimelineView": {
+        "TimelineInfo": [
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 6,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 10,
+            "CycleIssued": 1,
+            "CycleReady": 1,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 14,
+            "CycleIssued": 10,
+            "CycleReady": 10,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 3,
+            "CycleIssued": 2,
+            "CycleReady": 2,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 4,
+            "CycleIssued": 3,
+            "CycleReady": 3,
+            "CycleRetired": 15
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 20,
+            "CycleIssued": 14,
+            "CycleReady": 14,
+            "CycleRetired": 21
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 25,
+            "CycleIssued": 20,
+            "CycleReady": 20,
+            "CycleRetired": 26
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 29,
+            "CycleIssued": 20,
+            "CycleReady": 20,
+            "CycleRetired": 30
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 21,
+            "CycleIssued": 20,
+            "CycleReady": 20,
+            "CycleRetired": 30
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 33,
+            "CycleIssued": 29,
+            "CycleReady": 29,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 22,
+            "CycleIssued": 21,
+            "CycleReady": 21,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 23,
+            "CycleIssued": 22,
+            "CycleReady": 22,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 39,
+            "CycleIssued": 33,
+            "CycleReady": 33,
+            "CycleRetired": 40
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 44,
+            "CycleIssued": 39,
+            "CycleReady": 39,
+            "CycleRetired": 45
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 48,
+            "CycleIssued": 39,
+            "CycleReady": 39,
+            "CycleRetired": 49
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 40,
+            "CycleIssued": 39,
+            "CycleReady": 39,
+            "CycleRetired": 49
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 52,
+            "CycleIssued": 48,
+            "CycleReady": 48,
+            "CycleRetired": 53
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 41,
+            "CycleIssued": 40,
+            "CycleReady": 40,
+            "CycleRetired": 53
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 42,
+            "CycleIssued": 41,
+            "CycleReady": 41,
+            "CycleRetired": 53
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 58,
+            "CycleIssued": 52,
+            "CycleReady": 52,
+            "CycleRetired": 59
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 63,
+            "CycleIssued": 58,
+            "CycleReady": 58,
+            "CycleRetired": 64
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 67,
+            "CycleIssued": 58,
+            "CycleReady": 58,
+            "CycleRetired": 68
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 59,
+            "CycleIssued": 58,
+            "CycleReady": 58,
+            "CycleRetired": 68
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 71,
+            "CycleIssued": 67,
+            "CycleReady": 67,
+            "CycleRetired": 72
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 60,
+            "CycleIssued": 59,
+            "CycleReady": 59,
+            "CycleRetired": 72
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 61,
+            "CycleIssued": 60,
+            "CycleReady": 60,
+            "CycleRetired": 72
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 77,
+            "CycleIssued": 71,
+            "CycleReady": 71,
+            "CycleRetired": 78
+          }
+        ]
+      }
+    }
+  ],
+  "SimulationParameters": {
+    "-march": "x86_64",
+    "-mcpu": "skylake",
+    "-mtriple": "x86_64-w64-windows-gnu"
+  },
+  "TargetInfo": {
+    "CPUName": "skylake",
+    "Resources": [
+      "SKLDivider",
+      "SKLFPDivider",
+      "SKLPort0",
+      "SKLPort1",
+      "SKLPort2",
+      "SKLPort3",
+      "SKLPort4",
+      "SKLPort5",
+      "SKLPort6",
+      "SKLPort7"
+    ]
+  }
+}
