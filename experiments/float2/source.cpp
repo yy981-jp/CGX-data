@@ -6,7 +6,7 @@ int main() {
 	constexpr int n = 10;
 	std::array<float,n> a, b;
 
-	std::ifstream ifs;
+	std::ifstream ifs("dummy.txt");
 	for (auto& e: a) ifs >> e;
 	for (auto& e: b) ifs >> e;
 
