@@ -1,16 +1,16 @@
-	.file	"source.cpp"
 	.text
+	.file	"source.cpp"
 	.globl	main                            // -- Begin function main
 	.p2align	2
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
 	.loc	0 1 0                           // source.cpp:1:0
 	.cfi_startproc
 // %bb.0:
 	.file	1 "CGX-MCA-END"
-	.loc	1 0 2 is_stmt 0                 // CGX-MCA-END:0:2
+	.loc	1 0 2 prologue_end              // CGX-MCA-END:0:2
 	mov	w0, #1                          // =0x1
 	ret
 .Ltmp0:
@@ -18,6 +18,7 @@ main:                                   // @main
 	.size	main, .Lfunc_end0-main
 	.cfi_endproc
                                         // -- End function
+	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               // Abbreviation Code
 	.byte	17                              // DW_TAG_compile_unit
@@ -69,11 +70,11 @@ main:                                   // @main
 .Lstr_offsets_base0:
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
-	.asciz	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)" // string offset=0 ; clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)
+	.asciz	"Ubuntu clang version 18.1.3 (1ubuntu1)" // string offset=0
 .Linfo_string1:
-	.asciz	"source.cpp"                    // string offset=105 ; source.cpp
+	.asciz	"source.cpp"                    // string offset=39
 .Linfo_string2:
-	.asciz	"/home/yy981/cpp/CGX-data/experiments/float1" // string offset=116 ; /home/yy981/cpp/CGX-data/experiments/float1
+	.asciz	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" // string offset=50
 	.section	.debug_str_offsets,"",@progbits
 	.word	.Linfo_string0
 	.word	.Linfo_string1
@@ -87,7 +88,7 @@ main:                                   // @main
 .Laddr_table_base0:
 	.xword	.Lfunc_begin0
 .Ldebug_addr_end0:
-	.ident	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)"
+	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
 	.section	.debug_line,"",@progbits
