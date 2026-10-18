@@ -87,15 +87,15 @@
         ]
       },
       "Instructions": [
-        "movq\t(%r13,%rax), %xmm0",
-        "movq\t(%r14,%rax), %xmm2",
+        "movq\t(%rdi,%rax), %xmm1",
+        "movq\t(%rsi,%rax), %xmm2",
         "addq\t$8, %rax",
-        "mulps\t%xmm2, %xmm0",
-        "addss\t%xmm0, %xmm1",
-        "shufps\t$229, %xmm0, %xmm0",
-        "addss\t%xmm0, %xmm1",
+        "mulps\t%xmm2, %xmm1",
+        "addss\t%xmm1, %xmm0",
+        "shufps\t$229, %xmm1, %xmm1",
+        "addss\t%xmm1, %xmm0",
         "cmpq\t$40, %rax",
-        "jne\t.L4"
+        "jne\t.L2"
       ],
       "Name": "",
       "ResourcePressureView": {

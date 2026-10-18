@@ -60,12 +60,12 @@
         ]
       },
       "Instructions": [
-        "flw\tfa4, 0(s0)",
-        "flw\tfa5, 0(s3)",
-        "addi\ts0, s0, 4",
-        "addi\ts3, s3, 4",
-        "fmadd.s\tfs0, fa4, fa5, fs0",
-        "bne\ts0, s4, .L4"
+        "flw\tfa4, 0(a0)",
+        "flw\tfa5, 0(a1)",
+        "addi\ta0, a0, 4",
+        "addi\ta1, a1, 4",
+        "fmadd.s\tfa0, fa4, fa5, fa0",
+        "bne\ta0, a5, .L2"
       ],
       "Name": "",
       "ResourcePressureView": {

@@ -1,11 +1,11 @@
-	.file	"source.cpp"
 	.text
+	.file	"source.cpp"
 	.globl	main                            // -- Begin function main
 	.p2align	2
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
 	.loc	0 1 0                           // source.cpp:1:0
 	.cfi_startproc
 // %bb.0:
@@ -31,7 +31,8 @@ main:                                   // @main
 	mov	w8, #5                          // =0x5
 	str	w8, [sp, #12]
 	.loc	0 6 8                           // source.cpp:6:8
-	str	wzr, [sp, #8]
+	movi	d0, #0000000000000000
+	str	s0, [sp, #8]
 	.file	1 "CGX-MCA-BEGIN"
 	.loc	1 1 10                          // CGX-MCA-BEGIN:1:10
 	str	wzr, [sp, #4]
@@ -44,8 +45,8 @@ main:                                   // @main
 	ldr	w9, [sp, #12]
 	.loc	1 1 2                           // CGX-MCA-BEGIN:1:2
 	subs	w8, w8, w9
-	b.lt	.LBB0_2
-	b	.LBB0_4
+	b.ge	.LBB0_4
+	b	.LBB0_2
 .LBB0_2:                                //   in Loop: Header=BB0_1 Depth=1
 	.loc	1 2 12 is_stmt 1                // CGX-MCA-BEGIN:2:12
 	ldrsw	x9, [sp, #4]
@@ -104,6 +105,7 @@ main:                                   // @main
 	.word	0x3f666666                      // float 0.899999976
 	.size	.L__const.main.b, 20
 
+	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               // Abbreviation Code
 	.byte	17                              // DW_TAG_compile_unit
@@ -155,11 +157,11 @@ main:                                   // @main
 .Lstr_offsets_base0:
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
-	.asciz	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)" // string offset=0 ; clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)
+	.asciz	"Ubuntu clang version 18.1.3 (1ubuntu1)" // string offset=0
 .Linfo_string1:
-	.asciz	"source.cpp"                    // string offset=105 ; source.cpp
+	.asciz	"source.cpp"                    // string offset=39
 .Linfo_string2:
-	.asciz	"/home/yy981/cpp/CGX-data/experiments/float1" // string offset=116 ; /home/yy981/cpp/CGX-data/experiments/float1
+	.asciz	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" // string offset=50
 	.section	.debug_str_offsets,"",@progbits
 	.word	.Linfo_string0
 	.word	.Linfo_string1
@@ -173,7 +175,7 @@ main:                                   // @main
 .Laddr_table_base0:
 	.xword	.Lfunc_begin0
 .Ldebug_addr_end0:
-	.ident	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)"
+	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
 	.section	.debug_line,"",@progbits
