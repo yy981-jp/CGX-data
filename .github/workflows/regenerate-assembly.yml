@@ -1,0 +1,109 @@
+name: Regenerate assembly
+
+on:
+  push:
+    branches:
+      - test
+      - ci/github-actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cgx-data-regenerate-assembly
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout pushed CGX-data branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          path: CGX-data
+          persist-credentials: false
+
+      - name: Checkout CGX
+        uses: actions/checkout@v4
+        with:
+          repository: yy981-jp/CGX
+          ref: develop
+          path: CGX
+          persist-credentials: false
+
+      - name: Checkout test branch for generated output
+        uses: actions/checkout@v4
+        with:
+          repository: yy981-jp/CGX-data
+          ref: test
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: CGX-data-test
+
+      - name: Install compilers
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends \
+            clang \
+            gcc-x86-64-linux-gnu \
+            g++-aarch64-linux-gnu \
+            g++-riscv64-linux-gnu
+
+      - name: Generate assembly for every experiment
+        working-directory: CGX
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -d '' sources < <(
+            find ../CGX-data/experiments \
+              -mindepth 2 -maxdepth 2 \
+              -type f -name source.cpp -print0 | sort -z
+          )
+
+          if (( ${#sources[@]} == 0 )); then
+            echo "::error::No experiments/*/source.cpp files were found."
+            exit 1
+          fi
+
+          for source in "${sources[@]}"; do
+            experiment="${source#../CGX-data/experiments/}"
+            experiment="${experiment%/source.cpp}"
+            echo "::group::Generate assembly: ${experiment}"
+            python3 run.py "${experiment}"
+            echo "::endgroup::"
+          done
+
+      - name: Copy generated assembly to test
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          while IFS= read -r -d '' generated; do
+            relative="${generated#CGX-data/}"
+            destination="CGX-data-test/${relative}"
+            mkdir -p "$(dirname "${destination}")"
+            cp -- "${generated}" "${destination}"
+          done < <(
+            find CGX-data/experiments -type f -path '*/asm/*.s' -print0
+          )
+
+      - name: Commit and push results to test
+        working-directory: CGX-data-test
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- experiments
+
+          if git diff --cached --quiet; then
+            echo "Generated assembly is unchanged; no commit is necessary."
+            exit 0
+          fi
+
+          git commit -m "chore: regenerate assembly [skip ci]"
+          git push origin HEAD:test
