@@ -1,11 +1,11 @@
-	.file	"source.cpp"
 	.text
+	.file	"source.cpp"
 	.globl	main                            // -- Begin function main
 	.p2align	2
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
 	.loc	0 5 0                           // source.cpp:5:0
 	.cfi_startproc
 	.cfi_personality 156, DW.ref.__gxx_personality_v0
@@ -13,7 +13,7 @@ main:                                   // @main
 // %bb.0:
 	stp	x29, x30, [sp, #-48]!           // 16-byte Folded Spill
 	.cfi_def_cfa_offset 48
-	str	x28, [sp, #16]                  // 8-byte Spill
+	str	x28, [sp, #16]                  // 8-byte Folded Spill
 	stp	x20, x19, [sp, #32]             // 16-byte Folded Spill
 	mov	x29, sp
 	.cfi_def_cfa w29, 48
@@ -32,303 +32,279 @@ main:                                   // @main
 	mov	w2, #8                          // =0x8
 	bl	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
 .Ltmp43:
-.Ltmp0:                                 // EH_LABEL
-	.file	1 "/usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13" "istream"
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp0:
+	.file	1 "/usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13" "istream"
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	mov	x0, sp
 	sub	x1, x29, #40
 	sub	x19, x29, #40
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp44:
-.Ltmp1:                                 // EH_LABEL
+.Ltmp1:
 // %bb.1:
-.Ltmp2:                                 // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp2:
 	mov	x0, sp
 .Ltmp45:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #4
 .Ltmp46:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp47:
-.Ltmp3:                                 // EH_LABEL
+.Ltmp3:
 // %bb.2:
-.Ltmp4:                                 // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp4:
 	mov	x0, sp
 .Ltmp48:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #8
 .Ltmp49:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp50:
-.Ltmp5:                                 // EH_LABEL
+.Ltmp5:
 // %bb.3:
-.Ltmp6:                                 // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp6:
 	mov	x0, sp
 .Ltmp51:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #12
 .Ltmp52:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp53:
-.Ltmp7:                                 // EH_LABEL
+.Ltmp7:
 // %bb.4:
-.Ltmp8:                                 // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp8:
 	mov	x0, sp
 .Ltmp54:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #16
 .Ltmp55:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp56:
-.Ltmp9:                                 // EH_LABEL
+.Ltmp9:
 // %bb.5:
-.Ltmp10:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp10:
 	mov	x0, sp
 .Ltmp57:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #20
 .Ltmp58:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp59:
-.Ltmp11:                                // EH_LABEL
+.Ltmp11:
 // %bb.6:
-.Ltmp12:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp12:
 	mov	x0, sp
 .Ltmp60:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #24
 .Ltmp61:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp62:
-.Ltmp13:                                // EH_LABEL
+.Ltmp13:
 // %bb.7:
-.Ltmp14:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp14:
 	mov	x0, sp
 .Ltmp63:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #28
 .Ltmp64:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp65:
-.Ltmp15:                                // EH_LABEL
+.Ltmp15:
 // %bb.8:
-.Ltmp16:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp16:
 	mov	x0, sp
 .Ltmp66:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #32
 .Ltmp67:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp68:
-.Ltmp17:                                // EH_LABEL
+.Ltmp17:
 // %bb.9:
-.Ltmp18:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp18:
 	mov	x0, sp
 .Ltmp69:
 	.loc	0 10 14                         // source.cpp:10:14
 	add	x1, x19, #36
 .Ltmp70:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp71:
-.Ltmp19:                                // EH_LABEL
+.Ltmp19:
 // %bb.10:
-.Ltmp21:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp21:
+	.loc	1 217 16 is_stmt 0              // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	mov	x0, sp
 	sub	x1, x29, #80
 	sub	x19, x29, #80
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp72:
-.Ltmp22:                                // EH_LABEL
+.Ltmp22:
 // %bb.11:
-.Ltmp23:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp23:
 	mov	x0, sp
 .Ltmp73:
-	.loc	0 11 14                         // source.cpp:11:14
+	.loc	0 11 14 is_stmt 1               // source.cpp:11:14
 	add	x1, x19, #4
 .Ltmp74:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp75:
-.Ltmp24:                                // EH_LABEL
+.Ltmp24:
 // %bb.12:
-.Ltmp25:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp25:
 	mov	x0, sp
 .Ltmp76:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #8
 .Ltmp77:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp78:
-.Ltmp26:                                // EH_LABEL
+.Ltmp26:
 // %bb.13:
-.Ltmp27:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp27:
 	mov	x0, sp
 .Ltmp79:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #12
 .Ltmp80:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp81:
-.Ltmp28:                                // EH_LABEL
+.Ltmp28:
 // %bb.14:
-.Ltmp29:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp29:
 	mov	x0, sp
 .Ltmp82:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #16
 .Ltmp83:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp84:
-.Ltmp30:                                // EH_LABEL
+.Ltmp30:
 // %bb.15:
-.Ltmp31:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp31:
 	mov	x0, sp
 .Ltmp85:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #20
 .Ltmp86:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp87:
-.Ltmp32:                                // EH_LABEL
+.Ltmp32:
 // %bb.16:
-.Ltmp33:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp33:
 	mov	x0, sp
 .Ltmp88:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #24
 .Ltmp89:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp90:
-.Ltmp34:                                // EH_LABEL
+.Ltmp34:
 // %bb.17:
-.Ltmp35:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp35:
 	mov	x0, sp
 .Ltmp91:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #28
 .Ltmp92:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp93:
-.Ltmp36:                                // EH_LABEL
+.Ltmp36:
 // %bb.18:
-.Ltmp37:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp37:
 	mov	x0, sp
 .Ltmp94:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #32
 .Ltmp95:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp96:
-.Ltmp38:                                // EH_LABEL
+.Ltmp38:
 // %bb.19:
-.Ltmp39:                                // EH_LABEL
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp39:
 	mov	x0, sp
 .Ltmp97:
 	.loc	0 11 14                         // source.cpp:11:14
 	add	x1, x19, #36
 	mov	x20, sp
 .Ltmp98:
-	.loc	1 217 16                        // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	1 217 16                        // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:217:16
 	bl	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp99:
-.Ltmp40:                                // EH_LABEL
+.Ltmp40:
 // %bb.20:
-	.loc	1 0 16 is_stmt 0                // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:0:16
+	.loc	1 0 16 is_stmt 0                // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/istream:0:16
 	movi	d0, #0000000000000000
 	.file	2 "CGX-MCA-BEGIN"
-	.loc	2 2 17                          // CGX-MCA-BEGIN:2:17
+	.loc	2 2 17 is_stmt 1                // CGX-MCA-BEGIN:2:17
 	ldp	s1, s4, [x29, #-80]
-	.loc	2 2 10                          // CGX-MCA-BEGIN:2:10
+	.loc	2 2 10 is_stmt 0                // CGX-MCA-BEGIN:2:10
 	ldp	s2, s3, [x29, #-40]
 .Ltmp100:
-	.file	3 "/usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13" "fstream"
-	.loc	3 607 7                         // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
+	.file	3 "/usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13" "fstream"
+	.loc	3 607 7 is_stmt 1               // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7
 	adrp	x1, :got:_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE
 	mov	x0, sp
 .Ltmp101:
-	.loc	2 2 7 is_stmt 1                 // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
 	.loc	2 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s2, s1, s0
 	fmadd	s0, s3, s4, s0
 	.loc	2 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
 	ldp	s1, s4, [x29, #-72]
 	.loc	2 2 10                          // CGX-MCA-BEGIN:2:10
 	ldp	s2, s3, [x29, #-32]
-	.loc	2 2 7 is_stmt 1                 // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
 	.loc	2 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s2, s1, s0
 	fmadd	s0, s3, s4, s0
-	.loc	2 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
+	.loc	2 2 17                          // CGX-MCA-BEGIN:2:17
 	ldp	s1, s4, [x29, #-64]
 	.loc	2 2 10                          // CGX-MCA-BEGIN:2:10
 	ldp	s2, s3, [x29, #-24]
-	.loc	2 2 7 is_stmt 1                 // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
 	.loc	2 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s2, s1, s0
 	fmadd	s0, s3, s4, s0
-	.loc	2 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
+	.loc	2 2 17                          // CGX-MCA-BEGIN:2:17
 	ldp	s1, s4, [x29, #-56]
 	.loc	2 2 10                          // CGX-MCA-BEGIN:2:10
 	ldp	s2, s3, [x29, #-16]
-	.loc	2 2 7 is_stmt 1                 // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
 	.loc	2 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s2, s1, s0
 	fmadd	s0, s3, s4, s0
-	.loc	2 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
+	.loc	2 2 17                          // CGX-MCA-BEGIN:2:17
 	ldp	s1, s4, [x29, #-48]
 	.loc	2 2 10                          // CGX-MCA-BEGIN:2:10
 	ldp	s2, s3, [x29, #-8]
 .Ltmp102:
-	.loc	3 607 7                         // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
+	.loc	3 607 7 is_stmt 1               // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7
 	ldr	x1, [x1, :got_lo12:_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE]
 .Ltmp103:
-	.loc	2 2 7 is_stmt 1                 // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
 	.loc	2 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s2, s1, s0
 	fmadd	s0, s3, s4, s0
 	.file	4 "CGX-MCA-END"
 	.loc	4 0 9 is_stmt 0                 // CGX-MCA-END:0:9
 	fcvtzs	w19, s0
 .Ltmp104:
-	.loc	3 607 7 is_stmt 1               // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
+	.loc	3 607 7 is_stmt 1               // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7
 	bl	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED2Ev
 .Ltmp105:
-	.loc	3 607 7                         // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
 	add	x0, x20, #264
 	bl	_ZNSt8ios_baseD2Ev
 .Ltmp106:
@@ -338,7 +314,7 @@ main:                                   // @main
 	add	sp, sp, #608
 	.cfi_def_cfa wsp, 48
 	ldp	x20, x19, [sp, #32]             // 16-byte Folded Reload
-	ldr	x28, [sp, #16]                  // 8-byte Reload
+	ldr	x28, [sp, #16]                  // 8-byte Folded Reload
 	ldp	x29, x30, [sp], #48             // 16-byte Folded Reload
 	.cfi_def_cfa_offset 0
 	.cfi_restore w19
@@ -349,14 +325,14 @@ main:                                   // @main
 	ret
 .LBB0_21:
 	.cfi_restore_state
-.Ltmp41:                                // EH_LABEL
+.Ltmp41:
 	.loc	4 0 1                           // CGX-MCA-END:0:1
 	b	.LBB0_23
 .LBB0_22:
-.Ltmp20:                                // EH_LABEL
+.Ltmp20:
 .LBB0_23:
 .Ltmp107:
-	.loc	3 607 7 is_stmt 1               // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
+	.loc	3 607 7 is_stmt 1               // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7
 	adrp	x1, :got:_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE
 	mov	x19, x0
 	mov	x0, sp
@@ -364,11 +340,10 @@ main:                                   // @main
 	mov	x20, sp
 	bl	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED2Ev
 .Ltmp108:
-	.loc	3 607 7                         // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
 	add	x0, x20, #264
 	bl	_ZNSt8ios_baseD2Ev
 .Ltmp109:
-	.loc	3 0 7 is_stmt 0                 // /usr/lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:0:7
+	.loc	3 0 7 is_stmt 0                 // /usr/bin/../lib/gcc-cross/aarch64-linux-gnu/13/../../../../aarch64-linux-gnu/include/c++/13/fstream:0:7
 	mov	x0, x19
 	bl	_Unwind_Resume
 .Ltmp110:
@@ -409,6 +384,7 @@ GCC_except_table0:
 	.asciz	"dummy.txt"
 	.size	.L.str, 10
 
+	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               // Abbreviation Code
 	.byte	17                              // DW_TAG_compile_unit
@@ -490,30 +466,6 @@ GCC_except_table0:
 	.byte	11                              // DW_FORM_data1
 	.byte	0                               // EOM(1)
 	.byte	0                               // EOM(2)
-	.byte	6                               // Abbreviation Code
-	.byte	72                              // DW_TAG_call_site
-	.byte	0                               // DW_CHILDREN_no
-	.byte	127                             // DW_AT_call_origin
-	.byte	19                              // DW_FORM_ref4
-	.byte	125                             // DW_AT_call_return_pc
-	.byte	27                              // DW_FORM_addrx
-	.byte	0                               // EOM(1)
-	.byte	0                               // EOM(2)
-	.byte	7                               // Abbreviation Code
-	.byte	46                              // DW_TAG_subprogram
-	.byte	0                               // DW_CHILDREN_no
-	.byte	3                               // DW_AT_name
-	.byte	37                              // DW_FORM_strx1
-	.byte	58                              // DW_AT_decl_file
-	.byte	11                              // DW_FORM_data1
-	.byte	59                              // DW_AT_decl_line
-	.byte	5                               // DW_FORM_data2
-	.byte	60                              // DW_AT_declaration
-	.byte	25                              // DW_FORM_flag_present
-	.byte	63                              // DW_AT_external
-	.byte	25                              // DW_FORM_flag_present
-	.byte	0                               // EOM(1)
-	.byte	0                               // EOM(2)
 	.byte	0                               // EOM(3)
 	.section	.debug_info,"",@progbits
 .Lcu_begin0:
@@ -523,7 +475,7 @@ GCC_except_table0:
 	.byte	1                               // DWARF Unit Type
 	.byte	8                               // Address Size (in bytes)
 	.word	.debug_abbrev                   // Offset Into Abbrev. Section
-	.byte	1                               // Abbrev [1] 0xc:0xcd DW_TAG_compile_unit
+	.byte	1                               // Abbrev [1] 0xc:0x50 DW_TAG_compile_unit
 	.byte	0                               // DW_AT_producer
 	.hword	33                              // DW_AT_language
 	.byte	1                               // DW_AT_name
@@ -540,11 +492,11 @@ GCC_except_table0:
 	.byte	2                               // Abbrev [2] 0x29:0x2 DW_TAG_subprogram
 	.byte	4                               // DW_AT_name
                                         // DW_AT_inline
-	.byte	3                               // Abbrev [3] 0x2b:0xa8 DW_TAG_subprogram
+	.byte	3                               // Abbrev [3] 0x2b:0x30 DW_TAG_subprogram
 	.byte	0                               // DW_AT_low_pc
 	.word	.Lfunc_end0-.Lfunc_begin0       // DW_AT_high_pc
                                         // DW_AT_call_all_calls
-	.byte	6                               // DW_AT_name
+	.byte	5                               // DW_AT_name
 	.byte	4                               // Abbrev [4] 0x32:0x9 DW_TAG_inlined_subroutine
 	.word	39                              // DW_AT_abstract_origin
 	.byte	0                               // DW_AT_ranges
@@ -570,73 +522,7 @@ GCC_except_table0:
 	.byte	4                               // DW_AT_call_file
 	.byte	1                               // DW_AT_call_line
 	.byte	1                               // DW_AT_call_column
-	.byte	6                               // Abbrev [6] 0x5a:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	2                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x60:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	3                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x66:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	4                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x6c:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	5                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x72:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	6                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x78:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	7                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x7e:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	8                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x84:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	9                               // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x8a:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	10                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x90:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	11                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x96:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	12                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0x9c:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	13                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xa2:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	14                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xa8:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	15                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xae:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	16                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xb4:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	17                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xba:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	18                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xc0:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	19                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xc6:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	20                              // DW_AT_call_return_pc
-	.byte	6                               // Abbrev [6] 0xcc:0x6 DW_TAG_call_site
-	.word	211                             // DW_AT_call_origin
-	.byte	21                              // DW_AT_call_return_pc
 	.byte	0                               // End Of Children Mark
-	.byte	7                               // Abbrev [7] 0xd3:0x5 DW_TAG_subprogram
-	.byte	5                               // DW_AT_name
-	.byte	1                               // DW_AT_decl_file
-	.hword	731                             // DW_AT_decl_line
-                                        // DW_AT_declaration
-                                        // DW_AT_external
 	.byte	0                               // End Of Children Mark
 .Ldebug_info_end0:
 	.section	.debug_rnglists,"",@progbits
@@ -727,25 +613,23 @@ GCC_except_table0:
 	.byte	0                               // DW_RLE_end_of_list
 .Ldebug_list_header_end0:
 	.section	.debug_str_offsets,"",@progbits
-	.word	32                              // Length of String Offsets Set
+	.word	28                              // Length of String Offsets Set
 	.hword	5
 	.hword	0
 .Lstr_offsets_base0:
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
-	.asciz	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)" // string offset=0 ; clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)
+	.asciz	"Ubuntu clang version 18.1.3 (1ubuntu1)" // string offset=0
 .Linfo_string1:
-	.asciz	"source.cpp"                    // string offset=105 ; source.cpp
+	.asciz	"source.cpp"                    // string offset=39
 .Linfo_string2:
-	.asciz	"/home/yy981/cpp/CGX-data/experiments/float2" // string offset=116 ; /home/yy981/cpp/CGX-data/experiments/float2
+	.asciz	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" // string offset=50
 .Linfo_string3:
-	.asciz	"operator>>"                    // string offset=160 ; operator>>
+	.asciz	"operator>>"                    // string offset=114
 .Linfo_string4:
-	.asciz	"~basic_ifstream"               // string offset=171 ; ~basic_ifstream
+	.asciz	"~basic_ifstream"               // string offset=125
 .Linfo_string5:
-	.asciz	"_M_extract<float>"             // string offset=187 ; _M_extract<float>
-.Linfo_string6:
-	.asciz	"main"                          // string offset=205 ; main
+	.asciz	"main"                          // string offset=141
 	.section	.debug_str_offsets,"",@progbits
 	.word	.Linfo_string0
 	.word	.Linfo_string1
@@ -753,7 +637,6 @@ GCC_except_table0:
 	.word	.Linfo_string3
 	.word	.Linfo_string4
 	.word	.Linfo_string5
-	.word	.Linfo_string6
 	.section	.debug_addr,"",@progbits
 	.word	.Ldebug_addr_end0-.Ldebug_addr_start0 // Length of contribution
 .Ldebug_addr_start0:
@@ -763,26 +646,6 @@ GCC_except_table0:
 .Laddr_table_base0:
 	.xword	.Lfunc_begin0
 	.xword	.Ltmp107
-	.xword	.Ltmp44
-	.xword	.Ltmp47
-	.xword	.Ltmp50
-	.xword	.Ltmp53
-	.xword	.Ltmp56
-	.xword	.Ltmp59
-	.xword	.Ltmp62
-	.xword	.Ltmp65
-	.xword	.Ltmp68
-	.xword	.Ltmp71
-	.xword	.Ltmp72
-	.xword	.Ltmp75
-	.xword	.Ltmp78
-	.xword	.Ltmp81
-	.xword	.Ltmp84
-	.xword	.Ltmp87
-	.xword	.Ltmp90
-	.xword	.Ltmp93
-	.xword	.Ltmp96
-	.xword	.Ltmp99
 .Ldebug_addr_end0:
 	.hidden	DW.ref.__gxx_personality_v0
 	.weak	DW.ref.__gxx_personality_v0
@@ -792,7 +655,7 @@ GCC_except_table0:
 	.size	DW.ref.__gxx_personality_v0, 8
 DW.ref.__gxx_personality_v0:
 	.xword	__gxx_personality_v0
-	.ident	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)"
+	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
 	.addrsig_sym __gxx_personality_v0

@@ -1,14 +1,14 @@
-	.attribute	4, 16
-	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0_zmmul1p0_zaamo1p0_zalrsc1p0_zca1p0_zcd1p0"
-	.file	"source.cpp"
 	.text
+	.attribute	4, 16
+	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0"
+	.file	"source.cpp"
 	.globl	main                            # -- Begin function main
 	.p2align	1
 	.type	main,@function
 main:                                   # @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
-	.loc	0 5 0                           # source.cpp:5:0
+	.file	1 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp"
+	.loc	1 5 0                           # source.cpp:5:0
 	.cfi_startproc
 	.cfi_personality 155, DW.ref.__gxx_personality_v0
 	.cfi_lsda 27, .Lexception0
@@ -19,312 +19,309 @@ main:                                   # @main
 	sd	s0, 608(sp)                     # 8-byte Folded Spill
 	.cfi_offset ra, -8
 	.cfi_offset s0, -16
-	.cfi_remember_state
 .Lpcrel_hi0:
 .Ltmp42:
-	.loc	0 9 16 prologue_end             # source.cpp:9:16
-	auipc	a1, %pcrel_hi(.L.str)
-	addi	a1, a1, %pcrel_lo(.Lpcrel_hi0)
+	.loc	1 9 16 prologue_end             # source.cpp:9:16
+	auipc	a0, %pcrel_hi(.L.str)
+	addi	a1, a0, %pcrel_lo(.Lpcrel_hi0)
 	addi	a0, sp, 8
 	li	a2, 8
 	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode
 .Ltmp43:
-.Ltmp0:                                 # EH_LABEL
-	.file	1 "/usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13" "istream"
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+.Ltmp0:
+	.file	2 "/usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13" "istream"
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	addi	a1, sp, 568
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp44:
-.Ltmp1:                                 # EH_LABEL
+.Ltmp1:
 # %bb.1:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 572
-.Ltmp2:                                 # EH_LABEL
+.Ltmp2:
 .Ltmp45:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp46:
-.Ltmp3:                                 # EH_LABEL
+.Ltmp3:
 # %bb.2:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 576
-.Ltmp4:                                 # EH_LABEL
+.Ltmp4:
 .Ltmp47:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp48:
-.Ltmp5:                                 # EH_LABEL
+.Ltmp5:
 # %bb.3:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 580
-.Ltmp6:                                 # EH_LABEL
+.Ltmp6:
 .Ltmp49:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp50:
-.Ltmp7:                                 # EH_LABEL
+.Ltmp7:
 # %bb.4:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 584
-.Ltmp8:                                 # EH_LABEL
+.Ltmp8:
 .Ltmp51:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp52:
-.Ltmp9:                                 # EH_LABEL
+.Ltmp9:
 # %bb.5:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 588
-.Ltmp10:                                # EH_LABEL
+.Ltmp10:
 .Ltmp53:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp54:
-.Ltmp11:                                # EH_LABEL
+.Ltmp11:
 # %bb.6:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 592
-.Ltmp12:                                # EH_LABEL
+.Ltmp12:
 .Ltmp55:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp56:
-.Ltmp13:                                # EH_LABEL
+.Ltmp13:
 # %bb.7:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 596
-.Ltmp14:                                # EH_LABEL
+.Ltmp14:
 .Ltmp57:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp58:
-.Ltmp15:                                # EH_LABEL
+.Ltmp15:
 # %bb.8:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 600
-.Ltmp16:                                # EH_LABEL
+.Ltmp16:
 .Ltmp59:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp60:
-.Ltmp17:                                # EH_LABEL
+.Ltmp17:
 # %bb.9:
-	.loc	0 10 14                         # source.cpp:10:14
+	.loc	1 10 14                         # source.cpp:10:14
 	addi	a1, sp, 604
-.Ltmp18:                                # EH_LABEL
+.Ltmp18:
 .Ltmp61:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:10:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp62:
-.Ltmp19:                                # EH_LABEL
+.Ltmp19:
 # %bb.10:
-.Ltmp21:                                # EH_LABEL
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+.Ltmp21:
+	.loc	2 217 16 is_stmt 0              # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	addi	a1, sp, 528
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp63:
-.Ltmp22:                                # EH_LABEL
+.Ltmp22:
 # %bb.11:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14 is_stmt 1               # source.cpp:11:14
 	addi	a1, sp, 532
-.Ltmp23:                                # EH_LABEL
+.Ltmp23:
 .Ltmp64:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp65:
-.Ltmp24:                                # EH_LABEL
+.Ltmp24:
 # %bb.12:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 536
-.Ltmp25:                                # EH_LABEL
+.Ltmp25:
 .Ltmp66:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp67:
-.Ltmp26:                                # EH_LABEL
+.Ltmp26:
 # %bb.13:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 540
-.Ltmp27:                                # EH_LABEL
+.Ltmp27:
 .Ltmp68:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp69:
-.Ltmp28:                                # EH_LABEL
+.Ltmp28:
 # %bb.14:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 544
-.Ltmp29:                                # EH_LABEL
+.Ltmp29:
 .Ltmp70:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp71:
-.Ltmp30:                                # EH_LABEL
+.Ltmp30:
 # %bb.15:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 548
-.Ltmp31:                                # EH_LABEL
+.Ltmp31:
 .Ltmp72:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp73:
-.Ltmp32:                                # EH_LABEL
+.Ltmp32:
 # %bb.16:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 552
-.Ltmp33:                                # EH_LABEL
+.Ltmp33:
 .Ltmp74:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp75:
-.Ltmp34:                                # EH_LABEL
+.Ltmp34:
 # %bb.17:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 556
-.Ltmp35:                                # EH_LABEL
+.Ltmp35:
 .Ltmp76:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp77:
-.Ltmp36:                                # EH_LABEL
+.Ltmp36:
 # %bb.18:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 560
-.Ltmp37:                                # EH_LABEL
+.Ltmp37:
 .Ltmp78:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp79:
-.Ltmp38:                                # EH_LABEL
+.Ltmp38:
 # %bb.19:
-	.loc	0 11 14                         # source.cpp:11:14
+	.loc	1 11 14                         # source.cpp:11:14
 	addi	a1, sp, 564
-.Ltmp39:                                # EH_LABEL
+.Ltmp39:
 .Ltmp80:
-	.loc	1 217 16                        # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16 @[ source.cpp:11:23 ]
+	.loc	2 217 16                        # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/istream:217:16
 	addi	a0, sp, 8
 	call	_ZNSi10_M_extractIfEERSiRT_
 .Ltmp81:
-.Ltmp40:                                # EH_LABEL
+.Ltmp40:
 # %bb.20:
-	.file	2 "CGX-MCA-BEGIN"
-	.loc	2 2 17                          # CGX-MCA-BEGIN:2:17
-	flw	fa5, 528(sp)
-	fmv.w.x	fa4, zero
-	.loc	2 2 10 is_stmt 0                # CGX-MCA-BEGIN:2:10
-	flw	fa3, 568(sp)
-	flw	fa2, 572(sp)
-	flw	fa1, 576(sp)
-	flw	fa0, 580(sp)
-	.loc	2 2 17                          # CGX-MCA-BEGIN:2:17
-	flw	ft0, 532(sp)
-	flw	ft1, 536(sp)
-	flw	ft2, 540(sp)
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa3, fa5, fa4
-	.loc	2 2 7 is_stmt 1                 # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa2, ft0, fa5
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa1, ft1, fa5
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa0, ft2, fa5
-	.loc	2 2 17 is_stmt 0                # CGX-MCA-BEGIN:2:17
-	flw	fa4, 544(sp)
-	.loc	2 2 10                          # CGX-MCA-BEGIN:2:10
-	flw	fa3, 584(sp)
-	flw	fa2, 588(sp)
-	flw	fa1, 592(sp)
-	flw	fa0, 596(sp)
-	.loc	2 2 17                          # CGX-MCA-BEGIN:2:17
-	flw	ft0, 548(sp)
-	flw	ft1, 552(sp)
-	flw	ft2, 556(sp)
-	.loc	2 2 7 is_stmt 1                 # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa3, fa4, fa5
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa2, ft0, fa5
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa1, ft1, fa5
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa0, ft2, fa5
-	.loc	2 2 17 is_stmt 0                # CGX-MCA-BEGIN:2:17
-	flw	fa4, 560(sp)
-	.loc	2 2 10                          # CGX-MCA-BEGIN:2:10
-	flw	fa3, 600(sp)
-	flw	fa2, 604(sp)
-	.loc	2 2 17                          # CGX-MCA-BEGIN:2:17
-	flw	fa1, 564(sp)
-	.loc	2 2 7 is_stmt 1                 # CGX-MCA-BEGIN:2:7
-	fmadd.s	fa5, fa3, fa4, fa5
-	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
+	.file	3 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "CGX-MCA-BEGIN"
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa5, 568(sp)
+	.loc	3 2 17 is_stmt 0                # CGX-MCA-BEGIN:2:17
+	flw	fa4, 528(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa3, 572(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	fa2, 532(sp)
+	fmv.w.x	fa1, zero
+	.loc	3 2 7                           # CGX-MCA-BEGIN:2:7
+	fmadd.s	fa5, fa5, fa4, fa1
+	fmadd.s	fa5, fa3, fa2, fa5
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa4, 576(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	fa3, 536(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa2, 580(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	fa1, 540(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa0, 584(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	ft0, 544(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	ft1, 588(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	ft2, 548(sp)
+	.loc	3 2 7                           # CGX-MCA-BEGIN:2:7
+	fmadd.s	fa5, fa4, fa3, fa5
 	fmadd.s	fa5, fa2, fa1, fa5
-	.file	3 "CGX-MCA-END"
-	.loc	3 0 9 is_stmt 0                 # CGX-MCA-END:0:9
+	fmadd.s	fa5, fa0, ft0, fa5
+	fmadd.s	fa5, ft1, ft2, fa5
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa4, 592(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	fa3, 552(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa2, 596(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	fa1, 556(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	fa0, 600(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	ft0, 560(sp)
+	.loc	3 2 10                          # CGX-MCA-BEGIN:2:10
+	flw	ft1, 604(sp)
+	.loc	3 2 17                          # CGX-MCA-BEGIN:2:17
+	flw	ft2, 564(sp)
+	.loc	3 2 7                           # CGX-MCA-BEGIN:2:7
+	fmadd.s	fa5, fa4, fa3, fa5
+	fmadd.s	fa5, fa2, fa1, fa5
+	fmadd.s	fa5, fa0, ft0, fa5
+	fmadd.s	fa5, ft1, ft2, fa5
+	.file	4 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "CGX-MCA-END"
+	.loc	4 0 9                           # CGX-MCA-END:0:9
 	fcvt.w.s	s0, fa5, rtz
 .Lpcrel_hi1:
 .Ltmp82:
-	.file	4 "/usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13" "fstream"
-	.loc	4 607 7 is_stmt 1               # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
+	.file	5 "/usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13" "fstream"
+	.loc	5 607 7 is_stmt 1               # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7
 	auipc	a0, %got_pcrel_hi(_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE)
 	ld	a1, %pcrel_lo(.Lpcrel_hi1)(a0)
 	addi	a0, sp, 8
 	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED2Ev
 .Ltmp83:
-	.loc	4 607 7                         # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
 	addi	a0, sp, 264
 	call	_ZNSt8ios_baseD2Ev
 .Ltmp84:
-	.loc	3 1 1                           # CGX-MCA-END:1:1
+	.loc	4 1 1                           # CGX-MCA-END:1:1
 	mv	a0, s0
-	.loc	3 1 1 epilogue_begin is_stmt 0  # CGX-MCA-END:1:1
 	ld	ra, 616(sp)                     # 8-byte Folded Reload
 	ld	s0, 608(sp)                     # 8-byte Folded Reload
-	.cfi_restore ra
-	.cfi_restore s0
+	.loc	4 1 1 epilogue_begin is_stmt 0  # CGX-MCA-END:1:1
 	addi	sp, sp, 624
-	.cfi_def_cfa_offset 0
 	ret
 .LBB0_21:
-	.cfi_restore_state
-.Ltmp41:                                # EH_LABEL
-	.loc	3 0 1                           # CGX-MCA-END:0:1
+.Ltmp41:
+	.loc	4 0 1                           # CGX-MCA-END:0:1
 	j	.LBB0_23
 .LBB0_22:
-.Ltmp20:                                # EH_LABEL
+.Ltmp20:
 .LBB0_23:
 	mv	s0, a0
 .Lpcrel_hi2:
 .Ltmp85:
-	.loc	4 607 7 is_stmt 1               # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
+	.loc	5 607 7 is_stmt 1               # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7
 	auipc	a0, %got_pcrel_hi(_ZTTSt14basic_ifstreamIcSt11char_traitsIcEE)
 	ld	a1, %pcrel_lo(.Lpcrel_hi2)(a0)
 	addi	a0, sp, 8
 	call	_ZNSt14basic_ifstreamIcSt11char_traitsIcEED2Ev
 .Ltmp86:
-	.loc	4 607 7                         # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:607:7 @[ CGX-MCA-END:1:1 ]
 	addi	a0, sp, 264
 	call	_ZNSt8ios_baseD2Ev
 .Ltmp87:
-	.loc	4 0 7 is_stmt 0                 # /usr/lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:0:7
+	.loc	5 0 7 is_stmt 0                 # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/fstream:0:7
 	mv	a0, s0
 	call	_Unwind_Resume
 .Ltmp88:
@@ -365,53 +362,47 @@ GCC_except_table0:
 	.asciz	"dummy.txt"
 	.size	.L.str, 10
 
+	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               # Abbreviation Code
 	.byte	17                              # DW_TAG_compile_unit
 	.byte	1                               # DW_CHILDREN_yes
 	.byte	37                              # DW_AT_producer
-	.byte	37                              # DW_FORM_strx1
+	.byte	14                              # DW_FORM_strp
 	.byte	19                              # DW_AT_language
 	.byte	5                               # DW_FORM_data2
 	.byte	3                               # DW_AT_name
-	.byte	37                              # DW_FORM_strx1
-	.byte	114                             # DW_AT_str_offsets_base
-	.byte	23                              # DW_FORM_sec_offset
+	.byte	14                              # DW_FORM_strp
 	.byte	16                              # DW_AT_stmt_list
 	.byte	23                              # DW_FORM_sec_offset
 	.byte	27                              # DW_AT_comp_dir
-	.byte	37                              # DW_FORM_strx1
+	.byte	14                              # DW_FORM_strp
 	.byte	17                              # DW_AT_low_pc
-	.byte	27                              # DW_FORM_addrx
+	.byte	1                               # DW_FORM_addr
 	.byte	18                              # DW_AT_high_pc
 	.byte	6                               # DW_FORM_data4
-	.byte	115                             # DW_AT_addr_base
-	.byte	23                              # DW_FORM_sec_offset
-	.byte	116                             # DW_AT_rnglists_base
-	.byte	23                              # DW_FORM_sec_offset
 	.byte	0                               # EOM(1)
 	.byte	0                               # EOM(2)
 	.byte	2                               # Abbreviation Code
 	.byte	46                              # DW_TAG_subprogram
 	.byte	0                               # DW_CHILDREN_no
 	.byte	3                               # DW_AT_name
-	.byte	37                              # DW_FORM_strx1
+	.byte	14                              # DW_FORM_strp
 	.byte	32                              # DW_AT_inline
-	.byte	33                              # DW_FORM_implicit_const
-	.byte	1
+	.byte	11                              # DW_FORM_data1
 	.byte	0                               # EOM(1)
 	.byte	0                               # EOM(2)
 	.byte	3                               # Abbreviation Code
 	.byte	46                              # DW_TAG_subprogram
 	.byte	1                               # DW_CHILDREN_yes
 	.byte	17                              # DW_AT_low_pc
-	.byte	27                              # DW_FORM_addrx
+	.byte	1                               # DW_FORM_addr
 	.byte	18                              # DW_AT_high_pc
 	.byte	6                               # DW_FORM_data4
-	.byte	122                             # DW_AT_call_all_calls
+	.ascii	"\227B"                         # DW_AT_GNU_all_call_sites
 	.byte	25                              # DW_FORM_flag_present
 	.byte	3                               # DW_AT_name
-	.byte	37                              # DW_FORM_strx1
+	.byte	14                              # DW_FORM_strp
 	.byte	0                               # EOM(1)
 	.byte	0                               # EOM(2)
 	.byte	4                               # Abbreviation Code
@@ -420,7 +411,7 @@ GCC_except_table0:
 	.byte	49                              # DW_AT_abstract_origin
 	.byte	19                              # DW_FORM_ref4
 	.byte	85                              # DW_AT_ranges
-	.byte	35                              # DW_FORM_rnglistx
+	.byte	23                              # DW_FORM_sec_offset
 	.byte	88                              # DW_AT_call_file
 	.byte	11                              # DW_FORM_data1
 	.byte	89                              # DW_AT_call_line
@@ -435,7 +426,7 @@ GCC_except_table0:
 	.byte	49                              # DW_AT_abstract_origin
 	.byte	19                              # DW_FORM_ref4
 	.byte	17                              # DW_AT_low_pc
-	.byte	27                              # DW_FORM_addrx
+	.byte	1                               # DW_FORM_addr
 	.byte	18                              # DW_AT_high_pc
 	.byte	6                               # DW_FORM_data4
 	.byte	88                              # DW_AT_call_file
@@ -446,290 +437,122 @@ GCC_except_table0:
 	.byte	11                              # DW_FORM_data1
 	.byte	0                               # EOM(1)
 	.byte	0                               # EOM(2)
-	.byte	6                               # Abbreviation Code
-	.byte	72                              # DW_TAG_call_site
-	.byte	0                               # DW_CHILDREN_no
-	.byte	127                             # DW_AT_call_origin
-	.byte	19                              # DW_FORM_ref4
-	.byte	125                             # DW_AT_call_return_pc
-	.byte	27                              # DW_FORM_addrx
-	.byte	0                               # EOM(1)
-	.byte	0                               # EOM(2)
-	.byte	7                               # Abbreviation Code
-	.byte	46                              # DW_TAG_subprogram
-	.byte	0                               # DW_CHILDREN_no
-	.byte	3                               # DW_AT_name
-	.byte	37                              # DW_FORM_strx1
-	.byte	58                              # DW_AT_decl_file
-	.byte	11                              # DW_FORM_data1
-	.byte	59                              # DW_AT_decl_line
-	.byte	5                               # DW_FORM_data2
-	.byte	60                              # DW_AT_declaration
-	.byte	25                              # DW_FORM_flag_present
-	.byte	63                              # DW_AT_external
-	.byte	25                              # DW_FORM_flag_present
-	.byte	0                               # EOM(1)
-	.byte	0                               # EOM(2)
 	.byte	0                               # EOM(3)
 	.section	.debug_info,"",@progbits
 .Lcu_begin0:
 	.word	.Ldebug_info_end0-.Ldebug_info_start0 # Length of Unit
 .Ldebug_info_start0:
-	.half	5                               # DWARF version number
-	.byte	1                               # DWARF Unit Type
-	.byte	8                               # Address Size (in bytes)
+	.half	4                               # DWARF version number
 	.word	.debug_abbrev                   # Offset Into Abbrev. Section
-	.byte	1                               # Abbrev [1] 0xc:0xd1 DW_TAG_compile_unit
-	.byte	0                               # DW_AT_producer
+	.byte	8                               # Address Size (in bytes)
+	.byte	1                               # Abbrev [1] 0xb:0x7e DW_TAG_compile_unit
+	.word	.Linfo_string0                  # DW_AT_producer
 	.half	33                              # DW_AT_language
-	.byte	1                               # DW_AT_name
-	.word	.Lstr_offsets_base0             # DW_AT_str_offsets_base
+	.word	.Linfo_string1                  # DW_AT_name
 	.word	.Lline_table_start0             # DW_AT_stmt_list
-	.byte	2                               # DW_AT_comp_dir
-	.byte	0                               # DW_AT_low_pc
+	.word	.Linfo_string2                  # DW_AT_comp_dir
+	.quad	.Lfunc_begin0                   # DW_AT_low_pc
 	.word	.Lfunc_end0-.Lfunc_begin0       # DW_AT_high_pc
-	.word	.Laddr_table_base0              # DW_AT_addr_base
-	.word	.Lrnglists_table_base0          # DW_AT_rnglists_base
-	.byte	2                               # Abbrev [2] 0x27:0x2 DW_TAG_subprogram
-	.byte	3                               # DW_AT_name
-                                        # DW_AT_inline
-	.byte	2                               # Abbrev [2] 0x29:0x2 DW_TAG_subprogram
-	.byte	4                               # DW_AT_name
-                                        # DW_AT_inline
-	.byte	3                               # Abbrev [3] 0x2b:0xac DW_TAG_subprogram
-	.byte	0                               # DW_AT_low_pc
+	.byte	2                               # Abbrev [2] 0x2a:0x6 DW_TAG_subprogram
+	.word	.Linfo_string3                  # DW_AT_name
+	.byte	1                               # DW_AT_inline
+	.byte	2                               # Abbrev [2] 0x30:0x6 DW_TAG_subprogram
+	.word	.Linfo_string4                  # DW_AT_name
+	.byte	1                               # DW_AT_inline
+	.byte	3                               # Abbrev [3] 0x36:0x52 DW_TAG_subprogram
+	.quad	.Lfunc_begin0                   # DW_AT_low_pc
 	.word	.Lfunc_end0-.Lfunc_begin0       # DW_AT_high_pc
-                                        # DW_AT_call_all_calls
-	.byte	6                               # DW_AT_name
-	.byte	4                               # Abbrev [4] 0x32:0x9 DW_TAG_inlined_subroutine
-	.word	39                              # DW_AT_abstract_origin
-	.byte	0                               # DW_AT_ranges
-	.byte	0                               # DW_AT_call_file
+                                        # DW_AT_GNU_all_call_sites
+	.word	.Linfo_string5                  # DW_AT_name
+	.byte	4                               # Abbrev [4] 0x47:0xc DW_TAG_inlined_subroutine
+	.word	42                              # DW_AT_abstract_origin
+	.word	.Ldebug_ranges0                 # DW_AT_ranges
+	.byte	1                               # DW_AT_call_file
 	.byte	10                              # DW_AT_call_line
 	.byte	23                              # DW_AT_call_column
-	.byte	4                               # Abbrev [4] 0x3b:0x9 DW_TAG_inlined_subroutine
-	.word	39                              # DW_AT_abstract_origin
-	.byte	1                               # DW_AT_ranges
-	.byte	0                               # DW_AT_call_file
+	.byte	4                               # Abbrev [4] 0x53:0xc DW_TAG_inlined_subroutine
+	.word	42                              # DW_AT_abstract_origin
+	.word	.Ldebug_ranges1                 # DW_AT_ranges
+	.byte	1                               # DW_AT_call_file
 	.byte	11                              # DW_AT_call_line
 	.byte	23                              # DW_AT_call_column
-	.byte	5                               # Abbrev [5] 0x44:0xd DW_TAG_inlined_subroutine
-	.word	41                              # DW_AT_abstract_origin
-	.byte	1                               # DW_AT_low_pc
+	.byte	5                               # Abbrev [5] 0x5f:0x14 DW_TAG_inlined_subroutine
+	.word	48                              # DW_AT_abstract_origin
+	.quad	.Ltmp82                         # DW_AT_low_pc
 	.word	.Ltmp84-.Ltmp82                 # DW_AT_high_pc
-	.byte	3                               # DW_AT_call_file
+	.byte	4                               # DW_AT_call_file
 	.byte	1                               # DW_AT_call_line
 	.byte	1                               # DW_AT_call_column
-	.byte	5                               # Abbrev [5] 0x51:0xd DW_TAG_inlined_subroutine
-	.word	41                              # DW_AT_abstract_origin
-	.byte	2                               # DW_AT_low_pc
+	.byte	5                               # Abbrev [5] 0x73:0x14 DW_TAG_inlined_subroutine
+	.word	48                              # DW_AT_abstract_origin
+	.quad	.Ltmp85                         # DW_AT_low_pc
 	.word	.Ltmp88-.Ltmp85                 # DW_AT_high_pc
-	.byte	3                               # DW_AT_call_file
+	.byte	4                               # DW_AT_call_file
 	.byte	1                               # DW_AT_call_line
 	.byte	1                               # DW_AT_call_column
-	.byte	6                               # Abbrev [6] 0x5e:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	3                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x64:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	4                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x6a:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	5                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x70:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	6                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x76:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	7                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x7c:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	8                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x82:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	9                               # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x88:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	10                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x8e:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	11                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x94:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	12                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0x9a:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	13                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xa0:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	14                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xa6:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	15                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xac:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	16                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xb2:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	17                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xb8:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	18                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xbe:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	19                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xc4:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	20                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xca:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	21                              # DW_AT_call_return_pc
-	.byte	6                               # Abbrev [6] 0xd0:0x6 DW_TAG_call_site
-	.word	215                             # DW_AT_call_origin
-	.byte	22                              # DW_AT_call_return_pc
 	.byte	0                               # End Of Children Mark
-	.byte	7                               # Abbrev [7] 0xd7:0x5 DW_TAG_subprogram
-	.byte	5                               # DW_AT_name
-	.byte	1                               # DW_AT_decl_file
-	.half	731                             # DW_AT_decl_line
-                                        # DW_AT_declaration
-                                        # DW_AT_external
 	.byte	0                               # End Of Children Mark
 .Ldebug_info_end0:
-	.section	.debug_rnglists,"",@progbits
-	.word	.Ldebug_list_header_end0-.Ldebug_list_header_start0 # Length
-.Ldebug_list_header_start0:
-	.half	5                               # Version
-	.byte	8                               # Address size
-	.byte	0                               # Segment selector size
-	.word	2                               # Offset entry count
-.Lrnglists_table_base0:
-	.word	.Ldebug_ranges0-.Lrnglists_table_base0
-	.word	.Ldebug_ranges1-.Lrnglists_table_base0
+	.section	.debug_ranges,"",@progbits
 .Ldebug_ranges0:
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp43-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp44-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp45-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp46-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp47-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp48-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp49-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp50-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp51-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp52-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp53-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp54-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp55-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp56-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp57-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp58-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp59-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp60-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp61-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp62-.Lfunc_begin0          #   ending offset
-	.byte	0                               # DW_RLE_end_of_list
+	.quad	.Ltmp43-.Lfunc_begin0
+	.quad	.Ltmp44-.Lfunc_begin0
+	.quad	.Ltmp45-.Lfunc_begin0
+	.quad	.Ltmp46-.Lfunc_begin0
+	.quad	.Ltmp47-.Lfunc_begin0
+	.quad	.Ltmp48-.Lfunc_begin0
+	.quad	.Ltmp49-.Lfunc_begin0
+	.quad	.Ltmp50-.Lfunc_begin0
+	.quad	.Ltmp51-.Lfunc_begin0
+	.quad	.Ltmp52-.Lfunc_begin0
+	.quad	.Ltmp53-.Lfunc_begin0
+	.quad	.Ltmp54-.Lfunc_begin0
+	.quad	.Ltmp55-.Lfunc_begin0
+	.quad	.Ltmp56-.Lfunc_begin0
+	.quad	.Ltmp57-.Lfunc_begin0
+	.quad	.Ltmp58-.Lfunc_begin0
+	.quad	.Ltmp59-.Lfunc_begin0
+	.quad	.Ltmp60-.Lfunc_begin0
+	.quad	.Ltmp61-.Lfunc_begin0
+	.quad	.Ltmp62-.Lfunc_begin0
+	.quad	0
+	.quad	0
 .Ldebug_ranges1:
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp62-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp63-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp64-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp65-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp66-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp67-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp68-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp69-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp70-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp71-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp72-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp73-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp74-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp75-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp76-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp77-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp78-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp79-.Lfunc_begin0          #   ending offset
-	.byte	4                               # DW_RLE_offset_pair
-	.uleb128 .Ltmp80-.Lfunc_begin0          #   starting offset
-	.uleb128 .Ltmp81-.Lfunc_begin0          #   ending offset
-	.byte	0                               # DW_RLE_end_of_list
-.Ldebug_list_header_end0:
-	.section	.debug_str_offsets,"",@progbits
-	.word	32                              # Length of String Offsets Set
-	.half	5
-	.half	0
-.Lstr_offsets_base0:
+	.quad	.Ltmp62-.Lfunc_begin0
+	.quad	.Ltmp63-.Lfunc_begin0
+	.quad	.Ltmp64-.Lfunc_begin0
+	.quad	.Ltmp65-.Lfunc_begin0
+	.quad	.Ltmp66-.Lfunc_begin0
+	.quad	.Ltmp67-.Lfunc_begin0
+	.quad	.Ltmp68-.Lfunc_begin0
+	.quad	.Ltmp69-.Lfunc_begin0
+	.quad	.Ltmp70-.Lfunc_begin0
+	.quad	.Ltmp71-.Lfunc_begin0
+	.quad	.Ltmp72-.Lfunc_begin0
+	.quad	.Ltmp73-.Lfunc_begin0
+	.quad	.Ltmp74-.Lfunc_begin0
+	.quad	.Ltmp75-.Lfunc_begin0
+	.quad	.Ltmp76-.Lfunc_begin0
+	.quad	.Ltmp77-.Lfunc_begin0
+	.quad	.Ltmp78-.Lfunc_begin0
+	.quad	.Ltmp79-.Lfunc_begin0
+	.quad	.Ltmp80-.Lfunc_begin0
+	.quad	.Ltmp81-.Lfunc_begin0
+	.quad	0
+	.quad	0
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
-	.asciz	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)" # string offset=0 ; clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)
+	.asciz	"Ubuntu clang version 18.1.3 (1ubuntu1)" # string offset=0
 .Linfo_string1:
-	.asciz	"source.cpp"                    # string offset=105 ; source.cpp
+	.asciz	"source.cpp"                    # string offset=39
 .Linfo_string2:
-	.asciz	"/home/yy981/cpp/CGX-data/experiments/float2" # string offset=116 ; /home/yy981/cpp/CGX-data/experiments/float2
+	.asciz	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" # string offset=50
 .Linfo_string3:
-	.asciz	"operator>>"                    # string offset=160 ; operator>>
+	.asciz	"operator>>"                    # string offset=114
 .Linfo_string4:
-	.asciz	"~basic_ifstream"               # string offset=171 ; ~basic_ifstream
+	.asciz	"~basic_ifstream"               # string offset=125
 .Linfo_string5:
-	.asciz	"_M_extract<float>"             # string offset=187 ; _M_extract<float>
-.Linfo_string6:
-	.asciz	"main"                          # string offset=205 ; main
-	.section	.debug_str_offsets,"",@progbits
-	.word	.Linfo_string0
-	.word	.Linfo_string1
-	.word	.Linfo_string2
-	.word	.Linfo_string3
-	.word	.Linfo_string4
-	.word	.Linfo_string5
-	.word	.Linfo_string6
-	.section	.debug_addr,"",@progbits
-	.word	.Ldebug_addr_end0-.Ldebug_addr_start0 # Length of contribution
-.Ldebug_addr_start0:
-	.half	5                               # DWARF version number
-	.byte	8                               # Address size
-	.byte	0                               # Segment selector size
-.Laddr_table_base0:
-	.quad	.Lfunc_begin0
-	.quad	.Ltmp82
-	.quad	.Ltmp85
-	.quad	.Ltmp44
-	.quad	.Ltmp46
-	.quad	.Ltmp48
-	.quad	.Ltmp50
-	.quad	.Ltmp52
-	.quad	.Ltmp54
-	.quad	.Ltmp56
-	.quad	.Ltmp58
-	.quad	.Ltmp60
-	.quad	.Ltmp62
-	.quad	.Ltmp63
-	.quad	.Ltmp65
-	.quad	.Ltmp67
-	.quad	.Ltmp69
-	.quad	.Ltmp71
-	.quad	.Ltmp73
-	.quad	.Ltmp75
-	.quad	.Ltmp77
-	.quad	.Ltmp79
-	.quad	.Ltmp81
-.Ldebug_addr_end0:
+	.asciz	"main"                          # string offset=141
 	.hidden	DW.ref.__gxx_personality_v0
 	.weak	DW.ref.__gxx_personality_v0
 	.section	.data.DW.ref.__gxx_personality_v0,"awG",@progbits,DW.ref.__gxx_personality_v0,comdat
@@ -738,7 +561,7 @@ GCC_except_table0:
 	.size	DW.ref.__gxx_personality_v0, 8
 DW.ref.__gxx_personality_v0:
 	.quad	__gxx_personality_v0
-	.ident	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)"
+	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
 	.addrsig_sym __gxx_personality_v0

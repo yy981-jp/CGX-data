@@ -2,7 +2,7 @@
 	.file	"source.cpp"
 	.text
 .Ltext0:
-	.file 0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp"
+	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp"
 	.section	.rodata
 	.align	3
 .LC0:
@@ -709,7 +709,7 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.string	"_ZNSt14basic_ifstreamIcSt11char_traitsIcEEC1EPKcSt13_Ios_Openmode"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
-	.string	"/home/yy981/cpp/CGX-data/experiments/float2"
+	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2"
 .LASF0:
 	.string	"source.cpp"
 	.hidden	DW.ref.__gxx_personality_v0

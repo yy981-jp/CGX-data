@@ -1,7 +1,7 @@
 	.file	"source.cpp"
 	.text
 .Ltext0:
-	.file 0 "/home/yy981/cpp/CGX-data/experiments/float1" "source.cpp"
+	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
 	.section	.text.startup,"ax",@progbits
 	.p2align 4
 	.globl	main
@@ -183,7 +183,7 @@ main:
 	.string	"main"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
-	.string	"/home/yy981/cpp/CGX-data/experiments/float1"
+	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"
 .LASF0:
 	.string	"source.cpp"
 	.ident	"GCC: (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"

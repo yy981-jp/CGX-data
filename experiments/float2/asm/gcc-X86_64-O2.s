@@ -1,7 +1,7 @@
 	.file	"source.cpp"
 	.text
 .Ltext0:
-	.file 0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp"
+	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp"
 	.section	.rodata.str1.1,"aMS",@progbits,1
 .LC1:
 	.string	"dummy.txt"
@@ -1351,7 +1351,7 @@ main.cold:
 	.string	"_ZNSiC2Ev"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
-	.string	"/home/yy981/cpp/CGX-data/experiments/float2"
+	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2"
 .LASF0:
 	.string	"source.cpp"
 	.hidden	DW.ref.__gxx_personality_v0

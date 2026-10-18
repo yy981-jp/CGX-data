@@ -1,12 +1,11 @@
-	.att_syntax
-	.file	"source.cpp"
 	.text
+	.file	"source.cpp"
 	.globl	main                            # -- Begin function main
-	.prefalign	4, .Lfunc_end0, nop
+	.p2align	4, 0x90
 	.type	main,@function
 main:                                   # @main
 .Lfunc_begin0:
-	.file	0 "/home/yy981/cpp/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp" md5 0xb604dec725222629b7284c4fccccbdef
 	.loc	0 5 0                           # source.cpp:5:0
 	.cfi_startproc
 	.cfi_personality 155, DW.ref.__gxx_personality_v0
@@ -47,11 +46,11 @@ main:                                   # @main
 	movq	%rax, -640(%rbp)
 	.loc	0 10 26                         # source.cpp:10:26
 	movq	-640(%rbp), %rsi
-.Ltmp2:                                 # EH_LABEL
+.Ltmp2:
 	leaq	-608(%rbp), %rdi
 	.loc	0 10 23                         # source.cpp:10:23
 	callq	_ZNSirsERf@PLT
-.Ltmp3:                                 # EH_LABEL
+.Ltmp3:
 	jmp	.LBB0_3
 .LBB0_3:                                #   in Loop: Header=BB0_1 Depth=1
 	.loc	0 10 2                          # source.cpp:10:2
@@ -63,7 +62,7 @@ main:                                   # @main
 	movq	%rax, -624(%rbp)
 	jmp	.LBB0_1
 .LBB0_5:
-.Ltmp4:                                 # EH_LABEL
+.Ltmp4:
 	.loc	0 0 14                          # source.cpp:0:14
 	movq	%rax, %rcx
 	.file	1 "CGX-MCA-END"
@@ -95,11 +94,11 @@ main:                                   # @main
 	movq	%rax, -688(%rbp)
 	.loc	0 11 26                         # source.cpp:11:26
 	movq	-688(%rbp), %rsi
-.Ltmp0:                                 # EH_LABEL
+.Ltmp0:
 	leaq	-608(%rbp), %rdi
 	.loc	0 11 23                         # source.cpp:11:23
 	callq	_ZNSirsERf@PLT
-.Ltmp1:                                 # EH_LABEL
+.Ltmp1:
 	jmp	.LBB0_9
 .LBB0_9:                                #   in Loop: Header=BB0_7 Depth=1
 	.loc	0 11 2                          # source.cpp:11:2
@@ -197,13 +196,12 @@ GCC_except_table0:
                                         # -- End function
 	.section	.text._ZNSt5arrayIfLm10EE5beginEv,"axG",@progbits,_ZNSt5arrayIfLm10EE5beginEv,comdat
 	.weak	_ZNSt5arrayIfLm10EE5beginEv     # -- Begin function _ZNSt5arrayIfLm10EE5beginEv
-	.p2align	1
-	.prefalign	4, .Lfunc_end1, nop
+	.p2align	4, 0x90
 	.type	_ZNSt5arrayIfLm10EE5beginEv,@function
 _ZNSt5arrayIfLm10EE5beginEv:            # @_ZNSt5arrayIfLm10EE5beginEv
 .Lfunc_begin1:
-	.file	3 "/usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13" "array"
-	.loc	3 127 0 is_stmt 1               # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:127:0
+	.file	3 "/usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14" "array"
+	.loc	3 133 0 is_stmt 1               # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:133:0
 	.cfi_startproc
 # %bb.0:
 	pushq	%rbp
@@ -216,7 +214,7 @@ _ZNSt5arrayIfLm10EE5beginEv:            # @_ZNSt5arrayIfLm10EE5beginEv
 	movq	%rax, -8(%rbp)
 	movq	-8(%rbp), %rax
 .Ltmp7:
-	.loc	3 127 9 prologue_end epilogue_begin # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:127:9
+	.loc	3 133 9 prologue_end epilogue_begin # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:133:9
 	popq	%rbp
 	.cfi_def_cfa %rsp, 8
 	retq
@@ -227,12 +225,11 @@ _ZNSt5arrayIfLm10EE5beginEv:            # @_ZNSt5arrayIfLm10EE5beginEv
                                         # -- End function
 	.section	.text._ZNSt5arrayIfLm10EE3endEv,"axG",@progbits,_ZNSt5arrayIfLm10EE3endEv,comdat
 	.weak	_ZNSt5arrayIfLm10EE3endEv       # -- Begin function _ZNSt5arrayIfLm10EE3endEv
-	.p2align	1
-	.prefalign	4, .Lfunc_end2, nop
+	.p2align	4, 0x90
 	.type	_ZNSt5arrayIfLm10EE3endEv,@function
 _ZNSt5arrayIfLm10EE3endEv:              # @_ZNSt5arrayIfLm10EE3endEv
 .Lfunc_begin2:
-	.loc	3 137 0                         # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:137:0
+	.loc	3 143 0                         # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:143:0
 	.cfi_startproc
 # %bb.0:
 	pushq	%rbp
@@ -245,9 +242,9 @@ _ZNSt5arrayIfLm10EE3endEv:              # @_ZNSt5arrayIfLm10EE3endEv
 	movq	%rax, -8(%rbp)
 	movq	-8(%rbp), %rax
 .Ltmp9:
-	.loc	3 137 32 prologue_end           # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:137:32
+	.loc	3 143 32 prologue_end           # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:143:32
 	addq	$40, %rax
-	.loc	3 137 9 epilogue_begin is_stmt 0 # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:137:9
+	.loc	3 143 9 epilogue_begin is_stmt 0 # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:143:9
 	popq	%rbp
 	.cfi_def_cfa %rsp, 8
 	retq
@@ -258,12 +255,11 @@ _ZNSt5arrayIfLm10EE3endEv:              # @_ZNSt5arrayIfLm10EE3endEv
                                         # -- End function
 	.section	.text._ZNSt5arrayIfLm10EEixEm,"axG",@progbits,_ZNSt5arrayIfLm10EEixEm,comdat
 	.weak	_ZNSt5arrayIfLm10EEixEm         # -- Begin function _ZNSt5arrayIfLm10EEixEm
-	.p2align	1
-	.prefalign	4, .Lfunc_end3, nop
+	.p2align	4, 0x90
 	.type	_ZNSt5arrayIfLm10EEixEm,@function
 _ZNSt5arrayIfLm10EEixEm:                # @_ZNSt5arrayIfLm10EEixEm
 .Lfunc_begin3:
-	.loc	3 201 0 is_stmt 1               # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:201:0
+	.loc	3 207 0 is_stmt 1               # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:207:0
 	.cfi_startproc
 # %bb.0:
 	pushq	%rbp
@@ -275,12 +271,12 @@ _ZNSt5arrayIfLm10EEixEm:                # @_ZNSt5arrayIfLm10EEixEm
 	movq	%rsi, -16(%rbp)
 	movq	-8(%rbp), %rax
 .Ltmp11:
-	.loc	3 203 18 prologue_end           # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:203:18
+	.loc	3 209 18 prologue_end           # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:209:18
 	movq	-16(%rbp), %rcx
-	.loc	3 203 9 is_stmt 0               # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:203:9
+	.loc	3 209 9 is_stmt 0               # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:209:9
 	shlq	$2, %rcx
 	addq	%rcx, %rax
-	.loc	3 203 2 epilogue_begin          # /usr/lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array:203:2
+	.loc	3 209 2 epilogue_begin          # /usr/bin/../lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/array:209:2
 	popq	%rbp
 	.cfi_def_cfa %rsp, 8
 	retq
@@ -295,6 +291,7 @@ _ZNSt5arrayIfLm10EEixEm:                # @_ZNSt5arrayIfLm10EEixEm
 	.asciz	"dummy.txt"
 	.size	.L.str, 10
 
+	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               # Abbreviation Code
 	.byte	17                              # DW_TAG_compile_unit
@@ -373,11 +370,11 @@ _ZNSt5arrayIfLm10EEixEm:                # @_ZNSt5arrayIfLm10EEixEm
 .Lstr_offsets_base0:
 	.section	.debug_str,"MS",@progbits,1
 .Linfo_string0:
-	.asciz	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)" # string offset=0 ; clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)
+	.asciz	"Ubuntu clang version 18.1.3 (1ubuntu1)" # string offset=0
 .Linfo_string1:
-	.asciz	"source.cpp"                    # string offset=105 ; source.cpp
+	.asciz	"source.cpp"                    # string offset=39
 .Linfo_string2:
-	.asciz	"/home/yy981/cpp/CGX-data/experiments/float2" # string offset=116 ; /home/yy981/cpp/CGX-data/experiments/float2
+	.asciz	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" # string offset=50
 	.section	.debug_str_offsets,"",@progbits
 	.long	.Linfo_string0
 	.long	.Linfo_string1
@@ -402,7 +399,7 @@ _ZNSt5arrayIfLm10EEixEm:                # @_ZNSt5arrayIfLm10EEixEm
 	.size	DW.ref.__gxx_personality_v0, 8
 DW.ref.__gxx_personality_v0:
 	.quad	__gxx_personality_v0
-	.ident	"clang version 23.1.1 (https://github.com/llvm/llvm-project.git 6dfe1677ab8dffbc6ec13d53a1e0215d75147689)"
+	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
 	.addrsig_sym _ZNSt5arrayIfLm10EE5beginEv
