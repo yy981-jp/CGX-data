@@ -716,7 +716,7 @@
   "SimulationParameters": {
     "-march": "riscv64",
     "-mcpu": "sifive-p870-d",
-    "-mtriple": "riscv64-w64-windows-gnu"
+    "-mtriple": "riscv64-unknown-linux-gnu"
   },
   "TargetInfo": {
     "CPUName": "sifive-p870-d",

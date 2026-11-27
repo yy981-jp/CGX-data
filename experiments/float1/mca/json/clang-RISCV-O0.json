@@ -204,27 +204,27 @@
         ]
       },
       "Instructions": [
-        "sw\ta0, 4(sp)",
+        "sw\ta0, -76(s0)",
         "j\t.LBB0_1",
-        "lw\ta0, 4(sp)",
-        "lw\ta1, 12(sp)",
+        "lw\ta0, -76(s0)",
+        "lw\ta1, -68(s0)",
         "bge\ta0, a1, .LBB0_4",
         "j\t.LBB0_2",
-        "lw\ta0, 4(sp)",
+        "lw\ta0, -76(s0)",
         "slli\ta1, a0, 2",
-        "addi\ta0, sp, 40",
+        "addi\ta0, s0, -40",
         "add\ta0, a0, a1",
         "flw\tfa5, 0(a0)",
-        "addi\ta0, sp, 16",
+        "addi\ta0, s0, -64",
         "add\ta0, a0, a1",
         "flw\tfa4, 0(a0)",
-        "flw\tfa3, 8(sp)",
+        "flw\tfa3, -72(s0)",
         "fmadd.s\tfa5, fa5, fa4, fa3",
-        "fsw\tfa5, 8(sp)",
+        "fsw\tfa5, -72(s0)",
         "j\t.LBB0_3",
-        "lw\ta0, 4(sp)",
+        "lw\ta0, -76(s0)",
         "addiw\ta0, a0, 1",
-        "sw\ta0, 4(sp)",
+        "sw\ta0, -76(s0)",
         "j\t.LBB0_1"
       ],
       "Name": "",
@@ -2151,7 +2151,7 @@
   "SimulationParameters": {
     "-march": "riscv64",
     "-mcpu": "sifive-p870-d",
-    "-mtriple": "riscv64-w64-windows-gnu"
+    "-mtriple": "riscv64-unknown-linux-gnu"
   },
   "TargetInfo": {
     "CPUName": "sifive-p870-d",

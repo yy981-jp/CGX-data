@@ -80,7 +80,7 @@
   "SimulationParameters": {
     "-march": "x86_64",
     "-mcpu": "skylake",
-    "-mtriple": "x86_64-w64-windows-gnu"
+    "-mtriple": "x86_64-unknown-linux-gnu"
   },
   "TargetInfo": {
     "CPUName": "skylake",

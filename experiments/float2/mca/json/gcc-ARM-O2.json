@@ -701,7 +701,7 @@
   "SimulationParameters": {
     "-march": "aarch64",
     "-mcpu": "neoverse-v2",
-    "-mtriple": "aarch64-w64-windows-gnu"
+    "-mtriple": "aarch64-unknown-linux-gnu"
   },
   "TargetInfo": {
     "CPUName": "neoverse-v2",

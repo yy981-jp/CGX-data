@@ -200,8 +200,8 @@
         "ldr\tw8, [sp, #4]",
         "ldr\tw9, [sp, #12]",
         "subs\tw8, w8, w9",
-        "b.lt\t.LBB0_2",
-        "b\t.LBB0_4",
+        "b.ge\t.LBB0_4",
+        "b\t.LBB0_2",
         "ldrsw\tx9, [sp, #4]",
         "add\tx8, sp, #48",
         "ldr\ts0, [x8, x9, lsl #2]",
@@ -2121,7 +2121,7 @@
   "SimulationParameters": {
     "-march": "aarch64",
     "-mcpu": "neoverse-v2",
-    "-mtriple": "aarch64-w64-windows-gnu"
+    "-mtriple": "aarch64-unknown-linux-gnu"
   },
   "TargetInfo": {
     "CPUName": "neoverse-v2",
