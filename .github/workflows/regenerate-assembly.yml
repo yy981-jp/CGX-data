@@ -1,35 +1,35 @@
-name: Regenerate assembly
+name: Regenerate assembly and MCA
 
 on:
   push:
     branches:
+      - develop
       - test
       - ci/github-actions
+  workflow_dispatch:
 
 permissions:
   contents: write
 
-# Both trigger branches publish to test, so serialize runs to avoid racing pushes.
 concurrency:
   group: cgx-data-regenerate-assembly
   cancel-in-progress: false
 
 jobs:
   regenerate:
-    # Prevent a bot-generated commit from starting another generation run.
     if: github.actor != 'github-actions[bot]'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout pushed CGX-data branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           ref: ${{ github.ref_name }}
           path: CGX-data
           persist-credentials: false
 
       - name: Checkout CGX
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           repository: yy981-jp/CGX
           ref: develop
@@ -37,21 +37,150 @@ jobs:
           persist-credentials: false
 
       - name: Checkout test branch for generated output
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
-          repository: yy981-jp/CGX-data
           ref: test
-          token: ${{ secrets.GITHUB_TOKEN }}
           path: CGX-data-test
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install compilers
+      - name: Install build dependencies
+        shell: bash
         run: |
+          set -euo pipefail
+
           sudo apt-get update
           sudo apt-get install --yes --no-install-recommends \
             clang \
+            g++ \
             g++-x86-64-linux-gnu \
             g++-aarch64-linux-gnu \
-            g++-riscv64-linux-gnu
+            g++-riscv64-linux-gnu \
+            ninja-build \
+            nlohmann-json3-dev \
+            python3-venv
+
+          # CGX requires CMake 4.3 or newer.
+          python3 -m venv "$RUNNER_TEMP/cmake-venv"
+          "$RUNNER_TEMP/cmake-venv/bin/python" -m pip install \
+            --disable-pip-version-check \
+            "cmake==4.4.5"
+          echo "$RUNNER_TEMP/cmake-venv/bin" >> "$GITHUB_PATH"
+
+      - name: Record toolchain versions
+        id: toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "cmake=$(cmake --version | awk 'NR == 1 { print $3 }')" >> "$GITHUB_OUTPUT"
+          echo "gcc=$(g++ -dumpfullversion -dumpversion)" >> "$GITHUB_OUTPUT"
+
+      # Cache only the executable: it is the artifact CGX actually needs.
+      - name: Restore LLVM llvm-mca cache
+        id: llvm-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: CGX/external-bin/llvm/bin/llvm-mca
+          key: llvm-mca-${{ runner.os }}-${{ runner.arch }}-ubuntu-24.04-llvmorg-23.1.1-gcc-${{ steps.toolchain.outputs.gcc }}-cmake-4.4.5-x86-aarch64-riscv-release-v1
+
+      - name: Checkout LLVM
+        if: steps.llvm-cache.outputs.cache-hit != 'true'
+        uses: actions/checkout@v7.0.1
+        with:
+          repository: llvm/llvm-project
+          ref: llvmorg-23.1.1
+          path: llvm-project
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Build llvm-mca
+        if: steps.llvm-cache.outputs.cache-hit != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cmake -S llvm-project/llvm -B llvm-build -G Ninja \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_C_COMPILER=gcc \
+            -DCMAKE_CXX_COMPILER=g++ \
+            -DLLVM_TARGETS_TO_BUILD="X86;AArch64;RISCV" \
+            -DLLVM_BUILD_TOOLS=ON \
+            -DLLVM_INCLUDE_TESTS=OFF \
+            -DLLVM_INCLUDE_EXAMPLES=OFF \
+            -DLLVM_INCLUDE_BENCHMARKS=OFF \
+            -DLLVM_ENABLE_ZLIB=OFF \
+            -DLLVM_ENABLE_ZSTD=OFF \
+            -DLLVM_ENABLE_LIBXML2=OFF \
+            -DLLVM_ENABLE_TERMINFO=OFF \
+            -DLLVM_BUILD_LLVM_DYLIB=OFF \
+            -DLLVM_LINK_LLVM_DYLIB=OFF
+
+          cmake --build llvm-build --target llvm-mca --parallel 2
+          install -D -m 0755 \
+            llvm-build/bin/llvm-mca \
+            CGX/external-bin/llvm/bin/llvm-mca
+
+      - name: Verify llvm-mca
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -x CGX/external-bin/llvm/bin/llvm-mca
+          CGX/external-bin/llvm/bin/llvm-mca --version
+
+      - name: Save LLVM llvm-mca cache
+        if: steps.llvm-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: CGX/external-bin/llvm/bin/llvm-mca
+          key: llvm-mca-${{ runner.os }}-${{ runner.arch }}-ubuntu-24.04-llvmorg-23.1.1-gcc-${{ steps.toolchain.outputs.gcc }}-cmake-4.4.5-x86-aarch64-riscv-release-v1
+
+      - name: Initialize CGX submodules
+        id: submodules
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config --global url."https://github.com/".insteadOf "git@github.com:"
+          git -C CGX submodule update --init --recursive
+
+          submodule_status="$(git -C CGX submodule status --recursive)"
+          printf '%s\n' "$submodule_status"
+          submodule_hash="$(printf '%s' "$submodule_status" | sha256sum | cut -d ' ' -f 1)"
+          echo "sha256=$submodule_hash" >> "$GITHUB_OUTPUT"
+
+      # The executable key includes analyzer sources, submodule revisions and
+      # the compiler/toolchain. This avoids CMake timestamp misses on new runners.
+      - name: Restore analyzer executable cache
+        id: analyzer-cache
+        uses: actions/cache/restore@v6.1.0
+        with:
+          path: CGX/build/analyzer
+          key: analyzer-${{ runner.os }}-${{ runner.arch }}-ubuntu-24.04-gcc-${{ steps.toolchain.outputs.gcc }}-cmake-4.4.5-source-${{ hashFiles('CGX/CMakeLists.txt', 'CGX/analyzer/CMakeLists.txt', 'CGX/analyzer/src/**/*', 'CGX/.gitmodules') }}-submodules-${{ steps.submodules.outputs.sha256 }}-v1
+
+      - name: Build analyzer
+        if: steps.analyzer-cache.outputs.cache-hit != 'true'
+        working-directory: CGX
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cmake -S . -B build -G Ninja \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_CXX_COMPILER=g++
+          cmake --build build --target analyzer --parallel 2
+
+      - name: Verify analyzer
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -x CGX/build/analyzer
+          CGX/build/analyzer --help
+
+      - name: Save analyzer executable cache
+        if: steps.analyzer-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6.1.0
+        with:
+          path: CGX/build/analyzer
+          key: analyzer-${{ runner.os }}-${{ runner.arch }}-ubuntu-24.04-gcc-${{ steps.toolchain.outputs.gcc }}-cmake-4.4.5-source-${{ hashFiles('CGX/CMakeLists.txt', 'CGX/analyzer/CMakeLists.txt', 'CGX/analyzer/src/**/*', 'CGX/.gitmodules') }}-submodules-${{ steps.submodules.outputs.sha256 }}-v1
 
       - name: Generate assembly for every experiment
         working-directory: CGX
@@ -78,18 +207,96 @@ jobs:
             echo "::endgroup::"
           done
 
-      - name: Copy generated assembly to test
+      - name: Clear previous MCA JSON
+        working-directory: CGX
+        shell: bash
+        run: |
+          set -euo pipefail
+          find ../CGX-data/experiments -type f -path '*/mca/json/*.json' -delete
+
+      - name: Run llvm-mca for every experiment
+        working-directory: CGX
         shell: bash
         run: |
           set -euo pipefail
 
+          mapfile -d '' sources < <(
+            find ../CGX-data/experiments \
+              -mindepth 2 -maxdepth 2 \
+              -type f -name source.cpp -print0 | sort -z
+          )
+
+          for source in "${sources[@]}"; do
+            experiment="${source#../CGX-data/experiments/}"
+            experiment="${experiment%/source.cpp}"
+            echo "::group::Run llvm-mca: ${experiment}"
+            ./build/analyzer batchMca "${experiment}"
+            echo "::endgroup::"
+          done
+
+      - name: Validate MCA output
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          experiments = sorted(Path("CGX-data/experiments").glob("*/source.cpp"))
+          compilers = ("gcc", "clang")
+          architectures = ("X86_64", "ARM", "RISCV")
+          optimization_levels = ("O0", "O2", "O3")
+
+          checked = 0
+          for source in experiments:
+              output_dir = source.parent / "mca" / "json"
+              for compiler in compilers:
+                  for architecture in architectures:
+                      for optimization in optimization_levels:
+                          output = output_dir / f"{compiler}-{architecture}-{optimization}.json"
+                          if not output.is_file():
+                              raise SystemExit(f"Missing MCA output: {output}")
+
+                          raw = output.read_text(encoding="utf-8-sig")
+                          if raw.strip():
+                              json.loads(raw)
+                          checked += 1
+
+          expected = len(experiments) * len(compilers) * len(architectures) * len(optimization_levels)
+          if checked != expected:
+              raise SystemExit(f"Expected {expected} MCA files, checked {checked}")
+
+          print(f"Validated {checked} MCA output files across {len(experiments)} experiments.")
+          PY
+
+      - name: Copy generated assembly and MCA JSON to test
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          while IFS= read -r -d '' source; do
+            experiment="${source#CGX-data/experiments/}"
+            experiment="${experiment%/source.cpp}"
+            destination="CGX-data-test/experiments/${experiment}"
+
+            find "$destination/asm" -type f -name '*.s' -delete 2>/dev/null || true
+            find "$destination/mca/json" -type f -name '*.json' -delete 2>/dev/null || true
+          done < <(
+            find CGX-data/experiments \
+              -mindepth 2 -maxdepth 2 \
+              -type f -name source.cpp -print0 | sort -z
+          )
+
           while IFS= read -r -d '' generated; do
             relative="${generated#CGX-data/}"
             destination="CGX-data-test/${relative}"
-            mkdir -p "$(dirname "${destination}")"
-            cp -- "${generated}" "${destination}"
+            mkdir -p "$(dirname "$destination")"
+            cp -- "$generated" "$destination"
           done < <(
-            find CGX-data/experiments -type f -path '*/asm/*.s' -print0
+            find CGX-data/experiments -type f \
+              \( -path '*/asm/*.s' -o -path '*/mca/json/*.json' \) \
+              -print0 | sort -z
           )
 
       - name: Commit and push results to test
@@ -103,9 +310,9 @@ jobs:
           git add -- experiments
 
           if git diff --cached --quiet; then
-            echo "Generated assembly is unchanged; no commit is necessary."
+            echo "Generated assembly and MCA JSON are unchanged; no commit is necessary."
             exit 0
           fi
 
-          git commit -m "chore: regenerate assembly [skip ci]"
+          git commit -m "chore: regenerate assembly and MCA [skip ci]"
           git push origin HEAD:test
