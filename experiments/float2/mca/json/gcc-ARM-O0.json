@@ -238,62 +238,57 @@
           {
             "InstructionIndex": 0,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.62
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 0,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.38
+            "ResourceUsage": 0.97999999999999998
           },
           {
             "InstructionIndex": 1,
             "ResourceIndex": 0,
-            "ResourceUsage": 0.90000000000000002
+            "ResourceUsage": 0.98999999999999999
           },
           {
             "InstructionIndex": 1,
             "ResourceIndex": 1,
-            "ResourceUsage": 0.10000000000000001
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 2,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.51000000000000001
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 4,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.10000000000000001
+            "ResourceUsage": 0.51000000000000001
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 4,
             "ResourceIndex": 8,
             "ResourceUsage": 0.47999999999999998
           },
           {
-            "InstructionIndex": 2,
-            "ResourceIndex": 9,
-            "ResourceUsage": 0.41999999999999998
-          },
-          {
-            "InstructionIndex": 4,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.54000000000000004
-          },
-          {
-            "InstructionIndex": 4,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.16
-          },
-          {
             "InstructionIndex": 4,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.29999999999999999
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 5,
             "ResourceIndex": 0,
-            "ResourceUsage": 0.089999999999999997
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 5,
             "ResourceIndex": 1,
-            "ResourceUsage": 0.91000000000000003
+            "ResourceUsage": 0.98999999999999999
           },
           {
             "InstructionIndex": 5,
@@ -303,57 +298,57 @@
           {
             "InstructionIndex": 6,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.70999999999999996
+            "ResourceUsage": 0.47999999999999998
           },
           {
             "InstructionIndex": 6,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.14999999999999999
+            "ResourceUsage": 0.5
           },
           {
             "InstructionIndex": 6,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.14000000000000001
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 7,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.29999999999999999
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 7,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.42999999999999999
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 7,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.27000000000000002
+            "ResourceUsage": 0.96999999999999997
           },
           {
             "InstructionIndex": 9,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.13
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 9,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.27000000000000002
+            "ResourceUsage": 0.96999999999999997
           },
           {
             "InstructionIndex": 9,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.59999999999999998
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 10,
             "ResourceIndex": 0,
-            "ResourceUsage": 0.91000000000000003
+            "ResourceUsage": 0.98999999999999999
           },
           {
             "InstructionIndex": 10,
             "ResourceIndex": 1,
-            "ResourceUsage": 0.089999999999999997
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 10,
@@ -363,17 +358,17 @@
           {
             "InstructionIndex": 11,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.34000000000000002
+            "ResourceUsage": 0.48999999999999999
           },
           {
             "InstructionIndex": 11,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.37
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 11,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.28999999999999998
+            "ResourceUsage": 0.5
           },
           {
             "InstructionIndex": 12,
@@ -383,27 +378,27 @@
           {
             "InstructionIndex": 12,
             "ResourceIndex": 18,
-            "ResourceUsage": 0.32000000000000001
+            "ResourceUsage": 0.48999999999999999
           },
           {
             "InstructionIndex": 12,
             "ResourceIndex": 19,
-            "ResourceUsage": 0.42999999999999999
+            "ResourceUsage": 0.26000000000000001
           },
           {
             "InstructionIndex": 13,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.82999999999999996
+            "ResourceUsage": 0.96999999999999997
           },
           {
             "InstructionIndex": 13,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.11
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 13,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.059999999999999998
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 14,
@@ -413,22 +408,22 @@
           {
             "InstructionIndex": 14,
             "ResourceIndex": 18,
-            "ResourceUsage": 0.42999999999999999
+            "ResourceUsage": 0.26000000000000001
           },
           {
             "InstructionIndex": 14,
             "ResourceIndex": 19,
-            "ResourceUsage": 0.32000000000000001
+            "ResourceUsage": 0.48999999999999999
           },
           {
             "InstructionIndex": 15,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.62
+            "ResourceUsage": 0.029999999999999999
           },
           {
             "InstructionIndex": 15,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.38
+            "ResourceUsage": 0.96999999999999997
           },
           {
             "InstructionIndex": 15,
@@ -443,17 +438,17 @@
           {
             "InstructionIndex": 16,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.47999999999999998
+            "ResourceUsage": 0.95999999999999996
           },
           {
             "InstructionIndex": 16,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.34999999999999998
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 16,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.17000000000000001
+            "ResourceUsage": 0.02
           },
           {
             "InstructionIndex": 17,
@@ -473,27 +468,27 @@
           {
             "InstructionIndex": 18,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.38
+            "ResourceUsage": 0.96999999999999997
           },
           {
             "InstructionIndex": 18,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.62
+            "ResourceUsage": 0.029999999999999999
           },
           {
             "InstructionIndex": 19,
             "ResourceIndex": 7,
-            "ResourceUsage": 0.20999999999999999
+            "ResourceUsage": 0.5
           },
           {
             "InstructionIndex": 19,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.23999999999999999
+            "ResourceUsage": 0.48999999999999999
           },
           {
             "InstructionIndex": 19,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.55000000000000004
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 20,
@@ -523,12 +518,12 @@
           {
             "InstructionIndex": 21,
             "ResourceIndex": 0,
-            "ResourceUsage": 0.10000000000000001
+            "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 21,
             "ResourceIndex": 1,
-            "ResourceUsage": 0.90000000000000002
+            "ResourceUsage": 0.98999999999999999
           },
           {
             "InstructionIndex": 22,
@@ -568,17 +563,17 @@
           {
             "InstructionIndex": 22,
             "ResourceIndex": 7,
-            "ResourceUsage": 3.6400000000000001
+            "ResourceUsage": 3.9500000000000002
           },
           {
             "InstructionIndex": 22,
             "ResourceIndex": 8,
-            "ResourceUsage": 4.1799999999999997
+            "ResourceUsage": 4.0199999999999996
           },
           {
             "InstructionIndex": 22,
             "ResourceIndex": 9,
-            "ResourceUsage": 4.1799999999999997
+            "ResourceUsage": 4.0300000000000002
           },
           {
             "InstructionIndex": 22,
@@ -635,12 +630,12 @@
       "SummaryView": {
         "BlockRThroughput": 4.5,
         "DispatchWidth": 6,
-        "IPC": 2.3504273504273505,
+        "IPC": 4.7109207708779444,
         "Instructions": 2200,
         "Iterations": 100,
-        "TotalCycles": 936,
+        "TotalCycles": 467,
         "TotaluOps": 2700,
-        "uOpsPerCycle": 2.8846153846153846
+        "uOpsPerCycle": 5.7815845824411136
       },
       "TimelineView": {
         "TimelineInfo": [
@@ -678,6 +673,1511 @@
             "CycleIssued": 1,
             "CycleReady": 0,
             "CycleRetired": 6
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 2,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 6
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 11,
+            "CycleIssued": 5,
+            "CycleReady": 5,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 6,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 6,
+            "CycleIssued": 6,
+            "CycleReady": 6,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 6,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 3,
+            "CycleIssued": 3,
+            "CycleReady": 2,
+            "CycleRetired": 12
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 12,
+            "CycleIssued": 6,
+            "CycleReady": 6,
+            "CycleRetired": 13
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 15,
+            "CycleIssued": 12,
+            "CycleReady": 12,
+            "CycleRetired": 16
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 9,
+            "CycleIssued": 3,
+            "CycleReady": 2,
+            "CycleRetired": 16
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 17,
+            "CycleIssued": 15,
+            "CycleReady": 15,
+            "CycleRetired": 18
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 19,
+            "CycleIssued": 17,
+            "CycleReady": 17,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 8,
+            "CycleIssued": 4,
+            "CycleReady": 3,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 9,
+            "CycleIssued": 8,
+            "CycleReady": 8,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 3,
+            "CycleExecuted": 18,
+            "CycleIssued": 17,
+            "CycleReady": 17,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 9,
+            "CycleIssued": 5,
+            "CycleReady": 4,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 10,
+            "CycleIssued": 9,
+            "CycleReady": 9,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 11,
+            "CycleIssued": 10,
+            "CycleReady": 10,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 19,
+            "CycleIssued": 18,
+            "CycleReady": 17,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 4,
+            "CycleExecuted": 6,
+            "CycleIssued": 5,
+            "CycleReady": 4,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 10,
+            "CycleIssued": 6,
+            "CycleReady": 5,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 10,
+            "CycleIssued": 10,
+            "CycleReady": 10,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 10,
+            "CycleIssued": 6,
+            "CycleReady": 5,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 6,
+            "CycleIssued": 6,
+            "CycleReady": 5,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 5,
+            "CycleExecuted": 16,
+            "CycleIssued": 10,
+            "CycleReady": 10,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 11,
+            "CycleIssued": 7,
+            "CycleReady": 6,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 11,
+            "CycleIssued": 11,
+            "CycleReady": 11,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 11,
+            "CycleIssued": 7,
+            "CycleReady": 6,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 7,
+            "CycleIssued": 7,
+            "CycleReady": 6,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 6,
+            "CycleExecuted": 17,
+            "CycleIssued": 11,
+            "CycleReady": 11,
+            "CycleRetired": 20
+          },
+          {
+            "CycleDispatched": 7,
+            "CycleExecuted": 20,
+            "CycleIssued": 17,
+            "CycleReady": 17,
+            "CycleRetired": 21
+          },
+          {
+            "CycleDispatched": 7,
+            "CycleExecuted": 14,
+            "CycleIssued": 8,
+            "CycleReady": 7,
+            "CycleRetired": 21
+          },
+          {
+            "CycleDispatched": 7,
+            "CycleExecuted": 22,
+            "CycleIssued": 20,
+            "CycleReady": 20,
+            "CycleRetired": 23
+          },
+          {
+            "CycleDispatched": 7,
+            "CycleExecuted": 24,
+            "CycleIssued": 22,
+            "CycleReady": 22,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 7,
+            "CycleExecuted": 12,
+            "CycleIssued": 8,
+            "CycleReady": 7,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 8,
+            "CycleExecuted": 13,
+            "CycleIssued": 12,
+            "CycleReady": 12,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 8,
+            "CycleExecuted": 23,
+            "CycleIssued": 22,
+            "CycleReady": 22,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 8,
+            "CycleExecuted": 13,
+            "CycleIssued": 9,
+            "CycleReady": 8,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 8,
+            "CycleExecuted": 14,
+            "CycleIssued": 13,
+            "CycleReady": 13,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 8,
+            "CycleExecuted": 15,
+            "CycleIssued": 14,
+            "CycleReady": 14,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 9,
+            "CycleExecuted": 24,
+            "CycleIssued": 23,
+            "CycleReady": 22,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 9,
+            "CycleExecuted": 11,
+            "CycleIssued": 10,
+            "CycleReady": 9,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 9,
+            "CycleExecuted": 14,
+            "CycleIssued": 10,
+            "CycleReady": 9,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 9,
+            "CycleExecuted": 14,
+            "CycleIssued": 14,
+            "CycleReady": 14,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 9,
+            "CycleExecuted": 14,
+            "CycleIssued": 10,
+            "CycleReady": 9,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 10,
+            "CycleExecuted": 11,
+            "CycleIssued": 11,
+            "CycleReady": 10,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 10,
+            "CycleExecuted": 20,
+            "CycleIssued": 14,
+            "CycleReady": 14,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 10,
+            "CycleExecuted": 15,
+            "CycleIssued": 11,
+            "CycleReady": 10,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 10,
+            "CycleExecuted": 15,
+            "CycleIssued": 15,
+            "CycleReady": 15,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 10,
+            "CycleExecuted": 15,
+            "CycleIssued": 11,
+            "CycleReady": 10,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 11,
+            "CycleExecuted": 12,
+            "CycleIssued": 12,
+            "CycleReady": 11,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 11,
+            "CycleExecuted": 21,
+            "CycleIssued": 15,
+            "CycleReady": 15,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 11,
+            "CycleExecuted": 24,
+            "CycleIssued": 21,
+            "CycleReady": 21,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 11,
+            "CycleExecuted": 18,
+            "CycleIssued": 12,
+            "CycleReady": 11,
+            "CycleRetired": 25
+          },
+          {
+            "CycleDispatched": 11,
+            "CycleExecuted": 26,
+            "CycleIssued": 24,
+            "CycleReady": 24,
+            "CycleRetired": 27
+          },
+          {
+            "CycleDispatched": 12,
+            "CycleExecuted": 28,
+            "CycleIssued": 26,
+            "CycleReady": 26,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 12,
+            "CycleExecuted": 17,
+            "CycleIssued": 13,
+            "CycleReady": 12,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 12,
+            "CycleExecuted": 18,
+            "CycleIssued": 17,
+            "CycleReady": 17,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 12,
+            "CycleExecuted": 27,
+            "CycleIssued": 26,
+            "CycleReady": 26,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 13,
+            "CycleExecuted": 18,
+            "CycleIssued": 14,
+            "CycleReady": 13,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 13,
+            "CycleExecuted": 19,
+            "CycleIssued": 18,
+            "CycleReady": 18,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 13,
+            "CycleExecuted": 20,
+            "CycleIssued": 19,
+            "CycleReady": 19,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 13,
+            "CycleExecuted": 28,
+            "CycleIssued": 27,
+            "CycleReady": 26,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 13,
+            "CycleExecuted": 15,
+            "CycleIssued": 14,
+            "CycleReady": 13,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 14,
+            "CycleExecuted": 19,
+            "CycleIssued": 15,
+            "CycleReady": 14,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 14,
+            "CycleExecuted": 19,
+            "CycleIssued": 19,
+            "CycleReady": 19,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 14,
+            "CycleExecuted": 19,
+            "CycleIssued": 15,
+            "CycleReady": 14,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 14,
+            "CycleExecuted": 15,
+            "CycleIssued": 15,
+            "CycleReady": 14,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 14,
+            "CycleExecuted": 25,
+            "CycleIssued": 19,
+            "CycleReady": 19,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 15,
+            "CycleExecuted": 20,
+            "CycleIssued": 16,
+            "CycleReady": 15,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 15,
+            "CycleExecuted": 20,
+            "CycleIssued": 20,
+            "CycleReady": 20,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 15,
+            "CycleExecuted": 20,
+            "CycleIssued": 16,
+            "CycleReady": 15,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 15,
+            "CycleExecuted": 16,
+            "CycleIssued": 16,
+            "CycleReady": 15,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 15,
+            "CycleExecuted": 26,
+            "CycleIssued": 20,
+            "CycleReady": 20,
+            "CycleRetired": 29
+          },
+          {
+            "CycleDispatched": 16,
+            "CycleExecuted": 29,
+            "CycleIssued": 26,
+            "CycleReady": 26,
+            "CycleRetired": 30
+          },
+          {
+            "CycleDispatched": 16,
+            "CycleExecuted": 23,
+            "CycleIssued": 17,
+            "CycleReady": 16,
+            "CycleRetired": 30
+          },
+          {
+            "CycleDispatched": 16,
+            "CycleExecuted": 31,
+            "CycleIssued": 29,
+            "CycleReady": 29,
+            "CycleRetired": 32
+          },
+          {
+            "CycleDispatched": 16,
+            "CycleExecuted": 33,
+            "CycleIssued": 31,
+            "CycleReady": 31,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 16,
+            "CycleExecuted": 22,
+            "CycleIssued": 18,
+            "CycleReady": 16,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 17,
+            "CycleExecuted": 23,
+            "CycleIssued": 22,
+            "CycleReady": 22,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 17,
+            "CycleExecuted": 32,
+            "CycleIssued": 31,
+            "CycleReady": 31,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 17,
+            "CycleExecuted": 22,
+            "CycleIssued": 18,
+            "CycleReady": 17,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 17,
+            "CycleExecuted": 23,
+            "CycleIssued": 22,
+            "CycleReady": 22,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 17,
+            "CycleExecuted": 24,
+            "CycleIssued": 23,
+            "CycleReady": 23,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 18,
+            "CycleExecuted": 33,
+            "CycleIssued": 32,
+            "CycleReady": 31,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 18,
+            "CycleExecuted": 20,
+            "CycleIssued": 19,
+            "CycleReady": 18,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 18,
+            "CycleExecuted": 23,
+            "CycleIssued": 19,
+            "CycleReady": 18,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 18,
+            "CycleExecuted": 23,
+            "CycleIssued": 23,
+            "CycleReady": 23,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 18,
+            "CycleExecuted": 23,
+            "CycleIssued": 19,
+            "CycleReady": 18,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 19,
+            "CycleExecuted": 20,
+            "CycleIssued": 20,
+            "CycleReady": 19,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 19,
+            "CycleExecuted": 29,
+            "CycleIssued": 23,
+            "CycleReady": 23,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 19,
+            "CycleExecuted": 24,
+            "CycleIssued": 20,
+            "CycleReady": 19,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 19,
+            "CycleExecuted": 24,
+            "CycleIssued": 24,
+            "CycleReady": 24,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 19,
+            "CycleExecuted": 24,
+            "CycleIssued": 20,
+            "CycleReady": 19,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 20,
+            "CycleExecuted": 21,
+            "CycleIssued": 21,
+            "CycleReady": 20,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 20,
+            "CycleExecuted": 30,
+            "CycleIssued": 24,
+            "CycleReady": 24,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 20,
+            "CycleExecuted": 33,
+            "CycleIssued": 30,
+            "CycleReady": 30,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 20,
+            "CycleExecuted": 27,
+            "CycleIssued": 21,
+            "CycleReady": 20,
+            "CycleRetired": 34
+          },
+          {
+            "CycleDispatched": 20,
+            "CycleExecuted": 35,
+            "CycleIssued": 33,
+            "CycleReady": 33,
+            "CycleRetired": 36
+          },
+          {
+            "CycleDispatched": 21,
+            "CycleExecuted": 37,
+            "CycleIssued": 35,
+            "CycleReady": 35,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 21,
+            "CycleExecuted": 26,
+            "CycleIssued": 22,
+            "CycleReady": 21,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 21,
+            "CycleExecuted": 27,
+            "CycleIssued": 26,
+            "CycleReady": 26,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 21,
+            "CycleExecuted": 36,
+            "CycleIssued": 35,
+            "CycleReady": 35,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 22,
+            "CycleExecuted": 27,
+            "CycleIssued": 23,
+            "CycleReady": 22,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 22,
+            "CycleExecuted": 28,
+            "CycleIssued": 27,
+            "CycleReady": 27,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 22,
+            "CycleExecuted": 29,
+            "CycleIssued": 28,
+            "CycleReady": 28,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 22,
+            "CycleExecuted": 37,
+            "CycleIssued": 36,
+            "CycleReady": 35,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 22,
+            "CycleExecuted": 24,
+            "CycleIssued": 23,
+            "CycleReady": 22,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 23,
+            "CycleExecuted": 28,
+            "CycleIssued": 24,
+            "CycleReady": 23,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 23,
+            "CycleExecuted": 28,
+            "CycleIssued": 28,
+            "CycleReady": 28,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 23,
+            "CycleExecuted": 28,
+            "CycleIssued": 24,
+            "CycleReady": 23,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 23,
+            "CycleExecuted": 24,
+            "CycleIssued": 24,
+            "CycleReady": 23,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 23,
+            "CycleExecuted": 34,
+            "CycleIssued": 28,
+            "CycleReady": 28,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 24,
+            "CycleExecuted": 29,
+            "CycleIssued": 25,
+            "CycleReady": 24,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 24,
+            "CycleExecuted": 29,
+            "CycleIssued": 29,
+            "CycleReady": 29,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 24,
+            "CycleExecuted": 29,
+            "CycleIssued": 25,
+            "CycleReady": 24,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 24,
+            "CycleExecuted": 25,
+            "CycleIssued": 25,
+            "CycleReady": 24,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 24,
+            "CycleExecuted": 35,
+            "CycleIssued": 29,
+            "CycleReady": 29,
+            "CycleRetired": 38
+          },
+          {
+            "CycleDispatched": 25,
+            "CycleExecuted": 38,
+            "CycleIssued": 35,
+            "CycleReady": 35,
+            "CycleRetired": 39
+          },
+          {
+            "CycleDispatched": 25,
+            "CycleExecuted": 32,
+            "CycleIssued": 26,
+            "CycleReady": 25,
+            "CycleRetired": 39
+          },
+          {
+            "CycleDispatched": 25,
+            "CycleExecuted": 40,
+            "CycleIssued": 38,
+            "CycleReady": 38,
+            "CycleRetired": 41
+          },
+          {
+            "CycleDispatched": 25,
+            "CycleExecuted": 42,
+            "CycleIssued": 40,
+            "CycleReady": 40,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 25,
+            "CycleExecuted": 31,
+            "CycleIssued": 27,
+            "CycleReady": 25,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 26,
+            "CycleExecuted": 32,
+            "CycleIssued": 31,
+            "CycleReady": 31,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 26,
+            "CycleExecuted": 41,
+            "CycleIssued": 40,
+            "CycleReady": 40,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 26,
+            "CycleExecuted": 31,
+            "CycleIssued": 27,
+            "CycleReady": 26,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 26,
+            "CycleExecuted": 32,
+            "CycleIssued": 31,
+            "CycleReady": 31,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 26,
+            "CycleExecuted": 33,
+            "CycleIssued": 32,
+            "CycleReady": 32,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 27,
+            "CycleExecuted": 42,
+            "CycleIssued": 41,
+            "CycleReady": 40,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 27,
+            "CycleExecuted": 29,
+            "CycleIssued": 28,
+            "CycleReady": 27,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 27,
+            "CycleExecuted": 32,
+            "CycleIssued": 28,
+            "CycleReady": 27,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 27,
+            "CycleExecuted": 32,
+            "CycleIssued": 32,
+            "CycleReady": 32,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 27,
+            "CycleExecuted": 32,
+            "CycleIssued": 28,
+            "CycleReady": 27,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 28,
+            "CycleExecuted": 29,
+            "CycleIssued": 29,
+            "CycleReady": 28,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 28,
+            "CycleExecuted": 38,
+            "CycleIssued": 32,
+            "CycleReady": 32,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 28,
+            "CycleExecuted": 33,
+            "CycleIssued": 29,
+            "CycleReady": 28,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 28,
+            "CycleExecuted": 33,
+            "CycleIssued": 33,
+            "CycleReady": 33,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 28,
+            "CycleExecuted": 33,
+            "CycleIssued": 29,
+            "CycleReady": 28,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 29,
+            "CycleExecuted": 30,
+            "CycleIssued": 30,
+            "CycleReady": 29,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 29,
+            "CycleExecuted": 39,
+            "CycleIssued": 33,
+            "CycleReady": 33,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 29,
+            "CycleExecuted": 42,
+            "CycleIssued": 39,
+            "CycleReady": 39,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 29,
+            "CycleExecuted": 36,
+            "CycleIssued": 30,
+            "CycleReady": 29,
+            "CycleRetired": 43
+          },
+          {
+            "CycleDispatched": 29,
+            "CycleExecuted": 44,
+            "CycleIssued": 42,
+            "CycleReady": 42,
+            "CycleRetired": 45
+          },
+          {
+            "CycleDispatched": 30,
+            "CycleExecuted": 46,
+            "CycleIssued": 44,
+            "CycleReady": 44,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 30,
+            "CycleExecuted": 35,
+            "CycleIssued": 31,
+            "CycleReady": 30,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 30,
+            "CycleExecuted": 36,
+            "CycleIssued": 35,
+            "CycleReady": 35,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 30,
+            "CycleExecuted": 45,
+            "CycleIssued": 44,
+            "CycleReady": 44,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 31,
+            "CycleExecuted": 36,
+            "CycleIssued": 32,
+            "CycleReady": 31,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 31,
+            "CycleExecuted": 37,
+            "CycleIssued": 36,
+            "CycleReady": 36,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 31,
+            "CycleExecuted": 38,
+            "CycleIssued": 37,
+            "CycleReady": 37,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 31,
+            "CycleExecuted": 46,
+            "CycleIssued": 45,
+            "CycleReady": 44,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 31,
+            "CycleExecuted": 33,
+            "CycleIssued": 32,
+            "CycleReady": 31,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 32,
+            "CycleExecuted": 37,
+            "CycleIssued": 33,
+            "CycleReady": 32,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 32,
+            "CycleExecuted": 37,
+            "CycleIssued": 37,
+            "CycleReady": 37,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 32,
+            "CycleExecuted": 37,
+            "CycleIssued": 33,
+            "CycleReady": 32,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 32,
+            "CycleExecuted": 33,
+            "CycleIssued": 33,
+            "CycleReady": 32,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 32,
+            "CycleExecuted": 43,
+            "CycleIssued": 37,
+            "CycleReady": 37,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 33,
+            "CycleExecuted": 38,
+            "CycleIssued": 34,
+            "CycleReady": 33,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 33,
+            "CycleExecuted": 38,
+            "CycleIssued": 38,
+            "CycleReady": 38,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 33,
+            "CycleExecuted": 38,
+            "CycleIssued": 34,
+            "CycleReady": 33,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 33,
+            "CycleExecuted": 34,
+            "CycleIssued": 34,
+            "CycleReady": 33,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 33,
+            "CycleExecuted": 44,
+            "CycleIssued": 38,
+            "CycleReady": 38,
+            "CycleRetired": 47
+          },
+          {
+            "CycleDispatched": 34,
+            "CycleExecuted": 47,
+            "CycleIssued": 44,
+            "CycleReady": 44,
+            "CycleRetired": 48
+          },
+          {
+            "CycleDispatched": 34,
+            "CycleExecuted": 41,
+            "CycleIssued": 35,
+            "CycleReady": 34,
+            "CycleRetired": 48
+          },
+          {
+            "CycleDispatched": 34,
+            "CycleExecuted": 49,
+            "CycleIssued": 47,
+            "CycleReady": 47,
+            "CycleRetired": 50
+          },
+          {
+            "CycleDispatched": 34,
+            "CycleExecuted": 51,
+            "CycleIssued": 49,
+            "CycleReady": 49,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 34,
+            "CycleExecuted": 40,
+            "CycleIssued": 36,
+            "CycleReady": 34,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 35,
+            "CycleExecuted": 41,
+            "CycleIssued": 40,
+            "CycleReady": 40,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 35,
+            "CycleExecuted": 50,
+            "CycleIssued": 49,
+            "CycleReady": 49,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 35,
+            "CycleExecuted": 40,
+            "CycleIssued": 36,
+            "CycleReady": 35,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 35,
+            "CycleExecuted": 41,
+            "CycleIssued": 40,
+            "CycleReady": 40,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 35,
+            "CycleExecuted": 42,
+            "CycleIssued": 41,
+            "CycleReady": 41,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 36,
+            "CycleExecuted": 51,
+            "CycleIssued": 50,
+            "CycleReady": 49,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 36,
+            "CycleExecuted": 38,
+            "CycleIssued": 37,
+            "CycleReady": 36,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 36,
+            "CycleExecuted": 41,
+            "CycleIssued": 37,
+            "CycleReady": 36,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 36,
+            "CycleExecuted": 41,
+            "CycleIssued": 41,
+            "CycleReady": 41,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 36,
+            "CycleExecuted": 41,
+            "CycleIssued": 37,
+            "CycleReady": 36,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 37,
+            "CycleExecuted": 38,
+            "CycleIssued": 38,
+            "CycleReady": 37,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 37,
+            "CycleExecuted": 47,
+            "CycleIssued": 41,
+            "CycleReady": 41,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 37,
+            "CycleExecuted": 42,
+            "CycleIssued": 38,
+            "CycleReady": 37,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 37,
+            "CycleExecuted": 42,
+            "CycleIssued": 42,
+            "CycleReady": 42,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 37,
+            "CycleExecuted": 42,
+            "CycleIssued": 38,
+            "CycleReady": 37,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 38,
+            "CycleExecuted": 39,
+            "CycleIssued": 39,
+            "CycleReady": 38,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 38,
+            "CycleExecuted": 48,
+            "CycleIssued": 42,
+            "CycleReady": 42,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 38,
+            "CycleExecuted": 51,
+            "CycleIssued": 48,
+            "CycleReady": 48,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 38,
+            "CycleExecuted": 45,
+            "CycleIssued": 39,
+            "CycleReady": 38,
+            "CycleRetired": 52
+          },
+          {
+            "CycleDispatched": 38,
+            "CycleExecuted": 53,
+            "CycleIssued": 51,
+            "CycleReady": 51,
+            "CycleRetired": 54
+          },
+          {
+            "CycleDispatched": 39,
+            "CycleExecuted": 55,
+            "CycleIssued": 53,
+            "CycleReady": 53,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 39,
+            "CycleExecuted": 44,
+            "CycleIssued": 40,
+            "CycleReady": 39,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 39,
+            "CycleExecuted": 45,
+            "CycleIssued": 44,
+            "CycleReady": 44,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 39,
+            "CycleExecuted": 54,
+            "CycleIssued": 53,
+            "CycleReady": 53,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 40,
+            "CycleExecuted": 45,
+            "CycleIssued": 41,
+            "CycleReady": 40,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 40,
+            "CycleExecuted": 46,
+            "CycleIssued": 45,
+            "CycleReady": 45,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 40,
+            "CycleExecuted": 47,
+            "CycleIssued": 46,
+            "CycleReady": 46,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 40,
+            "CycleExecuted": 55,
+            "CycleIssued": 54,
+            "CycleReady": 53,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 40,
+            "CycleExecuted": 42,
+            "CycleIssued": 41,
+            "CycleReady": 40,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 41,
+            "CycleExecuted": 46,
+            "CycleIssued": 42,
+            "CycleReady": 41,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 41,
+            "CycleExecuted": 46,
+            "CycleIssued": 46,
+            "CycleReady": 46,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 41,
+            "CycleExecuted": 46,
+            "CycleIssued": 42,
+            "CycleReady": 41,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 41,
+            "CycleExecuted": 42,
+            "CycleIssued": 42,
+            "CycleReady": 41,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 41,
+            "CycleExecuted": 52,
+            "CycleIssued": 46,
+            "CycleReady": 46,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 42,
+            "CycleExecuted": 47,
+            "CycleIssued": 43,
+            "CycleReady": 42,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 42,
+            "CycleExecuted": 47,
+            "CycleIssued": 47,
+            "CycleReady": 47,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 42,
+            "CycleExecuted": 47,
+            "CycleIssued": 43,
+            "CycleReady": 42,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 42,
+            "CycleExecuted": 43,
+            "CycleIssued": 43,
+            "CycleReady": 42,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 42,
+            "CycleExecuted": 53,
+            "CycleIssued": 47,
+            "CycleReady": 47,
+            "CycleRetired": 56
+          },
+          {
+            "CycleDispatched": 43,
+            "CycleExecuted": 56,
+            "CycleIssued": 53,
+            "CycleReady": 53,
+            "CycleRetired": 57
+          },
+          {
+            "CycleDispatched": 43,
+            "CycleExecuted": 50,
+            "CycleIssued": 44,
+            "CycleReady": 43,
+            "CycleRetired": 57
+          },
+          {
+            "CycleDispatched": 43,
+            "CycleExecuted": 58,
+            "CycleIssued": 56,
+            "CycleReady": 56,
+            "CycleRetired": 59
+          },
+          {
+            "CycleDispatched": 43,
+            "CycleExecuted": 60,
+            "CycleIssued": 58,
+            "CycleReady": 58,
+            "CycleRetired": 61
+          },
+          {
+            "CycleDispatched": 43,
+            "CycleExecuted": 49,
+            "CycleIssued": 45,
+            "CycleReady": 43,
+            "CycleRetired": 61
+          },
+          {
+            "CycleDispatched": 44,
+            "CycleExecuted": 50,
+            "CycleIssued": 49,
+            "CycleReady": 49,
+            "CycleRetired": 61
+          },
+          {
+            "CycleDispatched": 44,
+            "CycleExecuted": 59,
+            "CycleIssued": 58,
+            "CycleReady": 58,
+            "CycleRetired": 61
+          },
+          {
+            "CycleDispatched": 44,
+            "CycleExecuted": 49,
+            "CycleIssued": 45,
+            "CycleReady": 44,
+            "CycleRetired": 61
+          },
+          {
+            "CycleDispatched": 44,
+            "CycleExecuted": 50,
+            "CycleIssued": 49,
+            "CycleReady": 49,
+            "CycleRetired": 61
+          },
+          {
+            "CycleDispatched": 44,
+            "CycleExecuted": 51,
+            "CycleIssued": 50,
+            "CycleReady": 50,
+            "CycleRetired": 61
           }
         ]
       }
