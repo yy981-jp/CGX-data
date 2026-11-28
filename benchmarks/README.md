@@ -35,4 +35,4 @@ The GitHub-hosted x86-64 and ARM64 jobs execute native binaries on architecture-
 
 The optional RISC-V job uses the third-party RISE RISC-V runner service. For this personal-account repository, install the [RISE RISC-V Runners (Personal) GitHub App](https://github.com/apps/rise-risc-v-runners-personal), then set the repository variable `CGX_RISCV_RUNNER_ENABLED` to `true`. The job only runs on pushes to `develop`, never on pull-request code. RISE is not a GitHub-hosted runner; review its separate service/security model before enabling it.
 
-Artifacts are retained for 90 days. They are intentionally not committed to the `experiments` tree, keeping generated assembly/MCA output and noisy wall-clock samples separate from the source definitions.
+Native wall-clock benchmark JSON files are retained as 90-day Actions artifacts and are not committed to the experiment tree. Generated compiler assembly and MCA JSON are committed alongside the corresponding experiment sources on the same branch that triggered regeneration.
