@@ -1,17 +1,105 @@
 {
 	"2-wide": {
-		"x86-64": "slm",
-		"aarch64": "thunderxt88",
-		"riscv64": "syntacore-scr7"
+		"x86-64": {
+			"llvm-mca": "slm",
+			"gcc": [
+				["-march=slm"]
+			],
+			"clang": [
+				["-march=slm"]
+			]
+		},
+		"aarch64": {
+			"llvm-mca": "thunderxt88",
+			"gcc": [
+				["-mcpu=thunderxt88"]
+			],
+			"clang": [
+				["-mcpu=thunderxt88"]
+			]
+		},
+		"riscv64": {
+			"llvm-mca": "syntacore-scr7",
+			"gcc": [
+				["-mcpu=syntacore-scr7"],
+				["-march=rv64gc"]
+			],
+			"clang": [
+				["-mcpu=syntacore-scr7"],
+				["-march=rv64gc"]
+			]
+		}
 	},
 	"4-wide": {
-		"x86-64": "haswell",
-		"aarch64": "ampere1",
-		"riscv64": "sifive-p600-series"
+		"x86-64": {
+			"llvm-mca": "haswell",
+			"gcc": [
+				["-march=haswell"]
+			],
+			"clang": [
+				["-march=haswell"]
+			]
+		},
+		"aarch64": {
+			"llvm-mca": "ampere1",
+			"gcc": [
+				["-mcpu=ampere1"]
+			],
+			"clang": [
+				["-mcpu=ampere1"]
+			]
+		},
+		"riscv64": {
+			"llvm-mca": "sifive-p670",
+			"gcc": [
+				["-mcpu=sifive-p670"],
+				["-march=rv64gcv_zba_zbb_zbs_zvl128b"],
+				["-march=rv64gcv"],
+				["-march=rv64gc"]
+			],
+			"clang": [
+				["-mcpu=sifive-p670"],
+				["-march=rv64gcv_zba_zbb_zbs_zvl128b"],
+				["-march=rv64gcv"],
+				["-march=rv64gc"]
+			]
+		}
 	},
 	"6-wide": {
-		"x86-64": "skylake",
-		"aarch64": "neoverse-v2",
-		"riscv64": "sifive-p870-d"
+		"x86-64": {
+			"llvm-mca": "skylake",
+			"gcc": [
+				["-march=skylake"]
+			],
+			"clang": [
+				["-march=skylake"]
+			]
+		},
+		"aarch64": {
+			"llvm-mca": "neoverse-v2",
+			"gcc": [
+				["-mcpu=neoverse-v2"]
+			],
+			"clang": [
+				["-mcpu=neoverse-v2"]
+			]
+		},
+		"riscv64": {
+			"llvm-mca": "sifive-p870-d",
+			"gcc": [
+				["-mcpu=sifive-p870-d"],
+				["-march=rv64gcv_zba_zbb_zbs_zvl128b", "-mtune=generic-ooo"],
+				["-march=rv64gcv_zba_zbb_zbs_zvl128b"],
+				["-march=rv64gcv"],
+				["-march=rv64gc"]
+			],
+			"clang": [
+				["-mcpu=sifive-p870-d"],
+				["-mcpu=sifive-p870"],
+				["-march=rv64gcv_zba_zbb_zbs_zvl128b"],
+				["-march=rv64gcv"],
+				["-march=rv64gc"]
+			]
+		}
 	}
 }
