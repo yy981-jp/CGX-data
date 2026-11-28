@@ -1,6 +1,6 @@
 	.text
 	.attribute	4, 16
-	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0"
+	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_v1p0_zicsr2p0_zifencei2p0_zba1p0_zbb1p0_zbs1p0_zve32f1p0_zve32x1p0_zve64d1p0_zve64f1p0_zve64x1p0_zvl128b1p0_zvl32b1p0_zvl64b1p0"
 	.file	"source.cpp"
 	.globl	cgxTarget                       # -- Begin function cgxTarget
 	.p2align	1
@@ -71,9 +71,10 @@ cgxTarget:                              # @cgxTarget
 	.file	3 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "CGX-MCA-END"
 	.loc	3 1 9                           # CGX-MCA-END:1:9
 	flw	fa0, -36(s0)
+	.loc	3 1 2 epilogue_begin            # CGX-MCA-END:1:2
+	addi	sp, s0, -48
 	ld	ra, 40(sp)                      # 8-byte Folded Reload
 	ld	s0, 32(sp)                      # 8-byte Folded Reload
-	.loc	3 1 2 epilogue_begin            # CGX-MCA-END:1:2
 	addi	sp, sp, 48
 	ret
 .Ltmp1:
@@ -101,16 +102,16 @@ _ZNKSt5arrayIfLm10EEixEm:               # @_ZNKSt5arrayIfLm10EEixEm
 	.cfi_def_cfa s0, 0
 	sd	a0, -24(s0)
 	sd	a1, -32(s0)
-	ld	a0, -24(s0)
+	ld	a1, -24(s0)
 .Ltmp2:
 	.loc	4 213 18 prologue_end           # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/array:213:18
-	ld	a1, -32(s0)
+	ld	a0, -32(s0)
 	.loc	4 213 9 is_stmt 0               # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/array:213:9
-	slli	a1, a1, 2
-	add	a0, a0, a1
+	sh2add	a0, a0, a1
+	.loc	4 213 2 epilogue_begin          # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/array:213:2
+	addi	sp, s0, -32
 	ld	ra, 24(sp)                      # 8-byte Folded Reload
 	ld	s0, 16(sp)                      # 8-byte Folded Reload
-	.loc	4 213 2 epilogue_begin          # /usr/bin/../lib/gcc-cross/riscv64-linux-gnu/13/../../../../riscv64-linux-gnu/include/c++/13/array:213:2
 	addi	sp, sp, 32
 	ret
 .Ltmp3:
@@ -137,10 +138,11 @@ main:                                   # @main
 	.cfi_def_cfa s0, 0
 	li	a0, 0
 	sw	a0, -20(s0)
-	ld	ra, 24(sp)                      # 8-byte Folded Reload
-	ld	s0, 16(sp)                      # 8-byte Folded Reload
 .Ltmp4:
 	.loc	3 6 2 prologue_end epilogue_begin # CGX-MCA-END:6:2
+	addi	sp, s0, -32
+	ld	ra, 24(sp)                      # 8-byte Folded Reload
+	ld	s0, 16(sp)                      # 8-byte Folded Reload
 	addi	sp, sp, 32
 	ret
 .Ltmp5:

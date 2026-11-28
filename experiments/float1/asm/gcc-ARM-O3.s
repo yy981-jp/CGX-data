@@ -1,11 +1,11 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
 	.section	.text.startup,"ax",@progbits
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	main
 	.type	main, %function
 main:
@@ -13,13 +13,111 @@ main:
 	.file 1 "source.cpp"
 	.loc 1 1 12
 	.cfi_startproc
-	.file 2 "CGX-MCA-END"
-	.loc 2 1 1
-	mov	w0, 1
+	adrp	x1, :got:__stack_chk_guard
+	ldr	x1, [x1, :got_lo12:__stack_chk_guard]
+	sub	sp, sp, #80
+	.cfi_def_cfa_offset 80
+	.loc 1 2 8
+	adrp	x0, .LANCHOR0
+.LBB2:
+	.file 2 "CGX-MCA-BEGIN"
+	.loc 2 2 7
+	movi	v0.2s, #0
+.LBE2:
+	.loc 1 2 8
+	add	x0, x0, :lo12:.LANCHOR0
+	mov	w2, 5
+	whilelo	p0.s, wzr, w2
+	cntw	x3
+	.loc 1 1 12
+	stp	x29, x30, [sp, 64]
+	whilelo	p1.s, w3, w2
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	add	x29, sp, 64
+	.loc 1 2 8
+	ldp	x4, x5, [x0]
+	.loc 1 1 12
+	ldr	x6, [x1]
+	str	x6, [sp, 56]
+	mov	x6, 0
+	.loc 1 3 8
+	ldp	x2, x3, [x0, 24]
+	.loc 1 2 8
+	stp	x4, x5, [sp, 8]
+	ldr	w1, [x0, 16]
+	.loc 1 3 8
+	stp	x2, x3, [sp, 32]
+	ldr	w0, [x0, 40]
+	.loc 1 2 8
+	str	w1, [sp, 24]
+	.loc 1 3 8
+	str	w0, [sp, 48]
+.LBB3:
+	.loc 2 2 13
+	add	x0, sp, 8
+	ld1w	z1.s, p0/z, [x0]
+	.loc 2 2 20
+	add	x0, sp, 32
+	ld1w	z2.s, p0/z, [x0]
+	.loc 2 2 15
+	fmul	z1.s, p0/m, z1.s, z2.s
+	.loc 2 2 7
+	fadda	s0, p0, s0, z1.s
+	b.none	.L2
+	.loc 2 2 13
+	add	x0, sp, 8
+	ld1w	z1.s, p1/z, [x0, #1, mul vl]
+	.loc 2 2 20
+	add	x0, sp, 32
+	ld1w	z2.s, p1/z, [x0, #1, mul vl]
+	.loc 2 2 15
+	fmul	z1.s, p1/m, z1.s, z2.s
+	.loc 2 2 7
+	fadda	s0, p1, s0, z1.s
+.L2:
+.LBE3:
+	.file 3 "CGX-MCA-END"
+	.loc 3 1 1
+	adrp	x0, :got:__stack_chk_guard
+	ldr	x0, [x0, :got_lo12:__stack_chk_guard]
+	fcvtzs	s0, s0
+	.loc 3 1 1
+	ldr	x2, [sp, 56]
+	ldr	x1, [x0]
+	subs	x2, x2, x1
+	mov	x1, 0
+	bne	.L6
+	ldp	x29, x30, [sp, 64]
+	add	sp, sp, 80
+	.cfi_remember_state
+	.cfi_restore 29
+	.cfi_restore 30
+	.cfi_def_cfa_offset 0
+	fmov	w0, s0
 	ret
+.L6:
+	.cfi_restore_state
+	bl	__stack_chk_fail
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
+	.section	.rodata
+	.align	3
+	.set	.LANCHOR0,. + 0
+.LC0:
+	.word	0
+	.word	1045220557
+	.word	1053609165
+	.word	1058642330
+	.word	1061997773
+	.zero	4
+.LC1:
+	.word	1036831949
+	.word	1050253722
+	.word	1056964608
+	.word	1060320051
+	.word	1063675494
 	.text
 .Letext0:
 	.section	.debug_info,"",@progbits
@@ -87,7 +185,7 @@ main:
 	.uleb128 0x7
 	.uleb128 0x40
 	.uleb128 0x18
-	.uleb128 0x7a
+	.uleb128 0x7c
 	.uleb128 0x19
 	.byte	0
 	.byte	0
@@ -122,7 +220,7 @@ main:
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
 .LASF2:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF3:
 	.string	"main"
 	.section	.debug_line_str,"MS",@progbits,1

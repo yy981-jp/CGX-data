@@ -188,16 +188,16 @@ _ZNSt8__detail30__integer_to_chars_is_unsignedIyEE:
 	.section	.debug_str,"MS",@progbits,1
 .LASF3:
 	.string	"cout"
+.LASF7:
+	.string	"main"
 .LASF5:
 	.string	"operator<< <std::char_traits<char> >"
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF6:
 	.string	"_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc"
 .LASF4:
 	.string	"_ZSt4cout"
-.LASF7:
-	.string	"main"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/test0"

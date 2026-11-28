@@ -1,10 +1,10 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp"
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	cgxTarget
 	.type	cgxTarget, %function
 cgxTarget:
@@ -16,20 +16,25 @@ cgxTarget:
 	movi	v0.2s, #0
 	.loc 1 6 79
 	mov	x2, 0
-	.p2align 3,,7
-.L2:
 .LBB7:
 	.file 2 "CGX-MCA-BEGIN"
-	.loc 2 2 7 discriminator 2
-	ldr	s2, [x0, x2]
-	ldr	s1, [x1, x2]
 	.loc 2 1 20 discriminator 1
-	add	x2, x2, 4
+	cntw	x4
+	mov	w3, 10
+	whilelo	p0.s, wzr, w3
+.L2:
+	.loc 2 2 15 discriminator 1
+	ld1w	z1.s, p0/z, [x0, x2, lsl 2]
+	.loc 2 2 15 is_stmt 0 discriminator 2
+	ld1w	z2.s, p0/z, [x1, x2, lsl 2]
+	.loc 2 1 20 is_stmt 1 discriminator 1
+	add	x2, x2, x4
+	.loc 2 2 15 discriminator 2
+	fmul	z1.s, p0/m, z1.s, z2.s
 	.loc 2 2 7 discriminator 2
-	fmadd	s0, s2, s1, s0
-	.loc 2 1 20 discriminator 1
-	cmp	x2, 40
-	bne	.L2
+	fadda	s0, p0, s0, z1.s
+	whilelo	p0.s, w2, w3
+	b.any	.L2
 .LBE7:
 	.file 3 "CGX-MCA-END"
 	.loc 3 2 1
@@ -39,7 +44,7 @@ cgxTarget:
 	.size	cgxTarget, .-cgxTarget
 	.section	.text.startup,"ax",@progbits
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	main
 	.type	main, %function
 main:
@@ -196,14 +201,14 @@ main:
 	.section	.debug_str,"MS",@progbits,1
 .LASF6:
 	.string	"_ZNKSt5arrayIfLm10EEixEm"
+.LASF4:
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF5:
 	.string	"operator[]"
 .LASF3:
 	.string	"cgxTarget"
 .LASF2:
 	.string	"main"
-.LASF4:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2"

@@ -121,7 +121,7 @@ main:
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
 .LASF2:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:
 	.string	"main"
 	.section	.debug_line_str,"MS",@progbits,1

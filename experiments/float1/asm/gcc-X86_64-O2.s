@@ -15,54 +15,62 @@ main:
 	subq	$72, %rsp
 	.cfi_def_cfa_offset 80
 	.loc 1 2 8
-	movaps	.LC1(%rip), %xmm0
-	.loc 1 6 8
-	pxor	%xmm1, %xmm1
+	vmovaps	.LC1(%rip), %xmm0
+.LBB2:
+	.file 2 "CGX-MCA-BEGIN"
+	.loc 2 2 7
+	vmovss	.LC5(%rip), %xmm3
+	movq	%rsp, %rcx
+	leaq	32(%rsp), %rdx
+.LBE2:
 	.loc 1 1 12
 	movq	%fs:40, %rax
 	movq	%rax, 56(%rsp)
 	xorl	%eax, %eax
 	.loc 1 2 8
 	movl	$0x3f4ccccd, 16(%rsp)
-	movq	%rsp, %rcx
-	leaq	32(%rsp), %rdx
-	movaps	%xmm0, (%rsp)
+.LBB3:
+	.loc 2 1 19 discriminator 1
+	movl	$4, %eax
+.LBE3:
+	.loc 1 2 8
+	vmovaps	%xmm0, (%rsp)
 	.loc 1 3 8
-	movaps	.LC3(%rip), %xmm0
+	vmovaps	.LC3(%rip), %xmm0
 	movl	$0x3f666666, 48(%rsp)
-	movaps	%xmm0, 32(%rsp)
-	.p2align 4,,10
-	.p2align 3
-.L2:
-.LBB2:
-	.file 2 "CGX-MCA-BEGIN"
-	.loc 2 2 15
-	movss	(%rcx,%rax), %xmm0
-	mulss	(%rdx,%rax), %xmm0
-	.loc 2 1 19 discriminator 1
-	addq	$4, %rax
+	vmovaps	%xmm0, 32(%rsp)
+	.loc 1 6 8
+	vxorps	%xmm0, %xmm0, %xmm0
+.LBB4:
 	.loc 2 2 7
-	addss	%xmm0, %xmm1
+	vfmadd231ss	.LC0(%rip), %xmm3, %xmm0
+.L2:
+	vmovss	(%rcx,%rax), %xmm1
+	vmovss	4(%rcx,%rax), %xmm2
+	vfmadd231ss	(%rdx,%rax), %xmm1, %xmm0
+	vfmadd231ss	4(%rdx,%rax), %xmm2, %xmm0
 	.loc 2 1 19 discriminator 1
+	addq	$8, %rax
 	cmpq	$20, %rax
 	jne	.L2
-.LBE2:
-	cvttss2sil	%xmm1, %eax
+.LBE4:
+	vcvttss2sil	%xmm0, %eax
 	.file 3 "CGX-MCA-END"
 	.loc 3 1 1
 	movq	56(%rsp), %rdx
 	subq	%fs:40, %rdx
-	jne	.L7
+	jne	.L9
 	addq	$72, %rsp
 	.cfi_remember_state
 	.cfi_def_cfa_offset 8
 	ret
-.L7:
+.L9:
 	.cfi_restore_state
 	call	__stack_chk_fail@PLT
 	.cfi_endproc
 .LFE0:
 	.size	main, .-main
+	.set	.LC0,.LC1
 	.section	.rodata.cst16,"aM",@progbits,16
 	.align 16
 .LC1:
@@ -76,6 +84,7 @@ main:
 	.long	1050253722
 	.long	1056964608
 	.long	1060320051
+	.set	.LC5,.LC3
 	.text
 .Letext0:
 	.section	.debug_info,"",@progbits
@@ -177,10 +186,10 @@ main:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:
 	.string	"main"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

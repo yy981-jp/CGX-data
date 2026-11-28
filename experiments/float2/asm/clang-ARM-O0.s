@@ -1,7 +1,7 @@
 	.text
 	.file	"source.cpp"
 	.globl	cgxTarget                       // -- Begin function cgxTarget
-	.p2align	2
+	.p2align	4
 	.type	cgxTarget,@function
 cgxTarget:                              // @cgxTarget
 .Lfunc_begin0:
@@ -83,7 +83,7 @@ cgxTarget:                              // @cgxTarget
                                         // -- End function
 	.section	.text._ZNKSt5arrayIfLm10EEixEm,"axG",@progbits,_ZNKSt5arrayIfLm10EEixEm,comdat
 	.weak	_ZNKSt5arrayIfLm10EEixEm        // -- Begin function _ZNKSt5arrayIfLm10EEixEm
-	.p2align	2
+	.p2align	4
 	.type	_ZNKSt5arrayIfLm10EEixEm,@function
 _ZNKSt5arrayIfLm10EEixEm:               // @_ZNKSt5arrayIfLm10EEixEm
 .Lfunc_begin1:
@@ -112,7 +112,7 @@ _ZNKSt5arrayIfLm10EEixEm:               // @_ZNKSt5arrayIfLm10EEixEm
                                         // -- End function
 	.text
 	.globl	main                            // -- Begin function main
-	.p2align	2
+	.p2align	4
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin2:

@@ -1,4 +1,4 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
@@ -25,22 +25,20 @@ main:
 	mov	x1, 0
 	.loc 1 2 8
 	adrp	x0, .LC0
-	add	x0, x0, :lo12:.LC0
-	add	x2, sp, 24
-	mov	x3, x0
-	ldp	x0, x1, [x3]
-	stp	x0, x1, [x2]
-	ldr	w0, [x3, 16]
-	str	w0, [x2, 16]
+	add	x1, x0, :lo12:.LC0
+	add	x0, sp, 24
+	ldp	x2, x3, [x1]
+	stp	x2, x3, [x0]
+	ldr	w1, [x1, 16]
+	str	w1, [x0, 16]
 	.loc 1 3 8
 	adrp	x0, .LC1
-	add	x0, x0, :lo12:.LC1
-	add	x2, sp, 48
-	mov	x3, x0
-	ldp	x0, x1, [x3]
-	stp	x0, x1, [x2]
-	ldr	w0, [x3, 16]
-	str	w0, [x2, 16]
+	add	x1, x0, :lo12:.LC1
+	add	x0, sp, 48
+	ldp	x2, x3, [x1]
+	stp	x2, x3, [x0]
+	ldr	w1, [x1, 16]
+	str	w1, [x0, 16]
 	.loc 1 4 6
 	mov	w0, 5
 	str	w0, [sp, 20]
@@ -55,14 +53,14 @@ main:
 .L3:
 	.loc 2 2 13
 	ldrsw	x0, [sp, 16]
-	lsl	x0, x0, 2
-	add	x1, sp, 24
-	ldr	s1, [x1, x0]
+	lsl	x1, x0, 2
+	add	x0, sp, 24
+	ldr	s1, [x0, x1]
 	.loc 2 2 20
 	ldrsw	x0, [sp, 16]
-	lsl	x0, x0, 2
-	add	x1, sp, 48
-	ldr	s0, [x1, x0]
+	lsl	x1, x0, 2
+	add	x0, sp, 48
+	ldr	s0, [x0, x1]
 	.loc 2 2 15
 	fmul	s0, s1, s0
 	.loc 2 2 7
@@ -206,10 +204,10 @@ main:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF3:
 	.string	"main"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

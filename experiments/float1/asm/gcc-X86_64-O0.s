@@ -21,32 +21,32 @@ main:
 	movq	%rax, -8(%rbp)
 	xorl	%eax, %eax
 	.loc 1 2 8
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -64(%rbp)
-	movss	.LC1(%rip), %xmm0
-	movss	%xmm0, -60(%rbp)
-	movss	.LC2(%rip), %xmm0
-	movss	%xmm0, -56(%rbp)
-	movss	.LC3(%rip), %xmm0
-	movss	%xmm0, -52(%rbp)
-	movss	.LC4(%rip), %xmm0
-	movss	%xmm0, -48(%rbp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -64(%rbp)
+	vmovss	.LC1(%rip), %xmm0
+	vmovss	%xmm0, -60(%rbp)
+	vmovss	.LC2(%rip), %xmm0
+	vmovss	%xmm0, -56(%rbp)
+	vmovss	.LC3(%rip), %xmm0
+	vmovss	%xmm0, -52(%rbp)
+	vmovss	.LC4(%rip), %xmm0
+	vmovss	%xmm0, -48(%rbp)
 	.loc 1 3 8
-	movss	.LC5(%rip), %xmm0
-	movss	%xmm0, -32(%rbp)
-	movss	.LC6(%rip), %xmm0
-	movss	%xmm0, -28(%rbp)
-	movss	.LC7(%rip), %xmm0
-	movss	%xmm0, -24(%rbp)
-	movss	.LC8(%rip), %xmm0
-	movss	%xmm0, -20(%rbp)
-	movss	.LC9(%rip), %xmm0
-	movss	%xmm0, -16(%rbp)
+	vmovss	.LC5(%rip), %xmm0
+	vmovss	%xmm0, -32(%rbp)
+	vmovss	.LC6(%rip), %xmm0
+	vmovss	%xmm0, -28(%rbp)
+	vmovss	.LC7(%rip), %xmm0
+	vmovss	%xmm0, -24(%rbp)
+	vmovss	.LC8(%rip), %xmm0
+	vmovss	%xmm0, -20(%rbp)
+	vmovss	.LC9(%rip), %xmm0
+	vmovss	%xmm0, -16(%rbp)
 	.loc 1 4 6
 	movl	$5, -68(%rbp)
 	.loc 1 6 8
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -76(%rbp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -76(%rbp)
 .LBB2:
 	.file 2 "CGX-MCA-BEGIN"
 	.loc 2 1 10
@@ -57,27 +57,27 @@ main:
 	.loc 2 2 13
 	movl	-72(%rbp), %eax
 	cltq
-	movss	-64(%rbp,%rax,4), %xmm1
+	vmovss	-64(%rbp,%rax,4), %xmm1
 	.loc 2 2 20
 	movl	-72(%rbp), %eax
 	cltq
-	movss	-32(%rbp,%rax,4), %xmm0
+	vmovss	-32(%rbp,%rax,4), %xmm0
 	.loc 2 2 15
-	mulss	%xmm1, %xmm0
+	vmulss	%xmm0, %xmm1, %xmm0
 	.loc 2 2 7
-	movss	-76(%rbp), %xmm1
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -76(%rbp)
+	vmovss	-76(%rbp), %xmm1
+	vaddss	%xmm0, %xmm1, %xmm0
+	vmovss	%xmm0, -76(%rbp)
 	.loc 2 1 2 discriminator 3
-	addl	$1, -72(%rbp)
+	incl	-72(%rbp)
 .L2:
 	.loc 2 1 19 discriminator 1
 	movl	-72(%rbp), %eax
 	cmpl	-68(%rbp), %eax
 	jl	.L3
 .LBE2:
-	movss	-76(%rbp), %xmm0
-	cvttss2sil	%xmm0, %eax
+	vmovss	-76(%rbp), %xmm0
+	vcvttss2sil	%xmm0, %eax
 	.file 3 "CGX-MCA-END"
 	.loc 3 1 1
 	movq	-8(%rbp), %rdx
@@ -206,10 +206,10 @@ main:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:
 	.string	"main"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

@@ -1,11 +1,11 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
 	.section	.text.startup,"ax",@progbits
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	main
 	.type	main, %function
 main:
@@ -13,85 +13,90 @@ main:
 	.file 1 "source.cpp"
 	.loc 1 1 12
 	.cfi_startproc
+	adrp	x1, :got:__stack_chk_guard
+	ldr	x1, [x1, :got_lo12:__stack_chk_guard]
 	sub	sp, sp, #80
 	.cfi_def_cfa_offset 80
 	.loc 1 2 8
 	adrp	x0, .LANCHOR0
-	.loc 1 1 12
-	adrp	x1, :got:__stack_chk_guard
-	ldr	x1, [x1, :got_lo12:__stack_chk_guard]
-	.loc 1 2 8
-	add	x0, x0, :lo12:.LANCHOR0
-	.loc 1 1 12
-	stp	x29, x30, [sp, 64]
-	.loc 1 2 8
-	add	x4, sp, 8
-	.loc 1 3 8
-	add	x3, sp, 32
-	.cfi_offset 29, -16
-	.cfi_offset 30, -8
-	.loc 1 1 12
-	add	x29, sp, 64
-	.loc 1 6 8
-	movi	v0.2s, #0
-	.loc 1 1 12
-	.loc 1 1 12
-	ldr	x2, [x1]
-	str	x2, [sp, 56]
-	mov	x2, 0
-	.loc 1 2 8
-	ldp	x6, x7, [x0]
-	.loc 1 3 8
-	mov	x1, 1
-	ldp	x8, x9, [x0, 24]
-	.loc 1 2 8
-	stp	x6, x7, [sp, 8]
-	ldr	w2, [x0, 16]
-	.loc 1 3 8
-	ldr	w0, [x0, 40]
-	str	w0, [x3, 16]
-	.loc 1 2 8
-	str	w2, [x4, 16]
-	.loc 1 3 8
-	stp	x8, x9, [sp, 32]
-	.p2align 3,,7
-.L2:
 .LBB2:
 	.file 2 "CGX-MCA-BEGIN"
-	.loc 2 2 13
-	lsl	x0, x1, 2
-	add	x2, x4, x0
-	.loc 2 2 20
-	add	x0, x3, x0
-	.loc 2 1 19 discriminator 1
-	add	x1, x1, 1
 	.loc 2 2 7
-	ldr	s1, [x0, -4]
-	ldr	s2, [x2, -4]
-	fmadd	s0, s2, s1, s0
-	.loc 2 1 19 discriminator 1
-	cmp	x1, 6
-	bne	.L2
+	movi	v0.2s, #0
 .LBE2:
+	.loc 1 2 8
+	add	x0, x0, :lo12:.LANCHOR0
+	mov	w2, 5
+	whilelo	p0.s, wzr, w2
+	cntw	x3
+	.loc 1 1 12
+	stp	x29, x30, [sp, 64]
+	whilelo	p1.s, w3, w2
+	.cfi_offset 29, -16
+	.cfi_offset 30, -8
+	add	x29, sp, 64
+	.loc 1 2 8
+	ldp	x4, x5, [x0]
+	.loc 1 1 12
+	ldr	x6, [x1]
+	str	x6, [sp, 56]
+	mov	x6, 0
+	.loc 1 3 8
+	ldp	x2, x3, [x0, 24]
+	.loc 1 2 8
+	stp	x4, x5, [sp, 8]
+	ldr	w1, [x0, 16]
+	.loc 1 3 8
+	stp	x2, x3, [sp, 32]
+	ldr	w0, [x0, 40]
+	.loc 1 2 8
+	str	w1, [sp, 24]
+	.loc 1 3 8
+	str	w0, [sp, 48]
+.LBB3:
+	.loc 2 2 13
+	add	x0, sp, 8
+	ld1w	z1.s, p0/z, [x0]
+	.loc 2 2 20
+	add	x0, sp, 32
+	ld1w	z2.s, p0/z, [x0]
+	.loc 2 2 15
+	fmul	z1.s, p0/m, z1.s, z2.s
+	.loc 2 2 7
+	fadda	s0, p0, s0, z1.s
+	b.none	.L2
+	.loc 2 2 13
+	add	x0, sp, 8
+	ld1w	z1.s, p1/z, [x0, #1, mul vl]
+	.loc 2 2 20
+	add	x0, sp, 32
+	ld1w	z2.s, p1/z, [x0, #1, mul vl]
+	.loc 2 2 15
+	fmul	z1.s, p1/m, z1.s, z2.s
+	.loc 2 2 7
+	fadda	s0, p1, s0, z1.s
+.L2:
+.LBE3:
 	.file 3 "CGX-MCA-END"
 	.loc 3 1 1
-	adrp	x1, :got:__stack_chk_guard
-	ldr	x1, [x1, :got_lo12:__stack_chk_guard]
-	fcvtzs	w0, s0
+	adrp	x0, :got:__stack_chk_guard
+	ldr	x0, [x0, :got_lo12:__stack_chk_guard]
+	fcvtzs	s0, s0
 	.loc 3 1 1
-	ldr	x3, [sp, 56]
-	ldr	x2, [x1]
-	subs	x3, x3, x2
-	mov	x2, 0
-	bne	.L7
+	ldr	x2, [sp, 56]
+	ldr	x1, [x0]
+	subs	x2, x2, x1
+	mov	x1, 0
+	bne	.L6
 	ldp	x29, x30, [sp, 64]
 	add	sp, sp, 80
 	.cfi_remember_state
 	.cfi_restore 29
 	.cfi_restore 30
 	.cfi_def_cfa_offset 0
+	fmov	w0, s0
 	ret
-.L7:
+.L6:
 	.cfi_restore_state
 	bl	__stack_chk_fail
 	.cfi_endproc
@@ -214,10 +219,10 @@ main:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
+.LASF2:
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF3:
 	.string	"main"
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

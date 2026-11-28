@@ -1,10 +1,10 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp"
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	cgxTarget
 	.type	cgxTarget, %function
 cgxTarget:
@@ -12,48 +12,39 @@ cgxTarget:
 	.file 1 "source.cpp"
 	.loc 1 6 79
 	.cfi_startproc
+	.loc 1 7 8
+	movi	v0.2s, #0
+	.loc 1 6 79
+	mov	x2, 0
 .LBB7:
 	.file 2 "CGX-MCA-BEGIN"
+	.loc 2 1 20 discriminator 1
+	cntw	x4
+	mov	w3, 10
+	whilelo	p0.s, wzr, w3
+.L2:
+	.loc 2 2 15 discriminator 1
+	ld1w	z1.s, p0/z, [x0, x2, lsl 2]
+	.loc 2 2 15 is_stmt 0 discriminator 2
+	ld1w	z2.s, p0/z, [x1, x2, lsl 2]
+	.loc 2 1 20 is_stmt 1 discriminator 1
+	add	x2, x2, x4
 	.loc 2 2 15 discriminator 2
-	ldp	q2, q4, [x1]
-	movi	v1.2s, #0
-	.loc 2 2 15 is_stmt 0 discriminator 1
-	ldp	q0, q3, [x0]
-	.loc 2 2 7 is_stmt 1 discriminator 2
-	ldr	s6, [x0, 32]
-	ldr	s5, [x1, 32]
-	.loc 2 2 15 discriminator 2
-	fmul	v0.4s, v0.4s, v2.4s
-	fmul	v3.4s, v3.4s, v4.4s
+	fmul	z1.s, p0/m, z1.s, z2.s
 	.loc 2 2 7 discriminator 2
-	ldr	s4, [x1, 36]
-	dup	s7, v0.s[1]
-	fadd	s1, s1, s0
-	dup	s18, v0.s[2]
-	dup	s2, v0.s[3]
-	ldr	s0, [x0, 36]
-	dup	s17, v3.s[1]
-	fadd	s1, s1, s7
-	dup	s16, v3.s[2]
-	dup	s7, v3.s[3]
-	fadd	s1, s1, s18
-	fadd	s1, s1, s2
-	fadd	s1, s1, s3
-	fadd	s1, s1, s17
-	fadd	s1, s1, s16
-	fadd	s1, s1, s7
-	fmadd	s1, s6, s5, s1
+	fadda	s0, p0, s0, z1.s
+	whilelo	p0.s, w2, w3
+	b.any	.L2
 .LBE7:
 	.file 3 "CGX-MCA-END"
 	.loc 3 2 1
-	fmadd	s0, s4, s0, s1
 	ret
 	.cfi_endproc
 .LFE696:
 	.size	cgxTarget, .-cgxTarget
 	.section	.text.startup,"ax",@progbits
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	main
 	.type	main, %function
 main:
@@ -210,10 +201,10 @@ main:
 	.section	.debug_str,"MS",@progbits,1
 .LASF6:
 	.string	"_ZNKSt5arrayIfLm10EEixEm"
-.LASF4:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF5:
 	.string	"operator[]"
+.LASF4:
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF3:
 	.string	"cgxTarget"
 .LASF2:

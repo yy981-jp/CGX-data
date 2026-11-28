@@ -14,20 +14,20 @@ cgxTarget:
 	.loc 1 6 79
 	xorl	%eax, %eax
 	.loc 1 7 8
-	pxor	%xmm0, %xmm0
+	vxorps	%xmm0, %xmm0, %xmm0
 .L2:
 .LBB7:
 	.file 2 "CGX-MCA-BEGIN"
 	.loc 2 2 15 discriminator 1
-	movq	(%rdi,%rax), %xmm1
+	vmovq	(%rdi,%rax), %xmm1
 	.loc 2 2 15 is_stmt 0 discriminator 2
-	movq	(%rsi,%rax), %xmm2
+	vmovq	(%rsi,%rax), %xmm2
 	addq	$8, %rax
-	mulps	%xmm2, %xmm1
-	addss	%xmm1, %xmm0
+	vmulps	%xmm2, %xmm1, %xmm1
+	vaddss	%xmm1, %xmm0, %xmm0
 	.loc 2 2 7 is_stmt 1 discriminator 2
-	shufps	$0xe5, %xmm1, %xmm1
-	addss	%xmm1, %xmm0
+	vmovshdup	%xmm1, %xmm1
+	vaddss	%xmm0, %xmm1, %xmm0
 	cmpq	$40, %rax
 	jne	.L2
 .LBE7:
@@ -199,7 +199,7 @@ main:
 .LASF5:
 	.string	"operator[]"
 .LASF4:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:
 	.string	"cgxTarget"
 .LASF2:

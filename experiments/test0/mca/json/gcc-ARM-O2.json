@@ -14,21 +14,21 @@
           },
           {
             "Instruction": 1,
-            "Latency": 4,
-            "NumMicroOpcodes": 1,
-            "RThroughput": 0.33333333333333331,
-            "hasUnmodeledSideEffects": false,
-            "mayLoad": true,
-            "mayStore": false
-          },
-          {
-            "Instruction": 2,
             "Latency": 1,
             "NumMicroOpcodes": 3,
             "RThroughput": 0.5,
             "hasUnmodeledSideEffects": false,
             "mayLoad": false,
             "mayStore": true
+          },
+          {
+            "Instruction": 2,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.16666666666666666,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
           },
           {
             "Instruction": 3,
@@ -59,11 +59,11 @@
           },
           {
             "Instruction": 6,
-            "Latency": 1,
+            "Latency": 4,
             "NumMicroOpcodes": 1,
-            "RThroughput": 0.16666666666666666,
+            "RThroughput": 0.33333333333333331,
             "hasUnmodeledSideEffects": false,
-            "mayLoad": false,
+            "mayLoad": true,
             "mayStore": false
           },
           {
@@ -105,13 +105,13 @@
         ]
       },
       "Instructions": [
-        "adrp\tx0, :got:_ZSt4cout",
-        "ldr\tx0, [x0, :got_lo12:_ZSt4cout]",
+        "adrp\tx1, .LC0",
         "stp\tx29, x30, [sp, #-16]!",
         "mov\tx2, #11",
         "mov\tx29, sp",
-        "adrp\tx1, .LC0",
         "add\tx1, x1, :lo12:.LC0",
+        "adrp\tx0, :got:_ZSt4cout",
+        "ldr\tx0, [x0, :got_lo12:_ZSt4cout]",
         "bl\t_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l",
         "mov\tw0, #0",
         "ldp\tx29, x30, [sp], #16",
@@ -128,12 +128,12 @@
           {
             "InstructionIndex": 0,
             "ResourceIndex": 11,
-            "ResourceUsage": 0.29999999999999999
+            "ResourceUsage": 0.34000000000000002
           },
           {
             "InstructionIndex": 0,
             "ResourceIndex": 12,
-            "ResourceUsage": 0.34000000000000002
+            "ResourceUsage": 0.29999999999999999
           },
           {
             "InstructionIndex": 0,
@@ -142,65 +142,80 @@
           },
           {
             "InstructionIndex": 1,
-            "ResourceIndex": 7,
-            "ResourceUsage": 0.040000000000000001
-          },
-          {
-            "InstructionIndex": 1,
-            "ResourceIndex": 8,
-            "ResourceUsage": 0.46999999999999997
-          },
-          {
-            "InstructionIndex": 1,
-            "ResourceIndex": 9,
-            "ResourceUsage": 0.48999999999999999
-          },
-          {
-            "InstructionIndex": 2,
             "ResourceIndex": 2,
             "ResourceUsage": 0.5
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 1,
             "ResourceIndex": 3,
             "ResourceUsage": 0.5
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 1,
             "ResourceIndex": 8,
             "ResourceUsage": 0.46999999999999997
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 1,
             "ResourceIndex": 9,
             "ResourceUsage": 0.53000000000000003
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 1,
             "ResourceIndex": 10,
             "ResourceUsage": 0.050000000000000003
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 1,
             "ResourceIndex": 11,
             "ResourceUsage": 0.31
           },
           {
-            "InstructionIndex": 2,
-            "ResourceIndex": 14,
-            "ResourceUsage": 0.33000000000000002
+            "InstructionIndex": 1,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.01
           },
           {
-            "InstructionIndex": 2,
+            "InstructionIndex": 1,
+            "ResourceIndex": 14,
+            "ResourceUsage": 0.32000000000000001
+          },
+          {
+            "InstructionIndex": 1,
             "ResourceIndex": 15,
             "ResourceUsage": 0.31
           },
           {
-            "InstructionIndex": 3,
+            "InstructionIndex": 2,
             "ResourceIndex": 10,
             "ResourceUsage": 0.28999999999999998
           },
           {
+            "InstructionIndex": 2,
+            "ResourceIndex": 11,
+            "ResourceUsage": 0.029999999999999999
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 14,
+            "ResourceUsage": 0.31
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 15,
+            "ResourceUsage": 0.35999999999999999
+          },
+          {
+            "InstructionIndex": 3,
+            "ResourceIndex": 10,
+            "ResourceUsage": 0.31
+          },
+          {
             "InstructionIndex": 3,
             "ResourceIndex": 11,
             "ResourceUsage": 0.029999999999999999
@@ -208,87 +223,82 @@
           {
             "InstructionIndex": 3,
             "ResourceIndex": 12,
+            "ResourceUsage": 0.31
+          },
+          {
+            "InstructionIndex": 3,
+            "ResourceIndex": 13,
             "ResourceUsage": 0.01
           },
           {
             "InstructionIndex": 3,
             "ResourceIndex": 14,
-            "ResourceUsage": 0.34000000000000002
+            "ResourceUsage": 0.28000000000000003
           },
           {
             "InstructionIndex": 3,
             "ResourceIndex": 15,
-            "ResourceUsage": 0.33000000000000002
+            "ResourceUsage": 0.059999999999999998
           },
           {
             "InstructionIndex": 4,
-            "ResourceIndex": 10,
-            "ResourceUsage": 0.31
-          },
-          {
-            "InstructionIndex": 4,
-            "ResourceIndex": 11,
-            "ResourceUsage": 0.040000000000000001
-          },
-          {
-            "InstructionIndex": 4,
-            "ResourceIndex": 12,
-            "ResourceUsage": 0.29999999999999999
-          },
-          {
-            "InstructionIndex": 4,
-            "ResourceIndex": 14,
-            "ResourceUsage": 0.31
-          },
-          {
-            "InstructionIndex": 4,
-            "ResourceIndex": 15,
-            "ResourceUsage": 0.040000000000000001
-          },
-          {
-            "InstructionIndex": 5,
             "ResourceIndex": 10,
             "ResourceUsage": 0.029999999999999999
           },
           {
-            "InstructionIndex": 5,
+            "InstructionIndex": 4,
             "ResourceIndex": 11,
-            "ResourceUsage": 0.33000000000000002
-          },
-          {
-            "InstructionIndex": 5,
-            "ResourceIndex": 12,
-            "ResourceUsage": 0.34000000000000002
-          },
-          {
-            "InstructionIndex": 5,
-            "ResourceIndex": 13,
             "ResourceUsage": 0.29999999999999999
           },
           {
-            "InstructionIndex": 6,
+            "InstructionIndex": 4,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.02
+          },
+          {
+            "InstructionIndex": 4,
+            "ResourceIndex": 14,
+            "ResourceUsage": 0.35999999999999999
+          },
+          {
+            "InstructionIndex": 4,
+            "ResourceIndex": 15,
+            "ResourceUsage": 0.28999999999999998
+          },
+          {
+            "InstructionIndex": 5,
             "ResourceIndex": 10,
             "ResourceUsage": 0.32000000000000001
           },
           {
-            "InstructionIndex": 6,
+            "InstructionIndex": 5,
             "ResourceIndex": 11,
             "ResourceUsage": 0.02
           },
           {
-            "InstructionIndex": 6,
+            "InstructionIndex": 5,
             "ResourceIndex": 12,
-            "ResourceUsage": 0.01
+            "ResourceUsage": 0.34999999999999998
           },
           {
-            "InstructionIndex": 6,
-            "ResourceIndex": 14,
+            "InstructionIndex": 5,
+            "ResourceIndex": 13,
             "ResourceUsage": 0.31
           },
           {
             "InstructionIndex": 6,
-            "ResourceIndex": 15,
-            "ResourceUsage": 0.34000000000000002
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.040000000000000001
+          },
+          {
+            "InstructionIndex": 6,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.47999999999999998
+          },
+          {
+            "InstructionIndex": 6,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.47999999999999998
           },
           {
             "InstructionIndex": 7,
@@ -298,12 +308,12 @@
           {
             "InstructionIndex": 7,
             "ResourceIndex": 12,
-            "ResourceUsage": 0.040000000000000001
+            "ResourceUsage": 0.080000000000000002
           },
           {
             "InstructionIndex": 7,
             "ResourceIndex": 13,
-            "ResourceUsage": 0.95999999999999996
+            "ResourceUsage": 0.92000000000000004
           },
           {
             "InstructionIndex": 9,
@@ -313,12 +323,12 @@
           {
             "InstructionIndex": 9,
             "ResourceIndex": 8,
-            "ResourceUsage": 0.51000000000000001
+            "ResourceUsage": 0.5
           },
           {
             "InstructionIndex": 9,
             "ResourceIndex": 9,
-            "ResourceUsage": 0.44
+            "ResourceUsage": 0.45000000000000001
           },
           {
             "InstructionIndex": 9,
@@ -333,17 +343,17 @@
           {
             "InstructionIndex": 9,
             "ResourceIndex": 12,
-            "ResourceUsage": 0.28999999999999998
+            "ResourceUsage": 0.25
           },
           {
             "InstructionIndex": 9,
             "ResourceIndex": 13,
-            "ResourceUsage": 0.02
+            "ResourceUsage": 0.040000000000000001
           },
           {
             "InstructionIndex": 9,
             "ResourceIndex": 14,
-            "ResourceUsage": 0.040000000000000001
+            "ResourceUsage": 0.059999999999999998
           },
           {
             "InstructionIndex": 9,
@@ -425,12 +435,12 @@
       "SummaryView": {
         "BlockRThroughput": 2.6666666666666665,
         "DispatchWidth": 6,
-        "IPC": 1.8092105263157894,
+        "IPC": 1.80623973727422,
         "Instructions": 1100,
         "Iterations": 100,
-        "TotalCycles": 608,
+        "TotalCycles": 609,
         "TotaluOps": 1600,
-        "uOpsPerCycle": 2.6315789473684212
+        "uOpsPerCycle": 2.6272577996715927
       },
       "TimelineView": {
         "TimelineInfo": [
@@ -443,45 +453,45 @@
           },
           {
             "CycleDispatched": 0,
-            "CycleExecuted": 6,
-            "CycleIssued": 2,
-            "CycleReady": 2,
-            "CycleRetired": 7
-          },
-          {
-            "CycleDispatched": 0,
-            "CycleExecuted": 3,
-            "CycleIssued": 2,
-            "CycleReady": 2,
-            "CycleRetired": 7
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 3
           },
           {
             "CycleDispatched": 0,
             "CycleExecuted": 2,
             "CycleIssued": 1,
             "CycleReady": 0,
-            "CycleRetired": 7
+            "CycleRetired": 3
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 3,
+            "CycleIssued": 2,
+            "CycleReady": 2,
+            "CycleRetired": 4
           },
           {
             "CycleDispatched": 1,
-            "CycleExecuted": 4,
-            "CycleIssued": 3,
-            "CycleReady": 3,
-            "CycleRetired": 7
+            "CycleExecuted": 3,
+            "CycleIssued": 2,
+            "CycleReady": 2,
+            "CycleRetired": 4
           },
           {
             "CycleDispatched": 1,
             "CycleExecuted": 3,
             "CycleIssued": 2,
             "CycleReady": 1,
-            "CycleRetired": 7
+            "CycleRetired": 4
           },
           {
             "CycleDispatched": 1,
-            "CycleExecuted": 4,
+            "CycleExecuted": 7,
             "CycleIssued": 3,
             "CycleReady": 3,
-            "CycleRetired": 7
+            "CycleRetired": 8
           }
         ]
       }

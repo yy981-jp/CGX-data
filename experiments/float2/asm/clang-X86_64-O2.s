@@ -10,54 +10,44 @@ cgxTarget:                              # @cgxTarget
 # %bb.0:
 	.file	1 "CGX-MCA-BEGIN"
 	.loc	1 2 10 prologue_end             # CGX-MCA-BEGIN:2:10
-	movss	(%rdi), %xmm0                   # xmm0 = mem[0],zero,zero,zero
-	movss	4(%rdi), %xmm1                  # xmm1 = mem[0],zero,zero,zero
+	vmovss	(%rdi), %xmm0                   # xmm0 = mem[0],zero,zero,zero
+	vmovss	4(%rdi), %xmm1                  # xmm1 = mem[0],zero,zero,zero
+	vxorps	%xmm2, %xmm2, %xmm2
 	.loc	1 2 7 is_stmt 0                 # CGX-MCA-BEGIN:2:7
-	mulss	(%rsi), %xmm0
-	xorps	%xmm2, %xmm2
-	addss	%xmm0, %xmm2
-	mulss	4(%rsi), %xmm1
-	addss	%xmm2, %xmm1
+	vfmadd231ss	(%rsi), %xmm0, %xmm2    # xmm2 = (xmm0 * mem) + xmm2
+	vfmadd231ss	4(%rsi), %xmm1, %xmm2   # xmm2 = (xmm1 * mem) + xmm2
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	8(%rdi), %xmm0                  # xmm0 = mem[0],zero,zero,zero
+	vmovss	8(%rdi), %xmm0                  # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	8(%rsi), %xmm0
-	addss	%xmm1, %xmm0
+	vfmadd132ss	8(%rsi), %xmm2, %xmm0   # xmm0 = (xmm0 * mem) + xmm2
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	12(%rdi), %xmm1                 # xmm1 = mem[0],zero,zero,zero
+	vmovss	12(%rdi), %xmm1                 # xmm1 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	12(%rsi), %xmm1
-	addss	%xmm0, %xmm1
+	vfmadd132ss	12(%rsi), %xmm0, %xmm1  # xmm1 = (xmm1 * mem) + xmm0
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	16(%rdi), %xmm0                 # xmm0 = mem[0],zero,zero,zero
+	vmovss	16(%rdi), %xmm0                 # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	16(%rsi), %xmm0
-	addss	%xmm1, %xmm0
+	vfmadd132ss	16(%rsi), %xmm1, %xmm0  # xmm0 = (xmm0 * mem) + xmm1
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	20(%rdi), %xmm1                 # xmm1 = mem[0],zero,zero,zero
+	vmovss	20(%rdi), %xmm1                 # xmm1 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	20(%rsi), %xmm1
-	addss	%xmm0, %xmm1
+	vfmadd132ss	20(%rsi), %xmm0, %xmm1  # xmm1 = (xmm1 * mem) + xmm0
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	24(%rdi), %xmm0                 # xmm0 = mem[0],zero,zero,zero
+	vmovss	24(%rdi), %xmm0                 # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	24(%rsi), %xmm0
-	addss	%xmm1, %xmm0
+	vfmadd132ss	24(%rsi), %xmm1, %xmm0  # xmm0 = (xmm0 * mem) + xmm1
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	28(%rdi), %xmm1                 # xmm1 = mem[0],zero,zero,zero
+	vmovss	28(%rdi), %xmm1                 # xmm1 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	28(%rsi), %xmm1
-	addss	%xmm0, %xmm1
+	vfmadd132ss	28(%rsi), %xmm0, %xmm1  # xmm1 = (xmm1 * mem) + xmm0
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	32(%rdi), %xmm2                 # xmm2 = mem[0],zero,zero,zero
+	vmovss	32(%rdi), %xmm2                 # xmm2 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	32(%rsi), %xmm2
-	addss	%xmm1, %xmm2
+	vfmadd132ss	32(%rsi), %xmm1, %xmm2  # xmm2 = (xmm2 * mem) + xmm1
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
-	movss	36(%rdi), %xmm0                 # xmm0 = mem[0],zero,zero,zero
+	vmovss	36(%rdi), %xmm0                 # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	mulss	36(%rsi), %xmm0
-	addss	%xmm2, %xmm0
+	vfmadd132ss	36(%rsi), %xmm2, %xmm0  # xmm0 = (xmm0 * mem) + xmm2
 	.file	2 "CGX-MCA-END"
 	.loc	2 1 2 is_stmt 1                 # CGX-MCA-END:1:2
 	retq

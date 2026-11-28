@@ -1,7 +1,7 @@
 	.text
 	.file	"source.cpp"
 	.globl	main                            // -- Begin function main
-	.p2align	2
+	.p2align	4
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin0:

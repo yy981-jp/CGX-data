@@ -19,8 +19,8 @@ cgxTarget:                              # @cgxTarget
 	movq	%rsi, -16(%rbp)
 .Ltmp0:
 	.loc	0 7 8 prologue_end              # source.cpp:7:8
-	xorps	%xmm0, %xmm0
-	movss	%xmm0, -20(%rbp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -20(%rbp)
 	.file	1 "CGX-MCA-BEGIN"
 	.loc	1 1 11                          # CGX-MCA-BEGIN:1:11
 	movl	$0, -24(%rbp)
@@ -36,22 +36,21 @@ cgxTarget:                              # @cgxTarget
 	movslq	-24(%rbp), %rsi
 	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
 	callq	_ZNKSt5arrayIfLm10EEixEm
-	movss	(%rax), %xmm0                   # xmm0 = mem[0],zero,zero,zero
-	movss	%xmm0, -28(%rbp)                # 4-byte Spill
+	vmovss	(%rax), %xmm0                   # xmm0 = mem[0],zero,zero,zero
+	vmovss	%xmm0, -28(%rbp)                # 4-byte Spill
 	.loc	1 2 17                          # CGX-MCA-BEGIN:2:17
 	movq	-16(%rbp), %rdi
 	.loc	1 2 19                          # CGX-MCA-BEGIN:2:19
 	movslq	-24(%rbp), %rsi
 	.loc	1 2 17                          # CGX-MCA-BEGIN:2:17
 	callq	_ZNKSt5arrayIfLm10EEixEm
-	movss	-28(%rbp), %xmm0                # 4-byte Reload
-                                        # xmm0 = mem[0],zero,zero,zero
-	movss	(%rax), %xmm2                   # xmm2 = mem[0],zero,zero,zero
+	vmovss	-28(%rbp), %xmm1                # 4-byte Reload
+                                        # xmm1 = mem[0],zero,zero,zero
+	vmovss	(%rax), %xmm0                   # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	movss	-20(%rbp), %xmm1                # xmm1 = mem[0],zero,zero,zero
-	mulss	%xmm2, %xmm0
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -20(%rbp)
+	vmovss	-20(%rbp), %xmm2                # xmm2 = mem[0],zero,zero,zero
+	vfmadd213ss	%xmm2, %xmm1, %xmm0     # xmm0 = (xmm1 * xmm0) + xmm2
+	vmovss	%xmm0, -20(%rbp)
 # %bb.3:                                #   in Loop: Header=BB0_1 Depth=1
 	.loc	1 1 25 is_stmt 1                # CGX-MCA-BEGIN:1:25
 	movl	-24(%rbp), %eax
@@ -62,7 +61,7 @@ cgxTarget:                              # @cgxTarget
 .LBB0_4:
 	.file	2 "CGX-MCA-END"
 	.loc	2 1 9                           # CGX-MCA-END:1:9
-	movss	-20(%rbp), %xmm0                # xmm0 = mem[0],zero,zero,zero
+	vmovss	-20(%rbp), %xmm0                # xmm0 = mem[0],zero,zero,zero
 	.loc	2 1 2 epilogue_begin            # CGX-MCA-END:1:2
 	addq	$32, %rsp
 	popq	%rbp

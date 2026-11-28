@@ -33,8 +33,8 @@ main:                                   # @main
 	.loc	0 4 6                           # source.cpp:4:6
 	movl	$5, -68(%rbp)
 	.loc	0 6 8                           # source.cpp:6:8
-	xorps	%xmm0, %xmm0
-	movss	%xmm0, -72(%rbp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -72(%rbp)
 	.file	1 "CGX-MCA-BEGIN"
 	.loc	1 1 10                          # CGX-MCA-BEGIN:1:10
 	movl	$0, -76(%rbp)
@@ -48,15 +48,14 @@ main:                                   # @main
 # %bb.2:                                #   in Loop: Header=BB0_1 Depth=1
 	.loc	1 2 10 is_stmt 1                # CGX-MCA-BEGIN:2:10
 	movslq	-76(%rbp), %rax
-	movss	-32(%rbp,%rax,4), %xmm0         # xmm0 = mem[0],zero,zero,zero
+	vmovss	-32(%rbp,%rax,4), %xmm1         # xmm1 = mem[0],zero,zero,zero
 	.loc	1 2 17 is_stmt 0                # CGX-MCA-BEGIN:2:17
 	movslq	-76(%rbp), %rax
-	movss	-64(%rbp,%rax,4), %xmm2         # xmm2 = mem[0],zero,zero,zero
+	vmovss	-64(%rbp,%rax,4), %xmm0         # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	movss	-72(%rbp), %xmm1                # xmm1 = mem[0],zero,zero,zero
-	mulss	%xmm2, %xmm0
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -72(%rbp)
+	vmovss	-72(%rbp), %xmm2                # xmm2 = mem[0],zero,zero,zero
+	vfmadd213ss	%xmm2, %xmm1, %xmm0     # xmm0 = (xmm1 * xmm0) + xmm2
+	vmovss	%xmm0, -72(%rbp)
 # %bb.3:                                #   in Loop: Header=BB0_1 Depth=1
 	.loc	1 1 24 is_stmt 1                # CGX-MCA-BEGIN:1:24
 	movl	-76(%rbp), %eax
@@ -67,7 +66,7 @@ main:                                   # @main
 .LBB0_4:
 	.file	2 "CGX-MCA-END"
 	.loc	2 0 9                           # CGX-MCA-END:0:9
-	cvttss2si	-72(%rbp), %eax
+	vcvttss2si	-72(%rbp), %eax
 	popq	%rbp
 	.cfi_def_cfa %rsp, 8
 	retq
