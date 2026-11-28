@@ -5,10 +5,10 @@ on:
     branches:
       - develop
     paths:
-      - 'experiments/tc01-*/**'
-      - 'experiments/tc02-*/**'
-      - 'experiments/tc03-*/**'
-      - 'experiments/tc05-*/**'
+      - 'experiments/tc01-*/source.cpp'
+      - 'experiments/tc02-*/source.cpp'
+      - 'experiments/tc03-*/source.cpp'
+      - 'experiments/tc05-*/source.cpp'
       - 'benchmarks/**'
       - '.github/workflows/native-benchmarks.yml'
       - '.github/workflows/regenerate-assembly.yml'
@@ -16,10 +16,10 @@ on:
     branches:
       - develop
     paths:
-      - 'experiments/tc01-*/**'
-      - 'experiments/tc02-*/**'
-      - 'experiments/tc03-*/**'
-      - 'experiments/tc05-*/**'
+      - 'experiments/tc01-*/source.cpp'
+      - 'experiments/tc02-*/source.cpp'
+      - 'experiments/tc03-*/source.cpp'
+      - 'experiments/tc05-*/source.cpp'
       - 'benchmarks/**'
       - '.github/workflows/native-benchmarks.yml'
       - '.github/workflows/regenerate-assembly.yml'

@@ -1,15 +1,13 @@
-int main() {
-	float a[] = {0.0f, 0.2f, 0.4f, 0.6f, 0.8f};
-	float b[] = {0.1f, 0.3f, 0.5f, 0.7f, 0.9f};
-	int n = 5;
+#include <cstddef>
 
+extern "C" __attribute__((used, noinline))
+float cgxTarget(const float* a, const float* b, std::size_t count) noexcept {
 	float sum = 0.0f;
 
-	#line 0 "CGX-MCA-BEGIN"
-
-	for(int i = 0; i < n; ++i)
+#line 1 "CGX-MCA-BEGIN"
+	for (std::size_t i = 0; i < count; ++i)
 		sum += a[i] * b[i];
+#line 1 "CGX-MCA-END"
 
-	#line 0 "CGX-MCA-END"
 	return sum;
 }
