@@ -1,0 +1,608 @@
+{
+  "CodeRegions": [
+    {
+      "InstructionInfoView": {
+        "InstructionList": [
+          {
+            "Instruction": 0,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 1,
+            "Latency": 2,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.25,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 2,
+            "Latency": 1,
+            "NumMicroOpcodes": 2,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": true
+          },
+          {
+            "Instruction": 3,
+            "Latency": 0,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.16666666666666666,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 4,
+            "Latency": 0,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.16666666666666666,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 5,
+            "Latency": 1,
+            "NumMicroOpcodes": 2,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": true
+          },
+          {
+            "Instruction": 6,
+            "Latency": 0,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.16666666666666666,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 7,
+            "Latency": 4,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.33333333333333331,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": true,
+            "mayStore": false
+          },
+          {
+            "Instruction": 8,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.16666666666666666,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 9,
+            "Latency": 4,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.33333333333333331,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": true,
+            "mayStore": false
+          },
+          {
+            "Instruction": 10,
+            "Latency": 4,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.33333333333333331,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": true,
+            "mayStore": false
+          },
+          {
+            "Instruction": 11,
+            "Latency": 1,
+            "NumMicroOpcodes": 2,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 12,
+            "Latency": 2,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.25,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 13,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.33333333333333331,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 14,
+            "Latency": 1,
+            "NumMicroOpcodes": 1,
+            "RThroughput": 0.5,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": false,
+            "mayStore": false
+          },
+          {
+            "Instruction": 15,
+            "Latency": 4,
+            "NumMicroOpcodes": 2,
+            "RThroughput": 0.33333333333333331,
+            "hasUnmodeledSideEffects": false,
+            "mayLoad": true,
+            "mayStore": false
+          }
+        ]
+      },
+      "Instructions": [
+        "cbz\tx1, .L4",
+        "movi\tv8.2s, #0",
+        "stp\tx19, x20, [sp, #16]",
+        "mov\tx20, x1",
+        "mov\tx19, #0",
+        "str\tx21, [sp, #32]",
+        "mov\tx21, x0",
+        "ldr\tx0, [x21, x19, lsl #3]",
+        "add\tx19, x19, #1",
+        "ldr\tx2, [x0]",
+        "ldr\tx2, [x2]",
+        "blr\tx2",
+        "fadd\ts8, s8, s0",
+        "cmp\tx20, x19",
+        "b.ne\t.L3",
+        "ldp\tx19, x20, [sp, #16]"
+      ],
+      "Name": "",
+      "ResourcePressureView": {
+        "ResourcePressureInfo": [
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 0,
+            "ResourceUsage": 0.51000000000000001
+          },
+          {
+            "InstructionIndex": 0,
+            "ResourceIndex": 1,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 17,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 1,
+            "ResourceIndex": 19,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 3,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 2,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.51000000000000001
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 2,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.51000000000000001
+          },
+          {
+            "InstructionIndex": 5,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.19
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.47999999999999998
+          },
+          {
+            "InstructionIndex": 7,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.33000000000000002
+          },
+          {
+            "InstructionIndex": 8,
+            "ResourceIndex": 10,
+            "ResourceUsage": 0.050000000000000003
+          },
+          {
+            "InstructionIndex": 8,
+            "ResourceIndex": 11,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 8,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.01
+          },
+          {
+            "InstructionIndex": 8,
+            "ResourceIndex": 14,
+            "ResourceUsage": 0.46000000000000002
+          },
+          {
+            "InstructionIndex": 8,
+            "ResourceIndex": 15,
+            "ResourceUsage": 0.46999999999999997
+          },
+          {
+            "InstructionIndex": 9,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.87
+          },
+          {
+            "InstructionIndex": 9,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.070000000000000007
+          },
+          {
+            "InstructionIndex": 9,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.059999999999999998
+          },
+          {
+            "InstructionIndex": 10,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.34000000000000002
+          },
+          {
+            "InstructionIndex": 10,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.27000000000000002
+          },
+          {
+            "InstructionIndex": 10,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.39000000000000001
+          },
+          {
+            "InstructionIndex": 11,
+            "ResourceIndex": 0,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 11,
+            "ResourceIndex": 1,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 11,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.47999999999999998
+          },
+          {
+            "InstructionIndex": 11,
+            "ResourceIndex": 13,
+            "ResourceUsage": 0.52000000000000002
+          },
+          {
+            "InstructionIndex": 12,
+            "ResourceIndex": 16,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 12,
+            "ResourceIndex": 18,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 4,
+            "ResourceUsage": 0.33000000000000002
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 5,
+            "ResourceUsage": 0.33000000000000002
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 6,
+            "ResourceUsage": 0.34000000000000002
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 10,
+            "ResourceUsage": 0.40999999999999998
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 11,
+            "ResourceUsage": 0.46000000000000002
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.080000000000000002
+          },
+          {
+            "InstructionIndex": 13,
+            "ResourceIndex": 13,
+            "ResourceUsage": 0.050000000000000003
+          },
+          {
+            "InstructionIndex": 14,
+            "ResourceIndex": 0,
+            "ResourceUsage": 0.48999999999999999
+          },
+          {
+            "InstructionIndex": 14,
+            "ResourceIndex": 1,
+            "ResourceUsage": 0.51000000000000001
+          },
+          {
+            "InstructionIndex": 15,
+            "ResourceIndex": 7,
+            "ResourceUsage": 0.34999999999999998
+          },
+          {
+            "InstructionIndex": 15,
+            "ResourceIndex": 8,
+            "ResourceUsage": 0.29999999999999999
+          },
+          {
+            "InstructionIndex": 15,
+            "ResourceIndex": 9,
+            "ResourceUsage": 0.34999999999999998
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 0,
+            "ResourceUsage": 1.5
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 1,
+            "ResourceUsage": 1.5
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 2,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 3,
+            "ResourceUsage": 1
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 4,
+            "ResourceUsage": 0.33000000000000002
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 5,
+            "ResourceUsage": 0.33000000000000002
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 6,
+            "ResourceUsage": 0.34000000000000002
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 7,
+            "ResourceUsage": 1.75
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 8,
+            "ResourceUsage": 2.1200000000000001
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 9,
+            "ResourceUsage": 2.1299999999999999
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 10,
+            "ResourceUsage": 0.46000000000000002
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 11,
+            "ResourceUsage": 0.46999999999999997
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 12,
+            "ResourceUsage": 0.56999999999999995
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 13,
+            "ResourceUsage": 0.56999999999999995
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 14,
+            "ResourceUsage": 0.46000000000000002
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 15,
+            "ResourceUsage": 0.46999999999999997
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 16,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 17,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 18,
+            "ResourceUsage": 0.5
+          },
+          {
+            "InstructionIndex": 16,
+            "ResourceIndex": 19,
+            "ResourceUsage": 0.5
+          }
+        ]
+      },
+      "SummaryView": {
+        "BlockRThroughput": 3.3333333333333335,
+        "DispatchWidth": 6,
+        "IPC": 2.0779220779220777,
+        "Instructions": 1600,
+        "Iterations": 100,
+        "TotalCycles": 770,
+        "TotaluOps": 2000,
+        "uOpsPerCycle": 2.5974025974025974
+      },
+      "TimelineView": {
+        "TimelineInfo": [
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 3
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 3,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 4
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 2,
+            "CycleIssued": 1,
+            "CycleReady": 0,
+            "CycleRetired": 4
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 0,
+            "CycleIssued": 0,
+            "CycleReady": 0,
+            "CycleRetired": 4
+          },
+          {
+            "CycleDispatched": 0,
+            "CycleExecuted": 0,
+            "CycleIssued": 0,
+            "CycleReady": 0,
+            "CycleRetired": 4
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 3,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 4
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 1,
+            "CycleIssued": 1,
+            "CycleReady": 1,
+            "CycleRetired": 4
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 6,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 3,
+            "CycleIssued": 2,
+            "CycleReady": 1,
+            "CycleRetired": 7
+          },
+          {
+            "CycleDispatched": 1,
+            "CycleExecuted": 10,
+            "CycleIssued": 6,
+            "CycleReady": 6,
+            "CycleRetired": 11
+          },
+          {
+            "CycleDispatched": 2,
+            "CycleExecuted": 14,
+            "CycleIssued": 10,
+            "CycleReady": 10,
+            "CycleRetired": 15
+          }
+        ]
+      }
+    }
+  ],
+  "SimulationParameters": {
+    "-march": "aarch64",
+    "-mcpu": "neoverse-v2",
+    "-mtriple": "aarch64-unknown-linux-gnu"
+  },
+  "TargetInfo": {
+    "CPUName": "neoverse-v2",
+    "Resources": [
+      "V2UnitB.\u0000",
+      "V2UnitB.\u0001",
+      "V2UnitD.\u0000",
+      "V2UnitD.\u0001",
+      "V2UnitFlg.\u0000",
+      "V2UnitFlg.\u0001",
+      "V2UnitFlg.\u0002",
+      "V2UnitL2",
+      "V2UnitL01.\u0000",
+      "V2UnitL01.\u0001",
+      "V2UnitM0",
+      "V2UnitM1",
+      "V2UnitS0",
+      "V2UnitS1",
+      "V2UnitS2",
+      "V2UnitS3",
+      "V2UnitV0",
+      "V2UnitV1",
+      "V2UnitV2",
+      "V2UnitV3"
+    ]
+  }
+}
