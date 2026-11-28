@@ -1,0 +1,96 @@
+name: Native benchmarks
+
+on:
+  push:
+    branches:
+      - develop
+    paths:
+      - 'experiments/tc01-*/**'
+      - 'experiments/tc02-*/**'
+      - 'experiments/tc03-*/**'
+      - 'experiments/tc05-*/**'
+      - 'benchmarks/**'
+      - '.github/workflows/native-benchmarks.yml'
+      - '.github/workflows/regenerate-assembly.yml'
+  pull_request:
+    branches:
+      - develop
+    paths:
+      - 'experiments/tc01-*/**'
+      - 'experiments/tc02-*/**'
+      - 'experiments/tc03-*/**'
+      - 'experiments/tc05-*/**'
+      - 'benchmarks/**'
+      - '.github/workflows/native-benchmarks.yml'
+      - '.github/workflows/regenerate-assembly.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  hosted-runners:
+    name: Native benchmark (${{ matrix.arch }})
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: x86_64
+            runner: ubuntu-24.04
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout CGX-data
+        uses: actions/checkout@v7.0.1
+
+      - name: Verify compilers
+        run: |
+          g++ --version
+          clang++ --version
+
+      - name: Run native benchmarks
+        run: |
+          python3 benchmarks/run.py \
+            --expect-arch '${{ matrix.arch }}' \
+            --compilers g++ clang++ \
+            --output 'benchmark-results/${{ matrix.arch }}.json'
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: native-benchmarks-${{ matrix.arch }}
+          path: benchmark-results/${{ matrix.arch }}.json
+          if-no-files-found: error
+          retention-days: 90
+
+  riscv-runner:
+    name: Native benchmark (riscv64, external runner)
+    if: ${{ github.event_name == 'push' && vars.CGX_RISCV_RUNNER_ENABLED == 'true' }}
+    runs-on: ubuntu-24.04-riscv
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout CGX-data
+        uses: actions/checkout@v7.0.1
+
+      - name: Verify compilers
+        run: |
+          g++ --version
+          clang++ --version
+
+      - name: Run native benchmarks
+        run: |
+          python3 benchmarks/run.py \
+            --expect-arch riscv64 \
+            --compilers g++ clang++ \
+            --output benchmark-results/riscv64.json
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: native-benchmarks-riscv64
+          path: benchmark-results/riscv64.json
+          if-no-files-found: error
+          retention-days: 90
