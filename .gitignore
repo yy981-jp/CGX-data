@@ -1,3 +1,5 @@
 /DB/llvm-ISA/*.json
 experiments/*/mca/asm/*
 images/
+/build/
+/benchmark-results/
