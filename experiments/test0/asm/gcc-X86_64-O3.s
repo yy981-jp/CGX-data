@@ -24,9 +24,9 @@ main:
 .LBB29:
 	.file 2 "/usr/include/c++/13/ostream"
 	.loc 2 667 18
-	movl	$11, %edx
 	leaq	.LC0(%rip), %rsi
 	leaq	_ZSt4cout(%rip), %rdi
+	movl	$11, %edx
 	call	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l@PLT
 .LBE29:
 .LBE28:
@@ -306,8 +306,6 @@ main:
 	.string	"length"
 .LASF5:
 	.string	"_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l"
-.LASF3:
-	.string	"__ostream_insert<char, std::char_traits<char> >"
 .LASF10:
 	.string	"operator<< <std::char_traits<char> >"
 .LASF4:
@@ -320,6 +318,8 @@ main:
 	.string	"cout"
 .LASF15:
 	.string	"_ZNSt11char_traitsIcE6lengthEPKc"
+.LASF16:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF8:
 	.string	"setstate"
 .LASF7:
@@ -328,8 +328,8 @@ main:
 	.string	"_ZSt4cout"
 .LASF19:
 	.string	"main"
-.LASF16:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O3 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+.LASF3:
+	.string	"__ostream_insert<char, std::char_traits<char> >"
 .LASF9:
 	.string	"_ZNSt9basic_iosIcSt11char_traitsIcEE8setstateESt12_Ios_Iostate"
 .LASF14:

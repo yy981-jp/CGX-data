@@ -1,32 +1,50 @@
 	.file	"source.cpp"
 	.option pic
-	.attribute arch, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0_zifencei2p0"
+	.attribute arch, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_v1p0_zicsr2p0_zifencei2p0_zba1p0_zbb1p0_zbs1p0_zve32f1p0_zve32x1p0_zve64d1p0_zve64f1p0_zve64x1p0_zvl128b1p0_zvl32b1p0_zvl64b1p0"
 	.attribute unaligned_access, 0
 	.attribute stack_align, 16
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
-	.section	.text.startup,"ax",@progbits
 	.align	1
-	.globl	main
-	.type	main, @function
-main:
-.LFB0:
+	.globl	cgxTarget
+	.type	cgxTarget, @function
+cgxTarget:
+.LFB14:
 	.file 1 "source.cpp"
-	.loc 1 1 12
+	.loc 1 4 77
 	.cfi_startproc
-	.file 2 "CGX-MCA-END"
-	.loc 2 1 1
-	li	a0,1
+	.loc 1 5 8
+	fmv.s.x	fa0,zero
+.LBB2:
+	.file 2 "CGX-MCA-BEGIN"
+	.loc 2 1 28 discriminator 1
+	beq	a2,zero,.L4
+	sh2add	a2,a2,a0
+.L3:
+	.loc 2 2 7
+	flw	fa4,0(a0)
+	flw	fa5,0(a1)
+	.loc 2 1 28 discriminator 1
+	addi	a0,a0,4
+	addi	a1,a1,4
+	.loc 2 2 7
+	fmadd.s	fa0,fa4,fa5,fa0
+	.loc 2 1 28 discriminator 1
+	bne	a2,a0,.L3
+	ret
+.L4:
+.LBE2:
+	.file 3 "CGX-MCA-END"
+	.loc 3 3 1
 	ret
 	.cfi_endproc
-.LFE0:
-	.size	main, .-main
-	.text
+.LFE14:
+	.size	cgxTarget, .-cgxTarget
 .Letext0:
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.4byte	0x41
+	.4byte	0x45
 	.2byte	0x5
 	.byte	0x1
 	.byte	0x8
@@ -36,16 +54,16 @@ main:
 	.byte	0x21
 	.4byte	.LASF0
 	.4byte	.LASF1
-	.4byte	.LLRL0
-	.8byte	0
+	.8byte	.Ltext0
+	.8byte	.Letext0-.Ltext0
 	.4byte	.Ldebug_line0
 	.uleb128 0x2
 	.4byte	.LASF3
 	.byte	0x1
-	.byte	0x1
-	.byte	0x5
-	.8byte	.LFB0
-	.8byte	.LFE0-.LFB0
+	.byte	0x4
+	.byte	0x7
+	.8byte	.LFB14
+	.8byte	.LFE14-.LFB14
 	.uleb128 0x1
 	.byte	0x9c
 	.byte	0
@@ -62,10 +80,10 @@ main:
 	.uleb128 0x1f
 	.uleb128 0x1b
 	.uleb128 0x1f
-	.uleb128 0x55
-	.uleb128 0x17
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
 	.uleb128 0x10
 	.uleb128 0x17
 	.byte	0
@@ -102,31 +120,17 @@ main:
 	.byte	0
 	.2byte	0
 	.2byte	0
-	.8byte	.LFB0
-	.8byte	.LFE0-.LFB0
+	.8byte	.Ltext0
+	.8byte	.Letext0-.Ltext0
 	.8byte	0
 	.8byte	0
-	.section	.debug_rnglists,"",@progbits
-.Ldebug_ranges0:
-	.4byte	.Ldebug_ranges3-.Ldebug_ranges2
-.Ldebug_ranges2:
-	.2byte	0x5
-	.byte	0x8
-	.byte	0
-	.4byte	0
-.LLRL0:
-	.byte	0x7
-	.8byte	.LFB0
-	.uleb128 .LFE0-.LFB0
-	.byte	0
-.Ldebug_ranges3:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mabi=lp64d -misa-spec=20191213 -march=rv64imafdc_zicsr_zifencei -g1 -O3 -std=c++23 -fstack-protector-strong"
 .LASF3:
-	.string	"main"
+	.string	"cgxTarget"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -mabi=lp64d -misa-spec=20191213 -march=rv64imafdcv_zicsr_zifencei_zba_zbb_zbs_zve32f_zve32x_zve64d_zve64f_zve64x_zvl128b_zvl32b_zvl64b -g1 -O3 -std=c++23 -fstack-protector-strong"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

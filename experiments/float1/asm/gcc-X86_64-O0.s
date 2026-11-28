@@ -2,12 +2,12 @@
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
-	.globl	main
-	.type	main, @function
-main:
-.LFB0:
+	.globl	cgxTarget
+	.type	cgxTarget, @function
+cgxTarget:
+.LFB14:
 	.file 1 "source.cpp"
-	.loc 1 1 12
+	.loc 1 4 77
 	.cfi_startproc
 	endbr64
 	pushq	%rbp
@@ -15,111 +15,55 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
-	subq	$80, %rsp
-	.loc 1 1 12
-	movq	%fs:40, %rax
-	movq	%rax, -8(%rbp)
-	xorl	%eax, %eax
-	.loc 1 2 8
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -64(%rbp)
-	movss	.LC1(%rip), %xmm0
-	movss	%xmm0, -60(%rbp)
-	movss	.LC2(%rip), %xmm0
-	movss	%xmm0, -56(%rbp)
-	movss	.LC3(%rip), %xmm0
-	movss	%xmm0, -52(%rbp)
-	movss	.LC4(%rip), %xmm0
-	movss	%xmm0, -48(%rbp)
-	.loc 1 3 8
-	movss	.LC5(%rip), %xmm0
-	movss	%xmm0, -32(%rbp)
-	movss	.LC6(%rip), %xmm0
-	movss	%xmm0, -28(%rbp)
-	movss	.LC7(%rip), %xmm0
-	movss	%xmm0, -24(%rbp)
-	movss	.LC8(%rip), %xmm0
-	movss	%xmm0, -20(%rbp)
-	movss	.LC9(%rip), %xmm0
-	movss	%xmm0, -16(%rbp)
-	.loc 1 4 6
-	movl	$5, -68(%rbp)
-	.loc 1 6 8
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -76(%rbp)
+	movq	%rdi, -24(%rbp)
+	movq	%rsi, -32(%rbp)
+	movq	%rdx, -40(%rbp)
+	.loc 1 5 8
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -12(%rbp)
 .LBB2:
 	.file 2 "CGX-MCA-BEGIN"
-	.loc 2 1 10
-	movl	$0, -72(%rbp)
+	.loc 2 1 19
+	movq	$0, -8(%rbp)
 	.loc 2 1 2
 	jmp	.L2
 .L3:
 	.loc 2 2 13
-	movl	-72(%rbp), %eax
-	cltq
-	movss	-64(%rbp,%rax,4), %xmm1
+	movq	-8(%rbp), %rax
+	leaq	0(,%rax,4), %rdx
+	movq	-24(%rbp), %rax
+	addq	%rdx, %rax
+	vmovss	(%rax), %xmm1
 	.loc 2 2 20
-	movl	-72(%rbp), %eax
-	cltq
-	movss	-32(%rbp,%rax,4), %xmm0
+	movq	-8(%rbp), %rax
+	leaq	0(,%rax,4), %rdx
+	movq	-32(%rbp), %rax
+	addq	%rdx, %rax
+	vmovss	(%rax), %xmm0
 	.loc 2 2 15
-	mulss	%xmm1, %xmm0
+	vmulss	%xmm0, %xmm1, %xmm0
 	.loc 2 2 7
-	movss	-76(%rbp), %xmm1
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -76(%rbp)
+	vmovss	-12(%rbp), %xmm1
+	vaddss	%xmm0, %xmm1, %xmm0
+	vmovss	%xmm0, -12(%rbp)
 	.loc 2 1 2 discriminator 3
-	addl	$1, -72(%rbp)
+	incq	-8(%rbp)
 .L2:
-	.loc 2 1 19 discriminator 1
-	movl	-72(%rbp), %eax
-	cmpl	-68(%rbp), %eax
-	jl	.L3
+	.loc 2 1 28 discriminator 1
+	movq	-8(%rbp), %rax
+	cmpq	-40(%rbp), %rax
+	jb	.L3
 .LBE2:
-	movss	-76(%rbp), %xmm0
-	cvttss2sil	%xmm0, %eax
 	.file 3 "CGX-MCA-END"
-	.loc 3 1 1
-	movq	-8(%rbp), %rdx
-	subq	%fs:40, %rdx
-	je	.L5
-	call	__stack_chk_fail@PLT
-.L5:
-	leave
+	.loc 3 2 9
+	vmovss	-12(%rbp), %xmm0
+	.loc 3 3 1
+	popq	%rbp
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc
-.LFE0:
-	.size	main, .-main
-	.section	.rodata
-	.align 4
-.LC1:
-	.long	1045220557
-	.align 4
-.LC2:
-	.long	1053609165
-	.align 4
-.LC3:
-	.long	1058642330
-	.align 4
-.LC4:
-	.long	1061997773
-	.align 4
-.LC5:
-	.long	1036831949
-	.align 4
-.LC6:
-	.long	1050253722
-	.align 4
-.LC7:
-	.long	1056964608
-	.align 4
-.LC8:
-	.long	1060320051
-	.align 4
-.LC9:
-	.long	1063675494
-	.text
+.LFE14:
+	.size	cgxTarget, .-cgxTarget
 .Letext0:
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
@@ -139,10 +83,10 @@ main:
 	.uleb128 0x2
 	.long	.LASF3
 	.byte	0x1
-	.byte	0x1
-	.byte	0x5
-	.quad	.LFB0
-	.quad	.LFE0-.LFB0
+	.byte	0x4
+	.byte	0x7
+	.quad	.LFB14
+	.quad	.LFE14-.LFB14
 	.uleb128 0x1
 	.byte	0x9c
 	.byte	0
@@ -186,7 +130,7 @@ main:
 	.uleb128 0x7
 	.uleb128 0x40
 	.uleb128 0x18
-	.uleb128 0x7c
+	.uleb128 0x7a
 	.uleb128 0x19
 	.byte	0
 	.byte	0
@@ -206,10 +150,10 @@ main:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:
-	.string	"main"
+	.string	"cgxTarget"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

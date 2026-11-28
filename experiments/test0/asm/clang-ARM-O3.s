@@ -5,7 +5,7 @@
 
                                         // End of file scope inline assembly
 	.globl	main                            // -- Begin function main
-	.p2align	2
+	.p2align	4
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin0:
@@ -25,8 +25,8 @@ main:                                   // @main
 	adrp	x0, :got:_ZSt4cout
 	adrp	x1, .L.str
 	add	x1, x1, :lo12:.L.str
-	ldr	x0, [x0, :got_lo12:_ZSt4cout]
 	mov	w2, #11                         // =0xb
+	ldr	x0, [x0, :got_lo12:_ZSt4cout]
 	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
 .Ltmp1:
 	.loc	0 6 1                           // source.cpp:6:1

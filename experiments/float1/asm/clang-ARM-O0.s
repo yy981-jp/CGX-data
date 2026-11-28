@@ -1,110 +1,76 @@
 	.text
 	.file	"source.cpp"
-	.globl	main                            // -- Begin function main
-	.p2align	2
-	.type	main,@function
-main:                                   // @main
+	.globl	cgxTarget                       // -- Begin function cgxTarget
+	.p2align	4
+	.type	cgxTarget,@function
+cgxTarget:                              // @cgxTarget
 .Lfunc_begin0:
-	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
-	.loc	0 1 0                           // source.cpp:1:0
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x9e5cf5aff15e5d418450cf80a80d0355
+	.loc	0 4 0                           // source.cpp:4:0
 	.cfi_startproc
 // %bb.0:
-	sub	sp, sp, #80
-	.cfi_def_cfa_offset 80
-	str	wzr, [sp, #76]
-	adrp	x8, .L__const.main.a
-	add	x8, x8, :lo12:.L__const.main.a
+	sub	sp, sp, #48
+	.cfi_def_cfa_offset 48
+	str	x0, [sp, #40]
+	str	x1, [sp, #32]
+	str	x2, [sp, #24]
 .Ltmp1:
-	.loc	0 2 8 prologue_end              // source.cpp:2:8
-	ldr	q0, [x8]
-	str	q0, [sp, #48]
-	ldr	s0, [x8, #16]
-	str	s0, [sp, #64]
-	adrp	x8, .L__const.main.b
-	add	x8, x8, :lo12:.L__const.main.b
-	.loc	0 3 8                           // source.cpp:3:8
-	ldr	q0, [x8]
-	str	q0, [sp, #16]
-	ldr	s0, [x8, #16]
-	str	s0, [sp, #32]
-	.loc	0 4 6                           // source.cpp:4:6
-	mov	w8, #5                          // =0x5
-	str	w8, [sp, #12]
-	.loc	0 6 8                           // source.cpp:6:8
+	.loc	0 5 8 prologue_end              // source.cpp:5:8
 	movi	d0, #0000000000000000
-	str	s0, [sp, #8]
+	str	s0, [sp, #20]
 	.file	1 "CGX-MCA-BEGIN"
-	.loc	1 1 10                          // CGX-MCA-BEGIN:1:10
-	str	wzr, [sp, #4]
-	.loc	1 1 6 is_stmt 0                 // CGX-MCA-BEGIN:1:6
+	.loc	1 1 19                          // CGX-MCA-BEGIN:1:19
+	str	xzr, [sp, #8]
+	.loc	1 1 7 is_stmt 0                 // CGX-MCA-BEGIN:1:7
 	b	.LBB0_1
 .LBB0_1:                                // =>This Inner Loop Header: Depth=1
-	.loc	1 1 17                          // CGX-MCA-BEGIN:1:17
-	ldr	w8, [sp, #4]
-	.loc	1 1 21                          // CGX-MCA-BEGIN:1:21
-	ldr	w9, [sp, #12]
+	.loc	1 1 26                          // CGX-MCA-BEGIN:1:26
+	ldr	x8, [sp, #8]
+	.loc	1 1 30                          // CGX-MCA-BEGIN:1:30
+	ldr	x9, [sp, #24]
 	.loc	1 1 2                           // CGX-MCA-BEGIN:1:2
-	subs	w8, w8, w9
-	b.ge	.LBB0_4
+	subs	x8, x8, x9
+	b.hs	.LBB0_4
 	b	.LBB0_2
 .LBB0_2:                                //   in Loop: Header=BB0_1 Depth=1
-	.loc	1 2 12 is_stmt 1                // CGX-MCA-BEGIN:2:12
-	ldrsw	x9, [sp, #4]
-	.loc	1 2 10 is_stmt 0                // CGX-MCA-BEGIN:2:10
-	add	x8, sp, #48
+	.loc	1 2 10 is_stmt 1                // CGX-MCA-BEGIN:2:10
+	ldr	x8, [sp, #40]
+	.loc	1 2 12 is_stmt 0                // CGX-MCA-BEGIN:2:12
+	ldr	x9, [sp, #8]
+	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
 	ldr	s0, [x8, x9, lsl #2]
-	.loc	1 2 19                          // CGX-MCA-BEGIN:2:19
-	ldrsw	x9, [sp, #4]
 	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
-	add	x8, sp, #16
+	ldr	x8, [sp, #32]
+	.loc	1 2 19                          // CGX-MCA-BEGIN:2:19
+	ldr	x9, [sp, #8]
+	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
 	ldr	s1, [x8, x9, lsl #2]
 	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
-	ldr	s2, [sp, #8]
+	ldr	s2, [sp, #20]
 	fmadd	s0, s0, s1, s2
-	str	s0, [sp, #8]
+	str	s0, [sp, #20]
 	.loc	1 2 3                           // CGX-MCA-BEGIN:2:3
 	b	.LBB0_3
 .LBB0_3:                                //   in Loop: Header=BB0_1 Depth=1
-	.loc	1 1 24 is_stmt 1                // CGX-MCA-BEGIN:1:24
-	ldr	w8, [sp, #4]
-	add	w8, w8, #1
-	str	w8, [sp, #4]
+	.loc	1 1 37 is_stmt 1                // CGX-MCA-BEGIN:1:37
+	ldr	x8, [sp, #8]
+	add	x8, x8, #1
+	str	x8, [sp, #8]
 	.loc	1 1 2 is_stmt 0                 // CGX-MCA-BEGIN:1:2
 	b	.LBB0_1
 .LBB0_4:
 	.file	2 "CGX-MCA-END"
-	.loc	2 0 9                           // CGX-MCA-END:0:9
-	ldr	s0, [sp, #8]
-	fcvtzs	w0, s0
-	add	sp, sp, #80
+	.loc	2 2 9 is_stmt 1                 // CGX-MCA-END:2:9
+	ldr	s0, [sp, #20]
+	.loc	2 2 2 epilogue_begin is_stmt 0  // CGX-MCA-END:2:2
+	add	sp, sp, #48
 	.cfi_def_cfa_offset 0
 	ret
 .Ltmp2:
 .Lfunc_end0:
-	.size	main, .Lfunc_end0-main
+	.size	cgxTarget, .Lfunc_end0-cgxTarget
 	.cfi_endproc
                                         // -- End function
-	.type	.L__const.main.a,@object        // @__const.main.a
-	.section	.rodata,"a",@progbits
-	.p2align	2, 0x0
-.L__const.main.a:
-	.word	0x00000000                      // float 0
-	.word	0x3e4ccccd                      // float 0.200000003
-	.word	0x3ecccccd                      // float 0.400000006
-	.word	0x3f19999a                      // float 0.600000024
-	.word	0x3f4ccccd                      // float 0.800000011
-	.size	.L__const.main.a, 20
-
-	.type	.L__const.main.b,@object        // @__const.main.b
-	.p2align	2, 0x0
-.L__const.main.b:
-	.word	0x3dcccccd                      // float 0.100000001
-	.word	0x3e99999a                      // float 0.300000012
-	.word	0x3f000000                      // float 0.5
-	.word	0x3f333333                      // float 0.699999988
-	.word	0x3f666666                      // float 0.899999976
-	.size	.L__const.main.b, 20
-
 	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               // Abbreviation Code
@@ -178,5 +144,6 @@ main:                                   // @main
 	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
+	.addrsig_sym cgxTarget
 	.section	.debug_line,"",@progbits
 .Lline_table_start0:

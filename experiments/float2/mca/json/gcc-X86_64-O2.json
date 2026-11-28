@@ -87,13 +87,13 @@
         ]
       },
       "Instructions": [
-        "movq\t(%rdi,%rax), %xmm1",
-        "movq\t(%rsi,%rax), %xmm2",
+        "vmovq\t(%rdi,%rax), %xmm1",
+        "vmovq\t(%rsi,%rax), %xmm2",
         "addq\t$8, %rax",
-        "mulps\t%xmm2, %xmm1",
-        "addss\t%xmm1, %xmm0",
-        "shufps\t$229, %xmm1, %xmm1",
-        "addss\t%xmm1, %xmm0",
+        "vmulps\t%xmm2, %xmm1, %xmm1",
+        "vaddss\t%xmm1, %xmm0, %xmm0",
+        "vmovshdup\t%xmm1, %xmm1",
+        "vaddss\t%xmm0, %xmm1, %xmm0",
         "cmpq\t$40, %rax",
         "jne\t.L2"
       ],
@@ -787,7 +787,7 @@
   "SimulationParameters": {
     "-march": "x86_64",
     "-mcpu": "skylake",
-    "-mtriple": "x86_64-w64-windows-gnu"
+    "-mtriple": "x86_64-unknown-linux-gnu"
   },
   "TargetInfo": {
     "CPUName": "skylake",

@@ -2,85 +2,69 @@
 	.text
 .Ltext0:
 	.file 0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
-	.section	.text.startup,"ax",@progbits
 	.p2align 4
-	.globl	main
-	.type	main, @function
-main:
-.LFB0:
+	.globl	cgxTarget
+	.type	cgxTarget, @function
+cgxTarget:
+.LFB14:
 	.file 1 "source.cpp"
-	.loc 1 1 12
+	.loc 1 4 77
 	.cfi_startproc
 	endbr64
-	subq	$72, %rsp
-	.cfi_def_cfa_offset 80
-	.loc 1 2 8
-	movaps	.LC1(%rip), %xmm0
-	.loc 1 6 8
-	pxor	%xmm1, %xmm1
-	.loc 1 1 12
-	movq	%fs:40, %rax
-	movq	%rax, 56(%rsp)
-	xorl	%eax, %eax
-	.loc 1 2 8
-	movl	$0x3f4ccccd, 16(%rsp)
-	movq	%rsp, %rcx
-	leaq	32(%rsp), %rdx
-	movaps	%xmm0, (%rsp)
-	.loc 1 3 8
-	movaps	.LC3(%rip), %xmm0
-	movl	$0x3f666666, 48(%rsp)
-	movaps	%xmm0, 32(%rsp)
-	.p2align 4,,10
-	.p2align 3
-.L2:
 .LBB2:
 	.file 2 "CGX-MCA-BEGIN"
-	.loc 2 2 15
-	movss	(%rcx,%rax), %xmm0
-	mulss	(%rdx,%rax), %xmm0
-	.loc 2 1 19 discriminator 1
-	addq	$4, %rax
-	.loc 2 2 7
-	addss	%xmm0, %xmm1
-	.loc 2 1 19 discriminator 1
-	cmpq	$20, %rax
-	jne	.L2
+	.loc 2 1 28 discriminator 1
+	testq	%rdx, %rdx
+	je	.L4
+	.loc 2 1 19
+	xorl	%eax, %eax
 .LBE2:
-	cvttss2sil	%xmm1, %eax
-	.file 3 "CGX-MCA-END"
-	.loc 3 1 1
-	movq	56(%rsp), %rdx
-	subq	%fs:40, %rdx
-	jne	.L7
-	addq	$72, %rsp
-	.cfi_remember_state
-	.cfi_def_cfa_offset 8
+	.loc 1 5 8
+	vxorps	%xmm0, %xmm0, %xmm0
+	testb	$1, %dl
+	je	.L3
+.LBB3:
+	.loc 2 2 7
+	vmovss	(%rdi), %xmm3
+	.loc 2 1 2 discriminator 3
+	movl	$1, %eax
+	.loc 2 2 7
+	vfmadd231ss	(%rsi), %xmm3, %xmm0
+	.loc 2 1 28 discriminator 1
+	cmpq	$1, %rdx
+	je	.L12
+	.p2align 4,,10
+	.p2align 3
+.L3:
+	.loc 2 2 7
+	vmovss	(%rdi,%rax,4), %xmm1
+	vmovss	4(%rdi,%rax,4), %xmm2
+	vfmadd231ss	(%rsi,%rax,4), %xmm1, %xmm0
+	vfmadd231ss	4(%rsi,%rax,4), %xmm2, %xmm0
+	.loc 2 1 2 discriminator 3
+	addq	$2, %rax
+	.loc 2 1 28 discriminator 1
+	cmpq	%rax, %rdx
+	jne	.L3
 	ret
-.L7:
-	.cfi_restore_state
-	call	__stack_chk_fail@PLT
+	.p2align 4,,10
+	.p2align 3
+.L4:
+.LBE3:
+	.loc 1 5 8
+	vxorps	%xmm0, %xmm0, %xmm0
+	.file 3 "CGX-MCA-END"
+	.loc 3 3 1
+	ret
+.L12:
+	ret
 	.cfi_endproc
-.LFE0:
-	.size	main, .-main
-	.section	.rodata.cst16,"aM",@progbits,16
-	.align 16
-.LC1:
-	.long	0
-	.long	1045220557
-	.long	1053609165
-	.long	1058642330
-	.align 16
-.LC3:
-	.long	1036831949
-	.long	1050253722
-	.long	1056964608
-	.long	1060320051
-	.text
+.LFE14:
+	.size	cgxTarget, .-cgxTarget
 .Letext0:
 	.section	.debug_info,"",@progbits
 .Ldebug_info0:
-	.long	0x41
+	.long	0x45
 	.value	0x5
 	.byte	0x1
 	.byte	0x8
@@ -90,16 +74,16 @@ main:
 	.byte	0x21
 	.long	.LASF0
 	.long	.LASF1
-	.long	.LLRL0
-	.quad	0
+	.quad	.Ltext0
+	.quad	.Letext0-.Ltext0
 	.long	.Ldebug_line0
 	.uleb128 0x2
 	.long	.LASF3
 	.byte	0x1
-	.byte	0x1
-	.byte	0x5
-	.quad	.LFB0
-	.quad	.LFE0-.LFB0
+	.byte	0x4
+	.byte	0x7
+	.quad	.LFB14
+	.quad	.LFE14-.LFB14
 	.uleb128 0x1
 	.byte	0x9c
 	.byte	0
@@ -116,10 +100,10 @@ main:
 	.uleb128 0x1f
 	.uleb128 0x1b
 	.uleb128 0x1f
-	.uleb128 0x55
-	.uleb128 0x17
 	.uleb128 0x11
 	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
 	.uleb128 0x10
 	.uleb128 0x17
 	.byte	0
@@ -143,7 +127,7 @@ main:
 	.uleb128 0x7
 	.uleb128 0x40
 	.uleb128 0x18
-	.uleb128 0x7c
+	.uleb128 0x7a
 	.uleb128 0x19
 	.byte	0
 	.byte	0
@@ -156,31 +140,17 @@ main:
 	.byte	0
 	.value	0
 	.value	0
-	.quad	.LFB0
-	.quad	.LFE0-.LFB0
+	.quad	.Ltext0
+	.quad	.Letext0-.Ltext0
 	.quad	0
 	.quad	0
-	.section	.debug_rnglists,"",@progbits
-.Ldebug_ranges0:
-	.long	.Ldebug_ranges3-.Ldebug_ranges2
-.Ldebug_ranges2:
-	.value	0x5
-	.byte	0x8
-	.byte	0
-	.long	0
-.LLRL0:
-	.byte	0x7
-	.quad	.LFB0
-	.uleb128 .LFE0-.LFB0
-	.byte	0
-.Ldebug_ranges3:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF2:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 .LASF3:
-	.string	"main"
+	.string	"cgxTarget"
+.LASF2:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1"

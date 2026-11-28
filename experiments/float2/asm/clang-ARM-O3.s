@@ -1,62 +1,60 @@
 	.text
 	.file	"source.cpp"
 	.globl	cgxTarget                       // -- Begin function cgxTarget
-	.p2align	2
+	.p2align	4
 	.type	cgxTarget,@function
 cgxTarget:                              // @cgxTarget
 .Lfunc_begin0:
 	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2" "source.cpp" md5 0x3a7a2da2f80a44dd1d9f6800c378a01a
-	.loc	0 6 0                           // source.cpp:6:0
 	.cfi_startproc
 // %bb.0:
-	movi	d0, #0000000000000000
-.Ltmp0:
 	.file	1 "CGX-MCA-BEGIN"
-	.loc	1 2 17 prologue_end             // CGX-MCA-BEGIN:2:17
-	ldp	s1, s4, [x1]
-	.loc	1 2 10 is_stmt 0                // CGX-MCA-BEGIN:2:10
-	ldp	s2, s3, [x0]
+	.loc	1 2 10 prologue_end             // CGX-MCA-BEGIN:2:10
+	ldp	s1, s2, [x0]
+	.loc	1 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
+	ldp	s3, s4, [x1]
+	movi	d0, #0000000000000000
 	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
-	fmadd	s0, s3, s4, s0
-	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
-	ldp	s1, s4, [x1, #8]
+	fmadd	s0, s1, s3, s0
+	fmadd	s0, s2, s4, s0
 	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
-	ldp	s2, s3, [x0, #8]
-	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
-	fmadd	s0, s3, s4, s0
+	ldp	s1, s2, [x0, #8]
 	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
-	ldp	s1, s4, [x1, #16]
-	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
-	ldp	s2, s3, [x0, #16]
+	ldp	s3, s4, [x1, #8]
 	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
-	fmadd	s0, s3, s4, s0
+	fmadd	s0, s1, s3, s0
+	fmadd	s0, s2, s4, s0
+	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
+	ldp	s1, s2, [x0, #16]
 	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
-	ldp	s1, s4, [x1, #24]
-	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
-	ldp	s2, s3, [x0, #24]
+	ldp	s3, s4, [x1, #16]
 	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
-	fmadd	s0, s3, s4, s0
+	fmadd	s0, s1, s3, s0
+	fmadd	s0, s2, s4, s0
+	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
+	ldp	s1, s2, [x0, #24]
 	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
-	ldp	s1, s4, [x1, #32]
-	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
-	ldp	s2, s3, [x0, #32]
+	ldp	s3, s4, [x1, #24]
 	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
-	fmadd	s0, s2, s1, s0
-	fmadd	s0, s3, s4, s0
+	fmadd	s0, s1, s3, s0
+	fmadd	s0, s2, s4, s0
+	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
+	ldp	s1, s2, [x0, #32]
+	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
+	ldp	s3, s4, [x1, #32]
+	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s1, s3, s0
+	fmadd	s0, s2, s4, s0
 	.file	2 "CGX-MCA-END"
 	.loc	2 1 2 is_stmt 1                 // CGX-MCA-END:1:2
 	ret
-.Ltmp1:
+.Ltmp0:
 .Lfunc_end0:
 	.size	cgxTarget, .Lfunc_end0-cgxTarget
 	.cfi_endproc
                                         // -- End function
 	.globl	main                            // -- Begin function main
-	.p2align	2
+	.p2align	4
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin1:
@@ -65,7 +63,7 @@ main:                                   // @main
 	.loc	2 6 2 prologue_end              // CGX-MCA-END:6:2
 	mov	w0, wzr
 	ret
-.Ltmp2:
+.Ltmp1:
 .Lfunc_end1:
 	.size	main, .Lfunc_end1-main
 	.cfi_endproc

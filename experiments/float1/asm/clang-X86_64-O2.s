@@ -1,21 +1,100 @@
 	.text
 	.file	"source.cpp"
-	.globl	main                            # -- Begin function main
+	.globl	cgxTarget                       # -- Begin function cgxTarget
 	.p2align	4, 0x90
-	.type	main,@function
-main:                                   # @main
+	.type	cgxTarget,@function
+cgxTarget:                              # @cgxTarget
 .Lfunc_begin0:
-	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
-	.loc	0 1 0                           # source.cpp:1:0
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x9e5cf5aff15e5d418450cf80a80d0355
 	.cfi_startproc
 # %bb.0:
-	.file	1 "CGX-MCA-END"
-	.loc	1 0 2 prologue_end              # CGX-MCA-END:0:2
-	movl	$1, %eax
+	.file	1 "CGX-MCA-BEGIN"
+	.loc	1 1 28 prologue_end             # CGX-MCA-BEGIN:1:28
+	testq	%rdx, %rdx
+	.loc	1 1 2 is_stmt 0                 # CGX-MCA-BEGIN:1:2
+	je	.LBB0_1
+# %bb.2:
+	movl	%edx, %eax
+	andl	$7, %eax
+	cmpq	$8, %rdx
+	jae	.LBB0_8
+# %bb.3:
+	.loc	1 0 2                           # CGX-MCA-BEGIN:0:2
+	vxorps	%xmm0, %xmm0, %xmm0
+	xorl	%ecx, %ecx
+	jmp	.LBB0_4
+.LBB0_1:
+	vxorps	%xmm0, %xmm0, %xmm0
+	.file	2 "CGX-MCA-END"
+	.loc	2 2 2 is_stmt 1                 # CGX-MCA-END:2:2
+	retq
+.LBB0_8:
+	.loc	1 1 2                           # CGX-MCA-BEGIN:1:2
+	andq	$-8, %rdx
+	vxorps	%xmm0, %xmm0, %xmm0
+	xorl	%ecx, %ecx
+	.p2align	4, 0x90
+.LBB0_9:                                # =>This Inner Loop Header: Depth=1
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	(%rdi,%rcx,4), %xmm1            # xmm1 = mem[0],zero,zero,zero
+	.loc	1 2 7 is_stmt 0                 # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	(%rsi,%rcx,4), %xmm0, %xmm1 # xmm1 = (xmm1 * mem) + xmm0
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	4(%rdi,%rcx,4), %xmm0           # xmm0 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd231ss	4(%rsi,%rcx,4), %xmm0, %xmm1 # xmm1 = (xmm0 * mem) + xmm1
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	8(%rdi,%rcx,4), %xmm0           # xmm0 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	8(%rsi,%rcx,4), %xmm1, %xmm0 # xmm0 = (xmm0 * mem) + xmm1
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	12(%rdi,%rcx,4), %xmm1          # xmm1 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	12(%rsi,%rcx,4), %xmm0, %xmm1 # xmm1 = (xmm1 * mem) + xmm0
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	16(%rdi,%rcx,4), %xmm0          # xmm0 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	16(%rsi,%rcx,4), %xmm1, %xmm0 # xmm0 = (xmm0 * mem) + xmm1
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	20(%rdi,%rcx,4), %xmm1          # xmm1 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	20(%rsi,%rcx,4), %xmm0, %xmm1 # xmm1 = (xmm1 * mem) + xmm0
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	24(%rdi,%rcx,4), %xmm2          # xmm2 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	24(%rsi,%rcx,4), %xmm1, %xmm2 # xmm2 = (xmm2 * mem) + xmm1
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	28(%rdi,%rcx,4), %xmm0          # xmm0 = mem[0],zero,zero,zero
+	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
+	vfmadd132ss	28(%rsi,%rcx,4), %xmm2, %xmm0 # xmm0 = (xmm0 * mem) + xmm2
+	.loc	1 1 37 is_stmt 1                # CGX-MCA-BEGIN:1:37
+	addq	$8, %rcx
+	.loc	1 1 2 is_stmt 0                 # CGX-MCA-BEGIN:1:2
+	cmpq	%rcx, %rdx
+	jne	.LBB0_9
+.LBB0_4:
+	testq	%rax, %rax
+	je	.LBB0_7
+# %bb.5:
+	leaq	(%rsi,%rcx,4), %rdx
+	leaq	(%rdi,%rcx,4), %rcx
+	xorl	%esi, %esi
+	.p2align	4, 0x90
+.LBB0_6:                                # =>This Inner Loop Header: Depth=1
+	.loc	1 2 10 is_stmt 1                # CGX-MCA-BEGIN:2:10
+	vmovss	(%rcx,%rsi,4), %xmm1            # xmm1 = mem[0],zero,zero,zero
+	.loc	1 2 7 is_stmt 0                 # CGX-MCA-BEGIN:2:7
+	vfmadd231ss	(%rdx,%rsi,4), %xmm1, %xmm0 # xmm0 = (xmm1 * mem) + xmm0
+	.loc	1 1 2 is_stmt 1                 # CGX-MCA-BEGIN:1:2
+	incq	%rsi
+	cmpq	%rsi, %rax
+	jne	.LBB0_6
+.LBB0_7:
+	.loc	2 2 2                           # CGX-MCA-END:2:2
 	retq
 .Ltmp0:
 .Lfunc_end0:
-	.size	main, .Lfunc_end0-main
+	.size	cgxTarget, .Lfunc_end0-cgxTarget
 	.cfi_endproc
                                         # -- End function
 	.section	".linker-options","e",@llvm_linker_options
@@ -91,5 +170,6 @@ main:                                   # @main
 	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
+	.addrsig_sym cgxTarget
 	.section	.debug_line,"",@progbits
 .Lline_table_start0:

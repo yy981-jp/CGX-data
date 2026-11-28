@@ -1,140 +1,84 @@
 	.text
 	.attribute	4, 16
-	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0"
+	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_v1p0_zicsr2p0_zifencei2p0_zba1p0_zbb1p0_zbs1p0_zve32f1p0_zve32x1p0_zve64d1p0_zve64f1p0_zve64x1p0_zvl128b1p0_zvl32b1p0_zvl64b1p0"
 	.file	"source.cpp"
-	.section	.sdata,"aw",@progbits
-	.p2align	3, 0x0                          # -- Begin function main
-.LCPI0_0:
-	.quad	4546834186564848845             # 0x3f19999a3ecccccd
-.LCPI0_1:
-	.quad	4510805389529107661             # 0x3e99999a3dcccccd
-	.text
-	.globl	main
+	.globl	cgxTarget                       # -- Begin function cgxTarget
 	.p2align	1
-	.type	main,@function
-main:                                   # @main
+	.type	cgxTarget,@function
+cgxTarget:                              # @cgxTarget
 .Lfunc_begin0:
 	.file	1 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp"
-	.loc	1 1 0                           # source.cpp:1:0
+	.loc	1 4 0                           # source.cpp:4:0
 	.cfi_startproc
 # %bb.0:
-	addi	sp, sp, -80
-	.cfi_def_cfa_offset 80
-	sd	ra, 72(sp)                      # 8-byte Folded Spill
-	sd	s0, 64(sp)                      # 8-byte Folded Spill
+	addi	sp, sp, -64
+	.cfi_def_cfa_offset 64
+	sd	ra, 56(sp)                      # 8-byte Folded Spill
+	sd	s0, 48(sp)                      # 8-byte Folded Spill
 	.cfi_offset ra, -8
 	.cfi_offset s0, -16
-	addi	s0, sp, 80
+	addi	s0, sp, 64
 	.cfi_def_cfa s0, 0
-	li	a0, 0
-	sw	a0, -20(s0)
-	lui	a1, 259277
-	addiw	a1, a1, -819
-.Ltmp0:
-	.loc	1 2 8 prologue_end              # source.cpp:2:8
-	sw	a1, -24(s0)
-.Lpcrel_hi0:
-	auipc	a1, %pcrel_hi(.LCPI0_0)
-	addi	a1, a1, %pcrel_lo(.Lpcrel_hi0)
-	ld	a1, 0(a1)
+	sd	a0, -24(s0)
 	sd	a1, -32(s0)
-	lui	a1, 255181
-	addiw	a1, a1, -819
-	slli	a1, a1, 32
-	sd	a1, -40(s0)
-	lui	a1, 259686
-	addiw	a1, a1, 1638
-	.loc	1 3 8                           # source.cpp:3:8
-	sw	a1, -48(s0)
-.Lpcrel_hi1:
-	auipc	a1, %pcrel_hi(.LCPI0_1)
-	addi	a1, a1, %pcrel_lo(.Lpcrel_hi1)
-	ld	a1, 0(a1)
-	sd	a1, -64(s0)
-	lui	a1, 16179
-	addiw	a1, a1, 819
-	slli	a1, a1, 12
-	addi	a1, a1, 831
-	slli	a1, a1, 24
-	sd	a1, -56(s0)
-	li	a1, 5
-	.loc	1 4 6                           # source.cpp:4:6
-	sw	a1, -68(s0)
-	.loc	1 6 8                           # source.cpp:6:8
-	sw	a0, -72(s0)
+	sd	a2, -40(s0)
+	li	a0, 0
+.Ltmp0:
+	.loc	1 5 8 prologue_end              # source.cpp:5:8
+	sw	a0, -44(s0)
 	.file	2 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "CGX-MCA-BEGIN"
-	.loc	2 1 10                          # CGX-MCA-BEGIN:1:10
-	sw	a0, -76(s0)
-	.loc	2 1 6 is_stmt 0                 # CGX-MCA-BEGIN:1:6
+	.loc	2 1 19                          # CGX-MCA-BEGIN:1:19
+	sd	a0, -56(s0)
+	.loc	2 1 7 is_stmt 0                 # CGX-MCA-BEGIN:1:7
 	j	.LBB0_1
 .LBB0_1:                                # =>This Inner Loop Header: Depth=1
-	.loc	2 1 17                          # CGX-MCA-BEGIN:1:17
-	lw	a0, -76(s0)
-	.loc	2 1 21                          # CGX-MCA-BEGIN:1:21
-	lw	a1, -68(s0)
+	.loc	2 1 26                          # CGX-MCA-BEGIN:1:26
+	ld	a0, -56(s0)
+	.loc	2 1 30                          # CGX-MCA-BEGIN:1:30
+	ld	a1, -40(s0)
 	.loc	2 1 2                           # CGX-MCA-BEGIN:1:2
-	bge	a0, a1, .LBB0_4
+	bgeu	a0, a1, .LBB0_4
 	j	.LBB0_2
 .LBB0_2:                                #   in Loop: Header=BB0_1 Depth=1
-	.loc	2 2 12 is_stmt 1                # CGX-MCA-BEGIN:2:12
-	lw	a0, -76(s0)
-	.loc	2 2 10 is_stmt 0                # CGX-MCA-BEGIN:2:10
-	slli	a1, a0, 2
-	addi	a0, s0, -40
-	add	a0, a0, a1
-	flw	fa5, 0(a0)
-	addi	a0, s0, -64
+	.loc	2 2 10 is_stmt 1                # CGX-MCA-BEGIN:2:10
+	ld	a1, -24(s0)
+	.loc	2 2 12 is_stmt 0                # CGX-MCA-BEGIN:2:12
+	ld	a0, -56(s0)
+	.loc	2 2 10                          # CGX-MCA-BEGIN:2:10
+	sh2add	a1, a0, a1
+	flw	fa5, 0(a1)
 	.loc	2 2 17                          # CGX-MCA-BEGIN:2:17
-	add	a0, a0, a1
+	ld	a1, -32(s0)
+	sh2add	a0, a0, a1
 	flw	fa4, 0(a0)
 	.loc	2 2 7                           # CGX-MCA-BEGIN:2:7
-	flw	fa3, -72(s0)
+	flw	fa3, -44(s0)
 	fmadd.s	fa5, fa5, fa4, fa3
-	fsw	fa5, -72(s0)
+	fsw	fa5, -44(s0)
 	.loc	2 2 3                           # CGX-MCA-BEGIN:2:3
 	j	.LBB0_3
 .LBB0_3:                                #   in Loop: Header=BB0_1 Depth=1
-	.loc	2 1 24 is_stmt 1                # CGX-MCA-BEGIN:1:24
-	lw	a0, -76(s0)
-	addiw	a0, a0, 1
-	sw	a0, -76(s0)
+	.loc	2 1 37 is_stmt 1                # CGX-MCA-BEGIN:1:37
+	ld	a0, -56(s0)
+	addi	a0, a0, 1
+	sd	a0, -56(s0)
 	.loc	2 1 2 is_stmt 0                 # CGX-MCA-BEGIN:1:2
 	j	.LBB0_1
 .LBB0_4:
 	.file	3 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "CGX-MCA-END"
-	.loc	3 0 9                           # CGX-MCA-END:0:9
-	flw	fa5, -72(s0)
-	fcvt.w.s	a0, fa5, rtz
-	ld	ra, 72(sp)                      # 8-byte Folded Reload
-	ld	s0, 64(sp)                      # 8-byte Folded Reload
-	addi	sp, sp, 80
+	.loc	3 2 9 is_stmt 1                 # CGX-MCA-END:2:9
+	flw	fa0, -44(s0)
+	.loc	3 2 2 epilogue_begin is_stmt 0  # CGX-MCA-END:2:2
+	addi	sp, s0, -64
+	ld	ra, 56(sp)                      # 8-byte Folded Reload
+	ld	s0, 48(sp)                      # 8-byte Folded Reload
+	addi	sp, sp, 64
 	ret
 .Ltmp1:
 .Lfunc_end0:
-	.size	main, .Lfunc_end0-main
+	.size	cgxTarget, .Lfunc_end0-cgxTarget
 	.cfi_endproc
                                         # -- End function
-	.type	.L__const.main.a,@object        # @__const.main.a
-	.section	.rodata,"a",@progbits
-	.p2align	2, 0x0
-.L__const.main.a:
-	.word	0x00000000                      # float 0
-	.word	0x3e4ccccd                      # float 0.200000003
-	.word	0x3ecccccd                      # float 0.400000006
-	.word	0x3f19999a                      # float 0.600000024
-	.word	0x3f4ccccd                      # float 0.800000011
-	.size	.L__const.main.a, 20
-
-	.type	.L__const.main.b,@object        # @__const.main.b
-	.p2align	2, 0x0
-.L__const.main.b:
-	.word	0x3dcccccd                      # float 0.100000001
-	.word	0x3e99999a                      # float 0.300000012
-	.word	0x3f000000                      # float 0.5
-	.word	0x3f333333                      # float 0.699999988
-	.word	0x3f666666                      # float 0.899999976
-	.size	.L__const.main.b, 20
-
 	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               # Abbreviation Code
@@ -183,5 +127,6 @@ main:                                   # @main
 	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
+	.addrsig_sym cgxTarget
 	.section	.debug_line,"",@progbits
 .Lline_table_start0:

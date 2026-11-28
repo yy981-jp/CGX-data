@@ -26,8 +26,8 @@ cgxTarget:
 	movq	%rdi, -24(%rbp)
 	movq	%rsi, -32(%rbp)
 	.loc 1 7 8
-	pxor	%xmm0, %xmm0
-	movss	%xmm0, -8(%rbp)
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -8(%rbp)
 .LBB2:
 	.file 2 "CGX-MCA-BEGIN"
 	.loc 2 1 11
@@ -37,30 +37,30 @@ cgxTarget:
 .L3:
 	.loc 2 2 13
 	movl	-4(%rbp), %eax
-	movslq	%eax, %rdx
-	movq	-24(%rbp), %rax
-	movq	%rdx, %rsi
-	movq	%rax, %rdi
+	cltq
+	movq	-24(%rbp), %rdx
+	movq	%rax, %rsi
+	movq	%rdx, %rdi
 	call	_ZNKSt5arrayIfLm10EEixEm
 	.loc 2 2 15 discriminator 1
-	movss	(%rax), %xmm2
-	movss	%xmm2, -36(%rbp)
+	vmovss	(%rax), %xmm2
+	vmovss	%xmm2, -36(%rbp)
 	.loc 2 2 20 discriminator 1
 	movl	-4(%rbp), %eax
-	movslq	%eax, %rdx
-	movq	-32(%rbp), %rax
-	movq	%rdx, %rsi
-	movq	%rax, %rdi
+	cltq
+	movq	-32(%rbp), %rdx
+	movq	%rax, %rsi
+	movq	%rdx, %rdi
 	call	_ZNKSt5arrayIfLm10EEixEm
 	.loc 2 2 15 discriminator 2
-	movss	(%rax), %xmm0
-	mulss	-36(%rbp), %xmm0
+	vmovss	(%rax), %xmm0
+	vmulss	-36(%rbp), %xmm0, %xmm0
 	.loc 2 2 7 discriminator 2
-	movss	-8(%rbp), %xmm1
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -8(%rbp)
+	vmovss	-8(%rbp), %xmm1
+	vaddss	%xmm0, %xmm1, %xmm0
+	vmovss	%xmm0, -8(%rbp)
 	.loc 2 1 2 discriminator 3
-	addl	$1, -4(%rbp)
+	incl	-4(%rbp)
 .L2:
 	.loc 2 1 20 discriminator 1
 	cmpl	$9, -4(%rbp)
@@ -68,7 +68,7 @@ cgxTarget:
 .LBE2:
 	.file 3 "CGX-MCA-END"
 	.loc 3 1 9
-	movss	-8(%rbp), %xmm0
+	vmovss	-8(%rbp), %xmm0
 	.loc 3 2 1
 	leave
 	.cfi_def_cfa 7, 8
@@ -299,16 +299,16 @@ _ZNKSt5arrayIfLm10EEixEm:
 	.section	.debug_line,"",@progbits
 .Ldebug_line0:
 	.section	.debug_str,"MS",@progbits,1
-.LASF3:
-	.string	"cgxTarget"
 .LASF6:
 	.string	"_ZNKSt5arrayIfLm10EEixEm"
 .LASF5:
 	.string	"operator[]"
-.LASF4:
-	.string	"GNU C++23 13.3.0 -mtune=generic -march=x86-64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+.LASF3:
+	.string	"cgxTarget"
 .LASF2:
 	.string	"main"
+.LASF4:
+	.string	"GNU C++23 13.3.0 -march=skylake -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection -fcf-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2"

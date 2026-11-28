@@ -5,7 +5,7 @@
 
                                         // End of file scope inline assembly
 	.globl	main                            // -- Begin function main
-	.p2align	2
+	.p2align	4
 	.type	main,@function
 main:                                   // @main
 .Lfunc_begin0:

@@ -1,4 +1,4 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
@@ -295,12 +295,12 @@ _ZNKSt5arrayIfLm10EEixEm:
 	.string	"_ZNKSt5arrayIfLm10EEixEm"
 .LASF5:
 	.string	"operator[]"
-.LASF4:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF3:
 	.string	"cgxTarget"
 .LASF2:
 	.string	"main"
+.LASF4:
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O0 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 	.section	.debug_line_str,"MS",@progbits,1
 .LASF1:
 	.string	"/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float2"

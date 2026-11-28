@@ -1,4 +1,4 @@
-	.arch armv8-a
+	.arch armv9-a+crc+profile+rng+memtag+sve2-bitperm+i8mm+bf16
 	.file	"source.cpp"
 	.text
 .Ltext0:
@@ -12,7 +12,7 @@
 #NO_APP
 	.section	.text.startup,"ax",@progbits
 	.align	2
-	.p2align 4,,11
+	.p2align 5,,15
 	.global	main
 	.type	main, %function
 main:
@@ -24,8 +24,7 @@ main:
 .LBB29:
 	.file 2 "/usr/aarch64-linux-gnu/include/c++/13/ostream"
 	.loc 2 667 18
-	adrp	x0, :got:_ZSt4cout
-	ldr	x0, [x0, :got_lo12:_ZSt4cout]
+	adrp	x1, .LC0
 .LBE29:
 .LBE28:
 	.loc 1 4 12
@@ -44,14 +43,15 @@ main:
 .LBB34:
 .LBB31:
 	.loc 2 667 18
-	adrp	x1, .LC0
+	add	x1, x1, :lo12:.LC0
 .LBE31:
 .LBE34:
 	.loc 1 4 12
 .LBB35:
 .LBB32:
 	.loc 2 667 18
-	add	x1, x1, :lo12:.LC0
+	adrp	x0, :got:_ZSt4cout
+	ldr	x0, [x0, :got_lo12:_ZSt4cout]
 	bl	_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l
 .LBE32:
 .LBE35:
@@ -345,10 +345,12 @@ main:
 	.string	"operator|"
 .LASF2:
 	.string	"clear"
-.LASF13:
-	.string	"length"
+.LASF16:
+	.string	"GNU C++23 13.3.0 -mcpu=neoverse-v2 -mlittle-endian -mabi=lp64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF5:
 	.string	"_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_l"
+.LASF13:
+	.string	"length"
 .LASF10:
 	.string	"operator<< <std::char_traits<char> >"
 .LASF4:
@@ -357,8 +359,6 @@ main:
 	.string	"rdstate"
 .LASF12:
 	.string	"_ZStorSt12_Ios_IostateS_"
-.LASF16:
-	.string	"GNU C++23 13.3.0 -mlittle-endian -mabi=lp64 -g1 -O2 -std=c++23 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection"
 .LASF17:
 	.string	"cout"
 .LASF15:

@@ -1,12 +1,12 @@
 	.text
 	.file	"source.cpp"
-	.globl	main                            # -- Begin function main
+	.globl	cgxTarget                       # -- Begin function cgxTarget
 	.p2align	4, 0x90
-	.type	main,@function
-main:                                   # @main
+	.type	cgxTarget,@function
+cgxTarget:                              # @cgxTarget
 .Lfunc_begin0:
-	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
-	.loc	0 1 0                           # source.cpp:1:0
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x9e5cf5aff15e5d418450cf80a80d0355
+	.loc	0 4 0                           # source.cpp:4:0
 	.cfi_startproc
 # %bb.0:
 	pushq	%rbp
@@ -14,89 +14,60 @@ main:                                   # @main
 	.cfi_offset %rbp, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register %rbp
-	movl	$0, -4(%rbp)
+	movq	%rdi, -8(%rbp)
+	movq	%rsi, -16(%rbp)
+	movq	%rdx, -24(%rbp)
 .Ltmp0:
-	.loc	0 2 8 prologue_end              # source.cpp:2:8
-	movq	.L__const.main.a(%rip), %rax
-	movq	%rax, -32(%rbp)
-	movq	.L__const.main.a+8(%rip), %rax
-	movq	%rax, -24(%rbp)
-	movl	.L__const.main.a+16(%rip), %eax
-	movl	%eax, -16(%rbp)
-	.loc	0 3 8                           # source.cpp:3:8
-	movq	.L__const.main.b(%rip), %rax
-	movq	%rax, -64(%rbp)
-	movq	.L__const.main.b+8(%rip), %rax
-	movq	%rax, -56(%rbp)
-	movl	.L__const.main.b+16(%rip), %eax
-	movl	%eax, -48(%rbp)
-	.loc	0 4 6                           # source.cpp:4:6
-	movl	$5, -68(%rbp)
-	.loc	0 6 8                           # source.cpp:6:8
-	xorps	%xmm0, %xmm0
-	movss	%xmm0, -72(%rbp)
+	.loc	0 5 8 prologue_end              # source.cpp:5:8
+	vxorps	%xmm0, %xmm0, %xmm0
+	vmovss	%xmm0, -28(%rbp)
 	.file	1 "CGX-MCA-BEGIN"
-	.loc	1 1 10                          # CGX-MCA-BEGIN:1:10
-	movl	$0, -76(%rbp)
-.LBB0_1:                                # =>This Inner Loop Header: Depth=1
-	.loc	1 1 17 is_stmt 0                # CGX-MCA-BEGIN:1:17
-	movl	-76(%rbp), %eax
 	.loc	1 1 19                          # CGX-MCA-BEGIN:1:19
-	cmpl	-68(%rbp), %eax
+	movq	$0, -40(%rbp)
+.LBB0_1:                                # =>This Inner Loop Header: Depth=1
+	.loc	1 1 26 is_stmt 0                # CGX-MCA-BEGIN:1:26
+	movq	-40(%rbp), %rax
+	.loc	1 1 28                          # CGX-MCA-BEGIN:1:28
+	cmpq	-24(%rbp), %rax
 	.loc	1 1 2                           # CGX-MCA-BEGIN:1:2
-	jge	.LBB0_4
+	jae	.LBB0_4
 # %bb.2:                                #   in Loop: Header=BB0_1 Depth=1
 	.loc	1 2 10 is_stmt 1                # CGX-MCA-BEGIN:2:10
-	movslq	-76(%rbp), %rax
-	movss	-32(%rbp,%rax,4), %xmm0         # xmm0 = mem[0],zero,zero,zero
-	.loc	1 2 17 is_stmt 0                # CGX-MCA-BEGIN:2:17
-	movslq	-76(%rbp), %rax
-	movss	-64(%rbp,%rax,4), %xmm2         # xmm2 = mem[0],zero,zero,zero
+	movq	-8(%rbp), %rax
+	.loc	1 2 12 is_stmt 0                # CGX-MCA-BEGIN:2:12
+	movq	-40(%rbp), %rcx
+	.loc	1 2 10                          # CGX-MCA-BEGIN:2:10
+	vmovss	(%rax,%rcx,4), %xmm1            # xmm1 = mem[0],zero,zero,zero
+	.loc	1 2 17                          # CGX-MCA-BEGIN:2:17
+	movq	-16(%rbp), %rax
+	.loc	1 2 19                          # CGX-MCA-BEGIN:2:19
+	movq	-40(%rbp), %rcx
+	.loc	1 2 17                          # CGX-MCA-BEGIN:2:17
+	vmovss	(%rax,%rcx,4), %xmm0            # xmm0 = mem[0],zero,zero,zero
 	.loc	1 2 7                           # CGX-MCA-BEGIN:2:7
-	movss	-72(%rbp), %xmm1                # xmm1 = mem[0],zero,zero,zero
-	mulss	%xmm2, %xmm0
-	addss	%xmm1, %xmm0
-	movss	%xmm0, -72(%rbp)
+	vmovss	-28(%rbp), %xmm2                # xmm2 = mem[0],zero,zero,zero
+	vfmadd213ss	%xmm2, %xmm1, %xmm0     # xmm0 = (xmm1 * xmm0) + xmm2
+	vmovss	%xmm0, -28(%rbp)
 # %bb.3:                                #   in Loop: Header=BB0_1 Depth=1
-	.loc	1 1 24 is_stmt 1                # CGX-MCA-BEGIN:1:24
-	movl	-76(%rbp), %eax
-	addl	$1, %eax
-	movl	%eax, -76(%rbp)
+	.loc	1 1 37 is_stmt 1                # CGX-MCA-BEGIN:1:37
+	movq	-40(%rbp), %rax
+	addq	$1, %rax
+	movq	%rax, -40(%rbp)
 	.loc	1 1 2 is_stmt 0                 # CGX-MCA-BEGIN:1:2
 	jmp	.LBB0_1
 .LBB0_4:
 	.file	2 "CGX-MCA-END"
-	.loc	2 0 9                           # CGX-MCA-END:0:9
-	cvttss2si	-72(%rbp), %eax
+	.loc	2 2 9 is_stmt 1                 # CGX-MCA-END:2:9
+	vmovss	-28(%rbp), %xmm0                # xmm0 = mem[0],zero,zero,zero
+	.loc	2 2 2 epilogue_begin is_stmt 0  # CGX-MCA-END:2:2
 	popq	%rbp
 	.cfi_def_cfa %rsp, 8
 	retq
 .Ltmp1:
 .Lfunc_end0:
-	.size	main, .Lfunc_end0-main
+	.size	cgxTarget, .Lfunc_end0-cgxTarget
 	.cfi_endproc
                                         # -- End function
-	.type	.L__const.main.a,@object        # @__const.main.a
-	.section	.rodata,"a",@progbits
-	.p2align	4, 0x0
-.L__const.main.a:
-	.long	0x00000000                      # float 0
-	.long	0x3e4ccccd                      # float 0.200000003
-	.long	0x3ecccccd                      # float 0.400000006
-	.long	0x3f19999a                      # float 0.600000024
-	.long	0x3f4ccccd                      # float 0.800000011
-	.size	.L__const.main.a, 20
-
-	.type	.L__const.main.b,@object        # @__const.main.b
-	.p2align	4, 0x0
-.L__const.main.b:
-	.long	0x3dcccccd                      # float 0.100000001
-	.long	0x3e99999a                      # float 0.300000012
-	.long	0x3f000000                      # float 0.5
-	.long	0x3f333333                      # float 0.699999988
-	.long	0x3f666666                      # float 0.899999976
-	.size	.L__const.main.b, 20
-
 	.section	".linker-options","e",@llvm_linker_options
 	.section	.debug_abbrev,"",@progbits
 	.byte	1                               # Abbreviation Code
@@ -170,5 +141,6 @@ main:                                   # @main
 	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
+	.addrsig_sym cgxTarget
 	.section	.debug_line,"",@progbits
 .Lline_table_start0:

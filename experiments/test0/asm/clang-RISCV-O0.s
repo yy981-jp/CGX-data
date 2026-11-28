@@ -1,6 +1,6 @@
 	.text
 	.attribute	4, 16
-	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_zicsr2p0"
+	.attribute	5, "rv64i2p1_m2p0_a2p1_f2p2_d2p2_c2p0_v1p0_zicsr2p0_zifencei2p0_zba1p0_zbb1p0_zbs1p0_zve32f1p0_zve32x1p0_zve64d1p0_zve64f1p0_zve64x1p0_zvl128b1p0_zvl32b1p0_zvl64b1p0"
 	.file	"source.cpp"
                                         # Start of file scope inline assembly
 	.globl	_ZSt21ios_base_library_initv
@@ -33,9 +33,10 @@ main:                                   # @main
 	addi	a1, a1, %pcrel_lo(.Lpcrel_hi1)
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc
 	li	a0, 0
+	.loc	1 6 1 epilogue_begin            # source.cpp:6:1
+	addi	sp, s0, -16
 	ld	ra, 8(sp)                       # 8-byte Folded Reload
 	ld	s0, 0(sp)                       # 8-byte Folded Reload
-	.loc	1 6 1 epilogue_begin            # source.cpp:6:1
 	addi	sp, sp, 16
 	ret
 .Ltmp1:

@@ -1,21 +1,85 @@
 	.text
 	.file	"source.cpp"
-	.globl	main                            // -- Begin function main
-	.p2align	2
-	.type	main,@function
-main:                                   // @main
+	.globl	cgxTarget                       // -- Begin function cgxTarget
+	.p2align	4
+	.type	cgxTarget,@function
+cgxTarget:                              // @cgxTarget
 .Lfunc_begin0:
-	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x4a56823100d30f13fdcdf6fc111611f2
-	.loc	0 1 0                           // source.cpp:1:0
+	.file	0 "/home/runner/work/CGX-data/CGX-data/CGX-data/experiments/float1" "source.cpp" md5 0x9e5cf5aff15e5d418450cf80a80d0355
 	.cfi_startproc
 // %bb.0:
-	.file	1 "CGX-MCA-END"
-	.loc	1 0 2 prologue_end              // CGX-MCA-END:0:2
-	mov	w0, #1                          // =0x1
+	.file	1 "CGX-MCA-BEGIN"
+	.loc	1 1 2 prologue_end              // CGX-MCA-BEGIN:1:2
+	cbz	x2, .LBB0_3
+// %bb.1:
+	cnth	x8
+	cmp	x8, x2
+	b.ls	.LBB0_4
+// %bb.2:
+	.loc	1 0 2 is_stmt 0                 // CGX-MCA-BEGIN:0:2
+	mov	x8, xzr
+	movi	d0, #0000000000000000
+	b	.LBB0_7
+.LBB0_3:
+	movi	d0, #0000000000000000
+                                        // kill: def $s0 killed $s0 killed $z0
+	.file	2 "CGX-MCA-END"
+	.loc	2 2 2 is_stmt 1                 // CGX-MCA-END:2:2
+	ret
+.LBB0_4:
+	.loc	1 1 2                           // CGX-MCA-BEGIN:1:2
+	neg	x8, x8
+	addvl	x10, x0, #1
+	addvl	x11, x1, #1
+	movi	d0, #0000000000000000
+	mov	x9, xzr
+	and	x8, x8, x2
+	ptrue	p0.s
+	.p2align	5, , 16
+.LBB0_5:                                // =>This Inner Loop Header: Depth=1
+	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
+	ld1w	{ z1.s }, p0/z, [x0, x9, lsl #2]
+	.loc	1 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
+	ld1w	{ z3.s }, p0/z, [x1, x9, lsl #2]
+	.loc	1 2 10                          // CGX-MCA-BEGIN:2:10
+	ld1w	{ z2.s }, p0/z, [x10, x9, lsl #2]
+	fmul	z1.s, z1.s, z3.s
+	.loc	1 2 17                          // CGX-MCA-BEGIN:2:17
+	ld1w	{ z4.s }, p0/z, [x11, x9, lsl #2]
+	fmul	z2.s, z2.s, z4.s
+	.loc	1 1 37 is_stmt 1                // CGX-MCA-BEGIN:1:37
+	inch	x9
+	cmp	x8, x9
+	fadda	s0, p0, s0, z1.s
+	fadda	s0, p0, s0, z2.s
+	b.ne	.LBB0_5
+// %bb.6:
+	.loc	1 1 2 is_stmt 0                 // CGX-MCA-BEGIN:1:2
+	cmp	x8, x2
+	b.eq	.LBB0_9
+.LBB0_7:
+	sub	x9, x2, x8
+	add	x10, x1, x8, lsl #2
+	add	x8, x0, x8, lsl #2
+	.p2align	5, , 16
+.LBB0_8:                                // =>This Inner Loop Header: Depth=1
+	.loc	1 2 10 is_stmt 1                // CGX-MCA-BEGIN:2:10
+	ldr	s1, [x8], #4
+	.loc	1 2 17 is_stmt 0                // CGX-MCA-BEGIN:2:17
+	ldr	s2, [x10], #4
+	.loc	1 1 28 is_stmt 1                // CGX-MCA-BEGIN:1:28
+	subs	x9, x9, #1
+	.loc	1 2 7                           // CGX-MCA-BEGIN:2:7
+	fmadd	s0, s1, s2, s0
+	.loc	1 1 2                           // CGX-MCA-BEGIN:1:2
+	b.ne	.LBB0_8
+.LBB0_9:
+                                        // kill: def $s0 killed $s0 killed $z0
+	.loc	2 2 2                           // CGX-MCA-END:2:2
 	ret
 .Ltmp0:
 .Lfunc_end0:
-	.size	main, .Lfunc_end0-main
+	.size	cgxTarget, .Lfunc_end0-cgxTarget
 	.cfi_endproc
                                         // -- End function
 	.section	".linker-options","e",@llvm_linker_options
@@ -91,5 +155,6 @@ main:                                   // @main
 	.ident	"Ubuntu clang version 18.1.3 (1ubuntu1)"
 	.section	".note.GNU-stack","",@progbits
 	.addrsig
+	.addrsig_sym cgxTarget
 	.section	.debug_line,"",@progbits
 .Lline_table_start0:
