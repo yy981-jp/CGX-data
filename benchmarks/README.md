@@ -11,7 +11,7 @@ These cases compare equivalent workloads using different C++ implementations. Ea
 | TC-03: sequential access | `tc03-span-range-for`, `tc03-span-index`, `tc03-span-pointer`, `tc03-vector-at` | Which abstractions survive optimization, and does `vector::at()` retain a bounds check? |
 | TC-05: runtime dispatch | `tc05-virtual`, `tc05-switch`, `tc05-variant` | How do virtual dispatch, a tag switch, and `std::visit` lower? |
 
-The variants preserve the same logical calculations within each case. TC-05 deliberately compares realistic representations: the virtual form uses a pointer list to separately stored derived objects, while the switch and variant forms store tagged values inline. Therefore its result is a comparison of the complete representation-plus-dispatch choices, not an isolated measurement of the call instruction alone. For TC-05, the MCA marker surrounds the dispatch loop; the virtual callee bodies are outside that region, so MCA characterizes the loop/dispatch-side instruction stream rather than the entire virtual call graph. The native benchmark does execute the callee bodies.
+The variants preserve the same logical calculations within each case. TC-05 deliberately compares realistic representations: the virtual form uses a pointer list to separately stored derived objects, while the switch and variant forms store tagged values inline. Therefore its result is a comparison of the complete representation-plus-dispatch choices, not an isolated measurement of the call instruction alone. For TC-05, the MCA marker surrounds the dispatch loop; the virtual callee bodies are outside that region, but the indirect call instruction remains inside it. LLVM-MCA warns that call instructions are not modeled accurately and assumes a 100-cycle latency, so treat its TC-05 virtual-call throughput as a rough static indication, not a reliable call-cost estimate. The native benchmark executes the callee bodies.
 
 ## Native runtime measurement
 
@@ -29,7 +29,7 @@ The Python runner records the CPU model exposed by the OS, architecture, virtual
 
 ### Interpreting the results
 
-Pull requests targeting `develop` run the x86-64 and ARM64 matrix with read-only repository permissions; pushes to `develop` run the same matrix. Each job uploads its JSON output as a 90-day Actions artifact.
+Pull requests targeting `develop` run the x86-64 and ARM64 matrix with read-only repository permissions; pushes to `develop` run the same matrix. Each job uploads its JSON output as a 90-day Actions artifact. Assembly and MCA JSON are generated separately and committed back to the same branch that triggered the regeneration workflow. The workflow ignores commits containing only generated `asm/` and `mca/` files, and it also skips bot-authored runs, preventing a generation loop.
 
 The GitHub-hosted x86-64 and ARM64 jobs execute native binaries on architecture-matched GitHub-hosted virtual machines. They are useful for repeatable *native execution* and correctness checks, but they are not isolated bare-metal benchmark labs: VM scheduling, host contention, frequency behavior, and runner-image/hardware changes can affect wall-clock measurements. Treat the artifact as a sample with environment metadata, not as a permanent CPU ranking or a merge gate. Compare variants on the same runner job and use the spread (MAD and sample values) when interpreting a small difference.
 

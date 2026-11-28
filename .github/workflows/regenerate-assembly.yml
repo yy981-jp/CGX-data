@@ -6,6 +6,11 @@ on:
       - develop
       - test
       - ci/github-actions
+    # Generated files must not start another generation run when the workflow
+    # publishes results back to the source branch.
+    paths-ignore:
+      - 'experiments/**/asm/**'
+      - 'experiments/**/mca/**'
   workflow_dispatch:
 
 permissions:
@@ -17,6 +22,8 @@ concurrency:
 
 jobs:
   regenerate:
+    # GITHUB_TOKEN pushes do not normally trigger another workflow, and this
+    # guard is a second line of defense if the event behavior ever changes.
     if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-24.04
 
@@ -36,12 +43,12 @@ jobs:
           path: CGX
           persist-credentials: false
 
-      - name: Checkout test branch for generated output
+      - name: Checkout the same branch for generated output
         uses: actions/checkout@v7.0.1
         with:
-          ref: test
-          path: CGX-data-test
+          ref: ${{ github.ref_name }}
           token: ${{ secrets.GITHUB_TOKEN }}
+          path: CGX-data-output
 
       - name: Install build dependencies
         shell: bash
@@ -74,7 +81,6 @@ jobs:
           echo "cmake=$(cmake --version | awk 'NR == 1 { print $3 }')" >> "$GITHUB_OUTPUT"
           echo "gcc=$(g++ -dumpfullversion -dumpversion)" >> "$GITHUB_OUTPUT"
 
-      # Cache only the executable: it is the artifact CGX actually needs.
       - name: Restore LLVM llvm-mca cache
         id: llvm-cache
         uses: actions/cache/restore@v6.1.0
@@ -147,8 +153,6 @@ jobs:
           submodule_hash="$(printf '%s' "$submodule_status" | sha256sum | cut -d ' ' -f 1)"
           echo "sha256=$submodule_hash" >> "$GITHUB_OUTPUT"
 
-      # The executable key includes analyzer sources, submodule revisions and
-      # the compiler/toolchain. This avoids CMake timestamp misses on new runners.
       - name: Restore analyzer executable cache
         id: analyzer-cache
         uses: actions/cache/restore@v6.1.0
@@ -259,18 +263,23 @@ jobs:
                               raise SystemExit(f"Missing MCA output: {output}")
 
                           raw = output.read_text(encoding="utf-8-sig")
-                          if raw.strip():
-                              json.loads(raw)
+                          if not raw.strip():
+                              raise SystemExit(f"Empty MCA output: {output}")
+
+                          result = json.loads(raw)
+                          if not isinstance(result, dict) or not result.get("CodeRegions"):
+                              raise SystemExit(f"MCA output has no CodeRegions: {output}")
+
                           checked += 1
 
           expected = len(experiments) * len(compilers) * len(architectures) * len(optimization_levels)
           if checked != expected:
-              raise SystemExit(f"Expected {expected} MCA files, checked {checked}")
+              raise SystemExit(f"Expected {expected} MCA output files, checked {checked}")
 
-          print(f"Validated {checked} MCA output files across {len(experiments)} experiments.")
+          print(f"Validated {checked} non-empty MCA outputs across {len(experiments)} experiments.")
           PY
 
-      - name: Copy generated assembly and MCA JSON to test
+      - name: Copy generated assembly and MCA JSON to the pushed branch
         shell: bash
         run: |
           set -euo pipefail
@@ -278,10 +287,11 @@ jobs:
           while IFS= read -r -d '' source; do
             experiment="${source#CGX-data/experiments/}"
             experiment="${experiment%/source.cpp}"
-            destination="CGX-data-test/experiments/${experiment}"
+            destination="CGX-data-output/experiments/${experiment}"
 
-            find "$destination/asm" -type f -name '*.s' -delete 2>/dev/null || true
-            find "$destination/mca/json" -type f -name '*.json' -delete 2>/dev/null || true
+            mkdir -p "$destination/asm" "$destination/mca/json"
+            find "$destination/asm" -type f -name '*.s' -delete
+            find "$destination/mca/json" -type f -name '*.json' -delete
           done < <(
             find CGX-data/experiments \
               -mindepth 2 -maxdepth 2 \
@@ -290,7 +300,7 @@ jobs:
 
           while IFS= read -r -d '' generated; do
             relative="${generated#CGX-data/}"
-            destination="CGX-data-test/${relative}"
+            destination="CGX-data-output/${relative}"
             mkdir -p "$(dirname "$destination")"
             cp -- "$generated" "$destination"
           done < <(
@@ -299,14 +309,14 @@ jobs:
               -print0 | sort -z
           )
 
-      - name: Commit and push results to test
-        working-directory: CGX-data-test
+      - name: Commit and push results to the pushed branch
+        working-directory: CGX-data-output
         shell: bash
         run: |
           set -euo pipefail
 
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+yy981-jp@users.noreply.github.com"
           git add -- experiments
 
           if git diff --cached --quiet; then
@@ -314,5 +324,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "chore: regenerate assembly and MCA [skip ci]"
-          git push origin HEAD:test
+          git commit -m "chore: regenerate assembly and MCA"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
